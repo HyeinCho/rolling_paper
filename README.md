@@ -39,3 +39,69 @@
 ##### * 결정할 사항
 - 익명 vs 실명 vs 별명
 
+
+
+## 1. 요구사항
+
+#### 1. 프로젝트 구조
+
+> game/은 game을 하는 디렉토리입니다.
+>
+> ssafy5_3/은 학생 정보, 메세지 등이 있는 디렉토리입니다.
+
+```bash
+$ django-admin startproject rollingpaper .
+$ python manage.py startapp game
+$ python manage.py startapp ssafy5_3
+```
+
+
+
+#### 2. Model
+
+1. Students
+
+   |     id      |     integer      |
+   | :---------: | :--------------: |
+   |    name     |   varchar(10)    |
+   |   message   |       text       |
+   |  webex_img  | image_url (text) |
+   | profile_img | image_url (text) |
+
+2. Professor
+
+   |    id     |     integer      |
+   | :-------: | :--------------: |
+   |   name    |   varchar(10)    |
+   | webex_img | image_url (text) |
+
+3. Greetings
+
+   |      id      | integer |
+   | :----------: | :-----: |
+   | professor_id | integer |
+   |   content    |  Text   |
+
+
+
+#### 3. URL
+
+##### 1. ssafy5_3 app
+
+| HTTP verb | URL 패턴  |                            설명                             |
+| :-------: | :-------: | :---------------------------------------------------------: |
+|    GET    |     /     |                         시작 페이지                         |
+|    GET    | students/ | 학생 정보와 메시지 보이는 페이지 (분리하는게 낫지 않을까요) |
+
+##### 2. game app
+
+| HTTP verb |  URL 패턴   |          설명           |
+| :-------: | :---------: | :---------------------: |
+|    GET    | match-card/ |    카드 맞추기 게임     |
+|    GET    |  nickname/  |  맞는 별명 채우기 게임  |
+|    GET    | whoislate/  | 지각한 사람 맞추기 게임 |
+
+
+
+이정도면 충분하쥬? - 혜인
+
