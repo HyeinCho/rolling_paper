@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <h1>확인</h1>
+
+  {% for student in students %}
+    {% comment %} static에 있는 이미지를 어떻게 잘 넣을 수 있을까 {% endcomment %}
+    <img src="{{ student.webex_img }}" alt="juan">
+    
+  {% endfor %}
+{% endblock content %}

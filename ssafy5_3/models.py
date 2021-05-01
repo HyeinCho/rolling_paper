@@ -1,17 +1,28 @@
 from django.db import models
 
-class Students(models.Model):
+class Student(models.Model):
     name = models.CharField(max_length=10)
-    message = models.TextField()
-    webex_img = models.ImageField()
-    profile_img = models.ImageField()
+    nickname = models.CharField(max_length=20)
+    webex_img = models.ImageField(upload_to='static/webex/')
+    profile_img = models.ImageField(upload_to='static/profile/')
+    flag = models.BooleanField()
+    song = models.CharField(max_length=50)
+    song_url = models.CharField(max_length=100)
 
 
 class Professor(models.Model):
     name = models.CharField(max_length=10)
-    webex_img = models.ImageField()
+    webex_img = models.ImageField(upload_to='static/webex/')
+    coins = models.IntegerField()
+    game_clear = models.BooleanField()
     
 
-class Greetings(models.Model):
+class Greeting(models.Model):
     professor = models.ForeignKey(Professor, on_delete=models.CASCADE)
+    content = models.TextField()
+    created_at = models.DateTimeField()
+
+
+class Comment(models.Model):
+    from_msg = models.ManyToManyField(Student, related_name="to_msg")
     content = models.TextField()

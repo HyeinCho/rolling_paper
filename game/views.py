@@ -1,12 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-def match_card(request):
+def stage1(request):
     pass
 
 
-def nickname(request):
+def stage2(request):
     pass
 
 
-def whoislate(request):
+def stage3(request):
+    pass
+
+
+def bonus(request):
+    pass
+
+
+def rewards(reqeust):
     pass

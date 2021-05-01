@@ -64,7 +64,7 @@ $ python manage.py startapp ssafy5_3
 
 #### 2. Model
 
-1. Students
+1. Student
 
    |     id      |     integer      |       id       |
    | :---------: | :--------------: | :------------: |
@@ -85,7 +85,7 @@ $ python manage.py startapp ssafy5_3
    |   coins    |     integer      | 쓸 수 있는 코인 개수 |
    | game_clear |     boolean      |    게임 성공 여부    |
 
-3. Greetings
+3. Greeting
 
    > 1:N 구조
    
@@ -95,15 +95,15 @@ $ python manage.py startapp ssafy5_3
    |   content    |   Text   | 교수님 조례 멘트 |
    |  created_at  | DateTime |    올린 시간     |
 
-4. Comments
+4. Comment
 
    > M:N 구조
 
-   |   id    | integer |     pk      |
-   | :-----: | :-----: | :---------: |
-   |  from   | integer | 보내는 사람 |
-   |   to    | integer |  받는 사람  |
-   | content |  Text   |  올린 시간  |
+   |    id    | integer |     pk      |
+   | :------: | :-----: | :---------: |
+   | from_msg | integer | 보내는 사람 |
+   |  to_msg  | integer |  받는 사람  |
+   | content  |  Text   |  올린 시간  |
 
 
 
@@ -125,8 +125,8 @@ $ python manage.py startapp ssafy5_3
 |   POST    | stage1/  |   Enter Baam!! 맞는 별명 채우기 게임   |
 |   POST    | stage2/  |            카드 맞추기 게임            |
 |   POST    | stage3/  |        지각한 사람 맞추기 게임         |
-|   POST    | rewards/ | 스테이지 클리어할 때마다 나오는 페이지 |
 |   POST    |  bonus/  |  Youtube 스타일의 교수님 주접 페이지   |
+|   POST    | rewards/ | 스테이지 클리어할 때마다 나오는 페이지 |
 
 
 
