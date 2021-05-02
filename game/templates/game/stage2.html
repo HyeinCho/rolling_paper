@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <header>
+  
+  </header>
+
+  <div class="row">
+    <section class="col-10 px-0">
+      <div class="container">
+        <div class="row row-cols-5">
+          {% for student in students %}
+            <div class="col py-2">
+              <div class="card">
+                <img src="{{ student.webex_img.url }}" class="card-img-top" alt="{{ student.name }}">
+              </div>
+            </div>
+          {% endfor %}
+          
+        </div>
+      </div>
+    </section>
+
+    <aside class="col-2 px-0 d-inline-flex justify-content-end">
+      <p>여긴 코인 추가를 위한 밸런스 게임</p>
+    </aside>
+  </div>
+
+{% endblock content %}

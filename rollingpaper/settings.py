@@ -31,8 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'game',
     'ssafy5_3',
+    'game',
     'bootstrap5',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -131,3 +131,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_ROOT = BASE_DIR / 'ssafy5_3' / 'media'
+MEDIA_URL = '/media/' 
