@@ -4,7 +4,7 @@ from .models import Card
 from random import randint
 
 def stage1(request):
-    pass
+    return render(request, 'game/stage1.html')
 
 
 def stage2(request):
