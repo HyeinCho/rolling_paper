@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from ssafy5_3.models import Student
 
 def stage1(request):
-    pass
+    return render(request, 'game/stage1.html')
 
 
 def stage2(request):
