@@ -9,11 +9,11 @@
     <section class="col-10 px-0">
       <div class="container">
         <div class="row row-cols-5">
-          {% for student in students %}
+          {% for card in cards %}
             <div class="col py-2">
-              <div class="card">
-                <img src="{{ student.webex_img.url }}" class="card-img-top" alt="{{ student.name }}">
-              </div>
+              <button class="card p-0" onclick="flipCard({{ card.student_id }}, {{ card.pk }})">
+                <img id="{{ card.pk }}" src="{{ card.card_img.url }}" class="card-img-top" alt="{{ card.student_id }}">
+              </button>
             </div>
           {% endfor %}
           
@@ -26,4 +26,28 @@
     </aside>
   </div>
 
+  <script>
+    let clicked_id = 0;
+
+    function matchCard(){
+      console.log(clicked_id)
+    }
+
+    function flipCard(student_id, card_pk) {
+      // 해당 카드 뒤집기
+      const idid = document.getElementById(card_pk)
+      console.log(idid)
+
+      // 확인
+      if (clicked_id == 0){
+        clicked_id = student_id
+      }else{
+        if (clicked_id == student_id){
+          matchCard()
+        }else{
+          clicked_id = 0
+        }
+      }
+    }
+  </script>
 {% endblock content %}
