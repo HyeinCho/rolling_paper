@@ -1,0 +1,324 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    body{
+        background-color: #fbfbfb;
+    }
+    ul{
+        list-style: none;
+    }
+
+    /* 개별 채팅 관련 */
+    .profile-holder{
+        width: 24px;
+        height: 24px; 
+        border-radius: 70%;
+        overflow: hidden;
+    }
+    .profile {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .author-name{
+        color : #11111199;
+    }
+    .chatting{
+        font-size: 13px;
+        padding: 4px 24px;
+    }
+
+    /* 채팅창 관련 */
+    .chatting-title-holder{
+        border: #eaeaea 1px solid;
+        padding: 8px;
+        background-color: #FFFFFFFA;
+    }
+    .chatting-bottom{
+        border: #eaeaea 1px solid;
+        padding: 8px;
+        background-color: #FFFFFFFA;
+    }
+    .chatting-bottom-info{
+        color: #11111199;
+        font-size: 11px;
+        text-align: center;
+    }
+    .chatting-title{
+        margin-left: 16px;
+        margin-bottom: 0px;
+        color: #030303;
+        font-size: 16px;
+    }
+    .chatting-btn {
+        border: #eaeaea 1px solid;
+        color: #606060;
+        font-size: 14px;
+        background-color: #fbfbfb;
+    }
+    #chatting-list{
+        border-left: #eaeaea 1px solid;
+        border-right: #eaeaea 1px solid;
+        padding-left: 0;
+        margin-bottom: 0;
+        overflow-y: scroll;
+        height: 400px;
+    }
+
+    /* 영상 관련 */
+    .video-holder{
+        width: auto;
+        display: block;
+        /* flex-grow: 1; */
+    }
+
+    /* 해쉬태그 관련 */
+    .hashtags{
+        display: flex;
+        color: #065fD4;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+    .hashtags li{
+        margin-right: 4px;
+    }
+    /* 타이틀 관련 */
+    .info-title{
+        font-size: 18px;
+        color:#030303;
+    }
+    .info-live-cnt{
+        font-size:14px;
+        color: #606060;
+    }
+    /* 채널 관련 */
+    .channel-profile-holder{
+        width: 48px;
+        height: 48px; 
+        border-radius: 70%;
+        overflow: hidden;
+        margin-right: 8px;
+    }
+    .channel-name{
+        color:#030303;
+        font-size: 14px;
+        margin-bottom: 0;
+        margin-top: 8px
+    }
+    .subscriber-cnt{
+        font-size: 12px;
+        color: #606060;
+    }
+
+</style>
+<div class = "row"> 
+<!-- 영상 -->
+<div class="video-frame col-lg-12 col-xl-9">
+    <!-- p5.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js" type="text/javascript"></script>
+    <!-- p5.js sketch start-->
+    <script>
+
+        let capture
+        let videoHolder, videoFrame
+        let img_flare, img_youtube_frame
+        let predictions = []
+        let youtube_height, video_height
+
+        function preload(){
+            img_flare = loadImage('https://i.postimg.cc/V6xzyRR5/flare.png')
+            img_youtube_frame = loadImage('https://i.postimg.cc/k52wH3gN/youtube-frame.png')
+        }
+
+        function setup(){
+            // DOM 위치 지정
+            videoHolder = select('.video-holder')
+            video_height = videoHolder.width / 1280 * 720
+
+            cnv = createCanvas(videoHolder.width, video_height)
+            cnv.parent(videoHolder)
+
+            // video capture
+            capture = createCapture(VIDEO)
+            capture.size(800, 600)
+            capture.hide()
+
+            // ml5 facemesh api
+            facemesh = ml5.facemesh(capture);
+            facemesh.on("predict", results => {
+                predictions = results;
+            });
+
+            youtube_height =  width / 1280 * 704
+            video_height = width / 1280 * 720
+            background(220)
+        }
+
+        function windowResized() {
+            youtube_height =  width / 1280 * 704
+            videoHolder = select('.video-holder')
+            video_height = videoHolder.width / 1280 * 720
+            resizeCanvas(videoHolder.width, video_height)
+        }
+        function draw() {
+            blendMode(BLEND)
+            image(capture, 0, 0, width, height)
+            blendMode(SOFT_LIGHT)
+            image(capture, 0, 0, width, height)
+            drawKeypoints()
+            if(0<=mouseX & mouseX<=width & 0<=mouseY & mouseY<=height){
+                image(img_youtube_frame, 0, height-youtube_height, width, youtube_height)
+            }
+        }
+
+        function drawKeypoints(){
+            for (let i = 0; i < predictions.length; i += 1) {
+                const keypoints = predictions[i].scaledMesh;
+                let center_x, center_y;
+                let up_x, up_y
+                for (let j = 0; j < keypoints.length; j += 1) {
+                    const [x, y] = keypoints[j];
+        
+                    if(j == 5){
+                        blendMode(BLEND)
+                        center_x = map(x, 0, 640, 0, width)
+                        center_y = map(y, 0, 480, 0, height)
+                    }
+                    else if(j == 8){
+                        up_x = map(x, 0, 640, 0, width)
+                        up_y = map(y, 0, 480, 0, height)
+                    }
+                }
+                let flare_dist = dist(center_x, center_y, up_x, up_y)/40
+
+                push()
+                translate(center_x, center_y)
+                scale(flare_dist)
+                translate(-612, -453)
+                image(img_flare, 0, 0)
+                pop()
+            }
+        }
+
+    </script>
+    <!-- p5.js sketch end-->
+    <div class="video-holder"></div>
+    <!-- <img src="https://via.placeholder.com/800/222222/808080.png?text=VIDEO" alt="video" class="profile"> -->
+    <div class="title col-xl-12 mt-3 d-none d-xl-block">
+        <ul class="hashtags">
+            <li>#실물존잘</li>
+            <li>#엔터빰의그대</li>
+            <li>#스윗한조례</li>
+        </ul>
+        <h2 class="info-title">[Live] juan 교수님의 실체를 공개합니다! </h2>
+        <h6 class="info-live-cnt">현재 23명 시청 중</h6>
+        <hr>
+        <div class="channel-info d-flex">
+            <div class="channel-profile-holder d-inline-block me-2">
+                <img src="https://via.placeholder.com/48/222222/808080.png?text=OPIC" alt="profile" class="profile">
+            </div>
+            <div class="channel-text-info">
+                <h4 class="channel-name">서울 3반 오픽 스터디</h4>
+                <h4 class="subscriber-cnt">구독자 23명</h4>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="col-lg-12 col-xl-3">
+    <div class="chatting-title-holder">
+        <h2 class="chatting-title">주요 채팅</h2>
+    </div>
+    <div>
+        <!-- 개별 주접 채팅 리스트 시작 -->
+        <ul id="chatting-list">
+            <li class="chatting d-flex align-items-center">
+                <div class="profile-holder d-inline-block me-2">
+                    <img src="https://via.placeholder.com/24/222222/808080.png?text=KJ" alt="profile" class="profile">
+                </div>
+                <span class="author-name me-2">이규정</span>
+                <span class="message">교수님 벽이 느껴져요...</span>
+            </li>
+        </ul>
+        <!-- 개별 주접 채팅 리스트 끝 -->
+    </div>
+    <div class="chatting-bottom d-grid gap-2">
+        <button class="chatting-btn btn">채팅하려면 로그인</button>
+        <p class="chatting-bottom-info">내가 보낸 모든 메시지가 공개적으로 표시됩니다.</p>
+    </div>
+</div>
+
+
+<!-- 영상 정보 -->
+<div class="title col-12 mt-3 d-xl-none">
+    <ul class="hashtags">
+        <li>#실물존잘</li>
+        <li>#엔터빰의그대</li>
+        <li>#스윗한조례</li>
+    </ul>
+    <h2 class="info-title">[Live] juan 교수님의 실체를 공개합니다! </h2>
+    <h6 class="info-live-cnt">현재 23명 시청 중</h6>
+    <hr>
+    <div class="channel-info d-flex">
+        <div class="channel-profile-holder d-inline-block me-2">
+            <img src="https://via.placeholder.com/48/222222/808080.png?text=OPIC" alt="profile" class="profile">
+        </div>
+        <div class="channel-text-info">
+            <h4 class="channel-name">서울 3반 오픽 스터디</h4>
+            <h4 class="subscriber-cnt">구독자 23명</h4>
+        </div>
+    </div>
+</div>
+
+<script>
+    const divChattingList = document.querySelector("#chatting-list")
+    const TempBtn = document.querySelector('button')
+
+
+    TempBtn.addEventListener('click',  function(event){
+        event.preventDefault()
+        let bgColor = '808080'
+        let fontColor = '000000'
+        let initialName = 'SG'
+        let nickname = '데스파시토'
+        let message = '완벽.. 완벽...'
+
+        // li
+        const li = document.createElement('li')
+        li.setAttribute('class', 'chatting d-flex align-items-center')
+        // 프로필 holder
+        const divProfileHolder = document.createElement('div')
+        divProfileHolder.setAttribute('class', 'profile-holder d-inline-block me-2')
+        li.append(divProfileHolder)
+        // 프로필 이미지
+        const imgProfile = document.createElement('img')
+        imgProfile.setAttribute('src',`https://via.placeholder.com/24/${bgColor}/${fontColor}.png?text=${initialName}`)
+        imgProfile.setAttribute('class', 'profile')
+        divProfileHolder.append(imgProfile)
+        // 이름
+        const spanName = document.createElement('span')
+        spanName.setAttribute('class', 'author-name me-2')
+        spanName.innerText = nickname
+        li.append(spanName)
+        // 메세지
+        const spanMessage = document.createElement('span')
+        spanMessage.setAttribute('class', 'message')
+        spanMessage.innerText = message
+        li.append(spanMessage)
+
+        divChattingList.append(li)
+        // 채팅 리스트가 넘쳤을 경우, 채팅창을 가장 하단으로 내려준다.
+        if (divChattingList.scrollHeight > 0){
+            divChattingList.scrollTop = divChattingList.scrollHeight
+        } 
+    })
+
+    
+</script>
+    
+
+
+{% endblock content %}
