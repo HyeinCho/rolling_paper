@@ -18,7 +18,7 @@ def stage3(request):
 
 
 def bonus(request):
-    pass
+    return render(request, 'game/bonus.html')
 
 
 def rewards(reqeust):
