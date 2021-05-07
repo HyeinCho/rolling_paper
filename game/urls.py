@@ -8,5 +8,6 @@ urlpatterns = [
     path('stage2/<int:pk>/', views.card_flip, name="card_flip"),
     path('stage3/', views.stage3, name='stage3'),
     path('bonus/', views.bonus, name='bonus'),
+    path('bonus/<int:chat_id>/chat/', views.getChatMessage, name='chat'),
     path('rewards/', views.rewards, name='rewards'),
 ]

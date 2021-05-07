@@ -3,7 +3,7 @@ from django.views.decorators.http import require_POST
 from django.http import JsonResponse
 from django.db.models import Q
 from ssafy5_3.models import Student
-from .models import Card
+from .models import Card, ChatMessage
 from random import randint
 
 def stage1(request):
@@ -91,12 +91,23 @@ def card_flip(request, pk):
 
 
 def stage3(request):
-    pass
+    return render(request, 'game/stage3.html')
 
 
 def bonus(request):
-    pass
+    return render(request, 'game/bonus.html')
 
+def getChatMessage(request, chat_id):
+    chat = get_object_or_404(ChatMessage, pk=chat_id)
+    author = chat.chat_user
+    context = {
+        'author': author.name,
+        'initial' : author.initial,
+        'fg': author.fg_color,
+        'bg': author.bg_color,
+        'message':chat.message,
+    }
+    return JsonResponse(context)
 
 def rewards(reqeust):
     pass
