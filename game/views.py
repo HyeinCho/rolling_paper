@@ -3,25 +3,32 @@ from django.views.decorators.http import require_POST
 from django.http import JsonResponse
 from django.db.models import Q
 from ssafy5_3.models import Student
-from .models import Card, ChatMessage
+from .models import Card, ChatMessage, Nickname
 from random import randint
 
+    # nicknames = ['꽃규정', '데스파시토', '조조교', 'MD장인', '오우마이걸', '홈카페사장', '갓덕삼', '점심시간딜러', '반장drop']
+    # names = ['이규정', '한상길', '조혜인', '이다영', '권오우', '황지원', '김주현', '이민아', '조규태']
+    
 def stage1(request):
+    #모든 학생들 중 해당 스테이지에서 언급되는 학생들 flag를 통해 구분하기
     students = Student.objects.all()
-    nicknames = {
-        '이규정': '꽃규정',
-        '한상길': '데스파시토',
-        '조혜인': '조조교',
-        '이다영': 'MD장인',
-        '권오우': '오우마이걸',
-        '황지원': '갓덕삼',
-        '김주현': '반장drop',
-    }
+    nicknames = Nickname.objects.all()
+    names = []
+    for i in range(len(nicknames)):
+        names.append(nicknames[i].student_name)
+
+    for student in students:
+        if student.name in names:
+            student.flag = False
+            
+    #save를 해야하는가?
     context = {
+        #닉네임 출력
         'nicknames':nicknames,
+        #확인용
+        'students':students,
     }
     return render(request, 'game/stage1.html', context)
-
 
 def stage2(request):
     if not Card.objects.all(): # 나중에 포스트로 바꿀거임

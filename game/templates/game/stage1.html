@@ -8,12 +8,20 @@
     <img src="{% static 'game/Enter.png' %}" alt="enter"><br>
     {% comment %} 텍스트 or 이미지로 문제 출력 {% endcomment %}
   </div>
+  {% for nickname in nicknames  %}
+    <p>{{ nickname }}</p><br>
+  {% endfor %}
+  
+  {% for student in students %}
+    {{student.name}}
+    {{student.flag}}
+
+  {% endfor %}
 
   <div class="d-flex justify-content-center mt-5">
     <form action="#" method='POST'>
       <input type="text" value='완성시켜 입력하세요.'>
       <button>제출</button>
     </form>
-
   </div>
 {% endblock content %}
