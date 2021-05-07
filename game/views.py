@@ -137,5 +137,5 @@ def getChatMessage(request, chat_id):
     }
     return JsonResponse(context)
 
-def rewards(reqeust):
-    pass
+def rewards(request):
+    return render(request, 'game/rewards.html')
