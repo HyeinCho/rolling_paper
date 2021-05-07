@@ -5,6 +5,7 @@ class Student(models.Model):
     nickname = models.CharField(max_length=20)
     webex_img = models.ImageField(upload_to='webex/')
     profile_img = models.ImageField(upload_to='profile/')
+    name_img = models.ImageField(upload_to='name/')
     flag = models.BooleanField()
     song = models.CharField(max_length=50)
     song_url = models.CharField(max_length=100)

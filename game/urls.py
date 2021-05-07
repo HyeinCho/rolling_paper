@@ -5,6 +5,7 @@ app_name = 'game'
 urlpatterns = [
     path('stage1/', views.stage1, name='stage1'),
     path('stage2/', views.stage2, name='stage2'),
+    path('stage2/<int:pk>/', views.card_flip, name="card_flip"),
     path('stage3/', views.stage3, name='stage3'),
     path('bonus/', views.bonus, name='bonus'),
     path('rewards/', views.rewards, name='rewards'),
