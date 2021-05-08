@@ -4,51 +4,59 @@
 
 {% block content %}
   <h1>Stage1</h1>
-  <div id="div" class="d-flex justify-content-center">
-    <img src="{% static 'game/Enter.png' %}" alt="enter"><br>
-    {% comment %} 텍스트 or 이미지로 문제 출력 {% endcomment %}
+  <div class="d-flex justify-content-center">
+    <img src="{% static 'game/Enter.png' %}" width="400" height="400" alt="enter"><br>
   </div>
   {% for nickname in nicknames  %}
     <input class = "datas" type="hidden" value={{ nickname.student_nickname }}></input><br>
   {% endfor %}
-  
-  {% for student in students %}
-    {{student.name}}
-    {{student.flag}}
-
-  {% endfor %}
-
+  <div id='div' class="d-flex justify-content-center">
+  </div>
   <div class="d-flex justify-content-center mt-5">
-    
+    <form class="myForm">
       <input class = "answer" type="text" value='완성시켜 입력하세요.'>
       <button class="my-btn">제출</button>
-   
+    </form>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
-    
+    // 문자열 인덱스 바꾸기 함수
+    String.prototype.replaceAt=function(idx, character) {
+    return this.substr(0, idx) + character + this.substr(idx+character.length);
+}
     let inputs = document.querySelectorAll(".datas")
     let div = document.querySelector("#div")
     let datas = []
-    for(let i=0; i<inputs.length; i++){
-      datas[i] = inputs[i].value
+    let problems = []
+    for(let i=0; i<inputs.length; i++) {
+      datas[i] = inputs[i].value;
+      for(let j=0; j<inputs[i].value.length; j++){
+        if (j % 2) {
+          // console.log(inputs[i].value.charAt(j))
+          //짝수 인덱스에서만
+        } else {
+          inputs[i].value = inputs[i].value.replaceAt(j, 'O')
+          // console.log(inputs[i].value)
+        }
+      }
+      problems[i] = inputs[i].value
     }
     let index = 0;
    
-    let p = `<p id='p'>${datas[index]}</p>`
-    div.insertAdjacentHTML('afterend',p)
-
+    let p = `<b id='p' style='font-size:3em'>${problems[index]}</b>`
+    div.insertAdjacentHTML('beforeend', p)
     let myBtn = document.querySelector(".my-btn");
-
+    let myForm = document.querySelector(".myForm")
     let answer2 = document.querySelector(".answer");
 
     answer2.addEventListener("click",(e)=>{
       answer2.value = "";
     })
-    myBtn.addEventListener("click",(e)=>{
+    myForm.addEventListener("submit",(e)=>{
+        e.preventDefault()
         let answer = document.querySelector(".answer").value;
-        if(answer===datas[index]){
+        if(answer === datas[index]){
           alert("정답")
           document.querySelector("#p").remove()
           index += 1
@@ -57,8 +65,8 @@
             return
           }
           document.querySelector(".answer").value = "";
-          p = `<p id='p'>${datas[index]}</p>`
-          div.insertAdjacentHTML('afterend',p)
+          p = `<b id='p' style='font-size:3em'>${problems[index]}</b>`
+          div.insertAdjacentHTML('beforeend',p)
         }
         else{
           alert("오답");
