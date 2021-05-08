@@ -4,12 +4,12 @@
 
 {% block content %}
   <h1>Stage1</h1>
-  <div class="d-flex justify-content-center">
+  <div id="div" class="d-flex justify-content-center">
     <img src="{% static 'game/Enter.png' %}" alt="enter"><br>
     {% comment %} 텍스트 or 이미지로 문제 출력 {% endcomment %}
   </div>
   {% for nickname in nicknames  %}
-    <p>{{ nickname }}</p><br>
+    <input class = "datas" type="hidden" value={{ nickname.student_nickname }}></input><br>
   {% endfor %}
   
   {% for student in students %}
@@ -19,9 +19,50 @@
   {% endfor %}
 
   <div class="d-flex justify-content-center mt-5">
-    <form action="#" method='POST'>
-      <input type="text" value='완성시켜 입력하세요.'>
-      <button>제출</button>
-    </form>
+    
+      <input class = "answer" type="text" value='완성시켜 입력하세요.'>
+      <button class="my-btn">제출</button>
+   
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    
+    let inputs = document.querySelectorAll(".datas")
+    let div = document.querySelector("#div")
+    let datas = []
+    for(let i=0; i<inputs.length; i++){
+      datas[i] = inputs[i].value
+    }
+    let index = 0;
+   
+    let p = `<p id='p'>${datas[index]}</p>`
+    div.insertAdjacentHTML('afterend',p)
+
+    let myBtn = document.querySelector(".my-btn");
+
+    let answer2 = document.querySelector(".answer");
+
+    answer2.addEventListener("click",(e)=>{
+      answer2.value = "";
+    })
+    myBtn.addEventListener("click",(e)=>{
+        let answer = document.querySelector(".answer").value;
+        if(answer===datas[index]){
+          alert("정답")
+          document.querySelector("#p").remove()
+          index += 1
+          if(datas.length <= index){
+            alert("끝")
+            return
+          }
+          document.querySelector(".answer").value = "";
+          p = `<p id='p'>${datas[index]}</p>`
+          div.insertAdjacentHTML('afterend',p)
+        }
+        else{
+          alert("오답");
+        }
+    })
+  </script>
 {% endblock content %}
