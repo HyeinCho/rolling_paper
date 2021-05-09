@@ -1,14 +1,35 @@
 from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
 from django.views.decorators.http import require_POST
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from ssafy5_3.models import Student
-from .models import Card, ChatMessage, BalanceGame
+from .models import Card, ChatMessage, BalanceGame, Nickname
+from ssafy5_3.models import Message
 from random import randint
 
+@login_required
 def stage1(request):
-    return render(request, 'game/stage1.html')
+    #모든 학생들 중 해당 스테이지에서 언급되는 학생들 flag를 통해 구분하기
+    students = Student.objects.all()
+    nicknames = Nickname.objects.all()
+    names = []
+    for i in range(len(nicknames)):
+        names.append(nicknames[i].student_name)
 
+    for student in students:
+        if student.name in names:
+            student.flag = False       
+
+    if request.is_ajax():
+        data = serializers.serialize('json', nicknames)
+        return HttpResponse(data, content_type='application/json')
+    else:
+        context = {
+            'nicknames':nicknames,
+        }
+        return render(request, 'game/stage1.html', context)
+    
 
 
 def stage2(request):
@@ -138,4 +159,8 @@ def getChatMessage(request, chat_id):
     return JsonResponse(context)
 
 def rewards(request):
-    return render(request, 'game/rewards.html')
+    messages = Message.objects.all()
+    context = {
+        'messages' : messages,
+    }
+    return render(request, 'game/rewards.html', context)

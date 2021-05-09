@@ -1,5 +1,10 @@
 from django.db import models
 
+class Nickname(models.Model):
+    student_nickname = models.CharField(max_length=10)
+    student_name = models.CharField(max_length=10)
+    flag = models.BooleanField()
+
 class Card(models.Model):
     student_id = models.IntegerField()
     card_img = models.ImageField()
