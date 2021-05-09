@@ -10,6 +10,10 @@ class Student(models.Model):
     flag = models.BooleanField()
     song = models.CharField(max_length=50)
     song_url = models.CharField(max_length=100)
+    git_url = models.CharField(max_length=100, blank=True)
+    insta_url = models.CharField(max_length=100, blank=True)
+    phone = models.CharField(max_length=100, blank=True)
+    email = models.CharField(max_length=100, blank=True)
 
 
 class Professor(models.Model):
