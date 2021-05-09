@@ -32,3 +32,8 @@ class Greeting(models.Model):
 class Comment(models.Model):
     from_msg = models.ManyToManyField(Student, related_name="to_msg")
     content = models.TextField()
+
+
+class Message(models.Model):
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, null=True, blank=True)
+    content = models.TextField()
