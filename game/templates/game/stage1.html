@@ -8,28 +8,60 @@
     <img src="{% static 'game/Enter.png' %}" width="400" height="400" alt="enter"><br>
   </div>
   {% for nickname in nicknames  %}
-    <input class = "datas" type="hidden" value={{ nickname.student_nickname }}></input><br>
+    <input class = "datas" type="hidden" value={{ nickname.student_nickname }}></input>
+    <input class = "datas-name" type="hidden" value={{ nickname.student_name }}></input>
   {% endfor %}
+
   <div id='div' class="d-flex justify-content-center">
   </div>
   <div class="d-flex justify-content-center mt-5">
+    <form class='move-next' style="display:none" method="POST" action="{% url 'game:stage2' %}">
+      {% csrf_token %}
+      <button type="button" class="btn btn-primary">다음 게임으로 이동</button>
+    </form>
     <form class="myForm">
       <input class = "answer" type="text" value='완성시켜 입력하세요.'>
       <button class="my-btn">제출</button>
     </form>
   </div>
 
+  <div class="modal" tabindex="-1" id='modal'>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
+    // 페이지 렌더링 시 모달 구현 ex) 게임을 시작하시겠습니까? bootstrap 모달 가져왔는데 실행시키는 방법을 모르겠음
+    // window.addEventListener("load", function(event) {
+    //   let myModal = document.getElementById('modal')
+    //   console.log(myModal)
+    // });
     // 문자열 인덱스 바꾸기 함수
     String.prototype.replaceAt=function(idx, character) {
-    return this.substr(0, idx) + character + this.substr(idx+character.length);
+    return this.substr(0, idx) + character + this.substr(idx+character.length)
 }
     let inputs = document.querySelectorAll(".datas")
+    let inputsName = document.querySelectorAll(".datas-name")
     let div = document.querySelector("#div")
     let datas = []
+    let datasName = []
     let problems = []
     for(let i=0; i<inputs.length; i++) {
+      datasName[i] = inputsName[i].value;
       datas[i] = inputs[i].value;
       for(let j=0; j<inputs[i].value.length; j++){
         if (j % 2) {
@@ -44,14 +76,14 @@
     }
     let index = 0;
    
-    let p = `<b id='p' style='font-size:3em'>${problems[index]}</b>`
+    let p = `<b id='p' style='font-size:3em' class='mt-5'>${problems[index]}</b>`
     div.insertAdjacentHTML('beforeend', p)
-    let myBtn = document.querySelector(".my-btn");
+    let myBtn = document.querySelector(".my-btn")
     let myForm = document.querySelector(".myForm")
-    let answer2 = document.querySelector(".answer");
+    let answer2 = document.querySelector(".answer")
 
     answer2.addEventListener("click",(e)=>{
-      answer2.value = "";
+      answer2.value = ""
     })
     myForm.addEventListener("submit",(e)=>{
         e.preventDefault()
@@ -62,14 +94,19 @@
           index += 1
           if(datas.length <= index){
             alert("끝")
+            // stage2 링크
+            let next = document.querySelector('.move-next')
+            next.setAttribute('style', 'display:block')
+            myForm.setAttribute('style', 'display:none')
             return
           }
-          document.querySelector(".answer").value = "";
-          p = `<b id='p' style='font-size:3em'>${problems[index]}</b>`
-          div.insertAdjacentHTML('beforeend',p)
+          document.querySelector(".answer").value = ""
+          p = `<b id='p' style='font-size:3em' class='mt-5'>${problems[index]}</b>`
+          div.insertAdjacentHTML('beforeend', p)
         }
         else{
-          alert("오답");
+          alert("오답")
+          alert(`Hint : ${datasName[index]}의 별명을 생각해보세요 (SSAFY데이, 카메라 조명 등)`)
         }
     })
   </script>

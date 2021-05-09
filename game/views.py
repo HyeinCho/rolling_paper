@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
 from django.views.decorators.http import require_POST
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from ssafy5_3.models import Student
 from .models import Card, ChatMessage, Nickname
 from random import randint
 
+@login_required
 def stage1(request):
     #모든 학생들 중 해당 스테이지에서 언급되는 학생들 flag를 통해 구분하기
     students = Student.objects.all()
