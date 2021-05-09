@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="app">
+<div class="d-flex flex-row-reverse my-3">
+    <button type="button" class="btn" :class="{'btn-primary':remainedNum}" style="width: 20%;">
+        열 수 있는 메세지 개수 <span class="badge bg-secondary" v-text="remainedNum"></span>
+    </button>
+</div>
+<div class="row">
+    <div class="col-3" v-for="message in messages" :key="message.id">
+        <template v-if="message.isLocked">
+            <div class="card text-white mb-3 bg-secondary" style="max-width: 18rem; cursor:pointer;" @click="openCard(message.id)" >
+            <div class="card-header">From. <i class="fas fa-user-lock"></i></div>
+            <div class="card-body">
+                <p class="card-text text-center"> <i class="fas fa-lock"></i> </p>
+            </div>
+        </template>
+        <template v-else>
+            <div class="card text-white mb-3" :class="message.color" style="max-width: 18rem;">
+            <div class="card-header">From. <span v-html="message.name"><i class="fas fa-user-lock"></i></span></div>
+            <div class="card-body">
+                <p class="card-text text-center" v-html="message.content"> </p>
+            </div>
+        </template>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            remainedNum: 4,
+            cardColors: [
+                'bg-primary', 'bg-success', 'bg-warning', 'bg-danger', 'bg-dark', 'bg-info'
+            ],
+            name : '<i class="fas fa-user-lock"></i>',
+            content : '<i class="fas fa-lock"></i>',
+            messages: [
+                {
+                    id: 1,
+                    name : '이민아',
+                    content : '교수님이 있어 제 2021년의 상반기는 훈훈했습니다. 매일 갬성 멘트 최고!!!!',
+                    isLocked : true,
+                },
+                {
+                    id: 2,
+                    name : '권오우',
+                    content : '6개월 동안 저희를 품어주셔서 감사합니다',
+                    isLocked : true,
+                },
+                {
+                    id: 3,
+                    name : '정희진',
+                    content : "항상 편안하고 즐겁게 수업해주셔서 너무 감사합니다 ♥ 제가 부족해서 길을 잃을 때가 종종 있었지만, 교수님 덕분에 긴 시간 동안 한 번도 지루한 적 없이 너무 즐겁게 수업 잘 들었습니다! 스윗한 교수님 만날 수 있어서 정말 행복했어요 ღ'ᴗ'ღ",
+                    isLocked : true,
+                },
+                {
+                    id: 4,
+                    name : '안동준',
+                    content : "변승환 교수님의 가르침 잊지 않겠습니다...",
+                    isLocked : true,
+                },
+                {
+                    id: 5,
+                    name : '이태용',
+                    content : "농부 후안은 바리스타입니다. 싸피 후안은 사랑입니다. 벌써 5개월이 다 되어가는데 알고리즘 3주마다 포기하지 않고 여기까지 올 수 있었던 것은 juan 교수님 덕분입니다. 1학기가 끝나고, 싸피가 끝나도 저희를 위한 등대가 되어주시길 바랍니다.",
+                    isLocked : true,
+                },
+                {
+                    id: 6,
+                    name : '이규정',
+                    content : "모든 장난 다 받아주시고 어려울 때마다 위안과 도움을 주신 변교수님 진심으로 감사드립니다. 덕분에 고난을 극복하고 싸피를 끝까지 잘 마무리할 수 있었습니다.",
+                    isLocked : true,
+                },
+                {
+                    id: 7,
+                    name : '익명',
+                    content : "변: 변하면 안돼요! 6기를 맡아도 5기3반이 최고입니다<br>승: 승환 교수님<br>환: 환...환타 좋아하세요? ㅋㅋㅋㅋㅋ 전 싫어해요. (단호)",
+                    isLocked : true,
+                }
+            ]
+        },
+        methods: {
+            openCard :function(id){
+                if (this.remainedNum > 0){
+                    this.messages[id-1].color = _.sample(this.cardColors)
+                    this.messages[id-1].isLocked = false
+                    this.remainedNum -= 1
+                }
+            },
+        },
+        computed: {
+
+        }
+    })
+</script>
+{% endblock content %}

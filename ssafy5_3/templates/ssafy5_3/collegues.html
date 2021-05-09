@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card p-4" >
+  <div class="card-body">
+    <div class="text-center">
+      <h3 class="d-inline">Juan</h3>
+    </div>
+
+    <div class="mt-3 text-center">
+     <h3>hihihihihi</h3>
+
+    </div>
+  </div>
+
+  <div class="row">
+    {% for student in students %}
+      <div class="col-4 col-lg-3 mb-3">
+        <div class="card">
+          <img src="/media/{{ student.profile_img }}" alt="{{ student.name }}">
+          <div class="card-body pb-0">
+            <h5 class="card-title text-center">{{ student.name }}</h5>
+            <p class="card-text text-center">{{ student.nickname }}</p>
+            <p><i class="fas fa-music" style="color:blueviolet; font-size:12px;"> {{ student.song }}</i></p>
+          </div>
+          <div class="card-footer">
+            {% if student.git_url %}
+              <div class="me-1"><a href="{{ student.git_url }}" class="text-dark text-decoration-none"><i class="fab fa-github"></i> Github</a></div>
+            {% endif %}
+            {% if student.insta_url %}
+              <div class="me-1"><a href="{{ student.insta_url }}" class="text-dark text-decoration-none"><i class="fab fa-instagram"></i> Insta</a></div>
+            {% endif %}
+            {% if student.email %}
+              <div class="me-1"><i class="fas fa-envelope"></i> {{ student.email }}</div>
+            {% endif %}
+            {% if student.phone %}
+              <div class="me-1"><i class="fas fa-mobile-alt"></i> {{ student.phone }}</div>
+            {% endif %}
+            
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+{% endblock content %}
