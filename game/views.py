@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from ssafy5_3.models import Student
 from .models import Card, ChatMessage, BalanceGame, Nickname
+from ssafy5_3.models import Message
 from random import randint
 
 @login_required
@@ -158,4 +159,8 @@ def getChatMessage(request, chat_id):
     return JsonResponse(context)
 
 def rewards(request):
-    return render(request, 'game/rewards.html')
+    messages = Message.objects.all()
+    context = {
+        'messages' : messages,
+    }
+    return render(request, 'game/rewards.html', context)
