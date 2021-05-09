@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from django.db.models import Q
 from ssafy5_3.models import Student
 from .models import Card, ChatMessage
+from ssafy5_3.models import Message
 from random import randint
 
 def stage1(request):
@@ -110,4 +111,8 @@ def getChatMessage(request, chat_id):
     return JsonResponse(context)
 
 def rewards(request):
-    return render(request, 'game/rewards.html')
+    messages = Message.objects.all()
+    context = {
+        'messages' : messages,
+    }
+    return render(request, 'game/rewards.html', context)
