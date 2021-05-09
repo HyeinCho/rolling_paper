@@ -29,15 +29,15 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
+          <h5 class="modal-title">Stage1</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p>Modal body text goes here.</p>
+          <p>게임을 시작하시겠습니까?</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Start</button>
         </div>
       </div>
     </div>
@@ -46,10 +46,15 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
     // 페이지 렌더링 시 모달 구현 ex) 게임을 시작하시겠습니까? bootstrap 모달 가져왔는데 실행시키는 방법을 모르겠음
-    // window.addEventListener("load", function(event) {
-    //   let myModal = document.getElementById('modal')
-    //   console.log(myModal)
-    // });
+    window.addEventListener("load", function(event) {
+      let modal = document.getElementById('modal')
+      var myModal = new bootstrap.Modal(document.getElementById('modal'), {
+        keyboard: false
+      })
+      console.log(modal)
+      console.log(myModal)
+      myModal.toggle()
+    });
     // 문자열 인덱스 바꾸기 함수
     String.prototype.replaceAt=function(idx, character) {
     return this.substr(0, idx) + character + this.substr(idx+character.length)
