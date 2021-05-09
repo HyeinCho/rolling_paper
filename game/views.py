@@ -1,27 +1,34 @@
 from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
 from django.views.decorators.http import require_POST
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from ssafy5_3.models import Student
-from .models import Card, ChatMessage, BalanceGame
+from .models import Card, ChatMessage, BalanceGame, Nickname
 from random import randint
 
+@login_required
 def stage1(request):
+    #모든 학생들 중 해당 스테이지에서 언급되는 학생들 flag를 통해 구분하기
     students = Student.objects.all()
-    nicknames = {
-        '이규정': '꽃규정',
-        '한상길': '데스파시토',
-        '조혜인': '조조교',
-        '이다영': 'MD장인',
-        '권오우': '오우마이걸',
-        '황지원': '갓덕삼',
-        '김주현': '반장drop',
-    }
-    context = {
-        'nicknames':nicknames,
-    }
-    return render(request, 'game/stage1.html', context)
+    nicknames = Nickname.objects.all()
+    names = []
+    for i in range(len(nicknames)):
+        names.append(nicknames[i].student_name)
 
+    for student in students:
+        if student.name in names:
+            student.flag = False       
+
+    if request.is_ajax():
+        data = serializers.serialize('json', nicknames)
+        return HttpResponse(data, content_type='application/json')
+    else:
+        context = {
+            'nicknames':nicknames,
+        }
+        return render(request, 'game/stage1.html', context)
+    
 
 
 def stage2(request):
