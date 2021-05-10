@@ -14,7 +14,11 @@ def messages(request):
 
 
 def collegues(request):
-    pass
+    students = Student.objects.all()
+    context = {
+        'students': students,
+    }
+    return render(request, 'ssafy5_3/collegues.html', context)
 
 
 def greetings(request):

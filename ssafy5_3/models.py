@@ -6,9 +6,14 @@ class Student(models.Model):
     webex_img = models.ImageField(upload_to='webex/')
     profile_img = models.ImageField(upload_to='profile/')
     name_img = models.ImageField(upload_to='name/')
+    card_img = models.ImageField(upload_to='card/')
     flag = models.BooleanField()
     song = models.CharField(max_length=50)
     song_url = models.CharField(max_length=100)
+    git_url = models.CharField(max_length=100, blank=True)
+    insta_url = models.CharField(max_length=100, blank=True)
+    phone = models.CharField(max_length=100, blank=True)
+    email = models.CharField(max_length=100, blank=True)
 
 
 class Professor(models.Model):
@@ -26,4 +31,9 @@ class Greeting(models.Model):
 
 class Comment(models.Model):
     from_msg = models.ManyToManyField(Student, related_name="to_msg")
+    content = models.TextField()
+
+
+class Message(models.Model):
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, null=True, blank=True)
     content = models.TextField()
