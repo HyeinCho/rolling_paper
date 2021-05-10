@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from ssafy5_3.models import Student
 from .models import Card, ChatMessage, BalanceGame, Nickname
-from ssafy5_3.models import Message
+from ssafy5_3.models import Message, Professor
 from random import randint
 
 @login_required
@@ -172,8 +172,49 @@ def getChatMessage(request, chat_id):
     return JsonResponse(context)
 
 def rewards(request):
-    messages = Message.objects.all()
+    messages = get_list_or_404(Message)
     context = {
         'messages' : messages,
     }
     return render(request, 'game/rewards.html', context)
+
+# Reward 페이지의 open에 필요한 coin 개수 불러오기
+def load_coin(request):
+    professor = get_object_or_404(Professor, pk=1)
+    coin = professor.coins
+    context = {
+        'coin' : coin
+    }
+    return JsonResponse(context)
+
+# DB에 있는 모든 메세지 불러오기
+def load_messages(request):
+    messages = get_list_or_404(Message)
+    serialized_messages = []
+    for message in messages:
+        message_content_br = message.content.replace('\n','<br>')
+        serialized_messages.append({
+            'id': message.pk,
+            'name': message.student.name if message.student else '<i class="fas fa-user-lock"></i>',
+            'content': message_content_br,
+            'isLocked' : message.is_locked,
+            'textSize' : 1 if (len(message_content_br)>60) else ( 2 if (len(message_content_br)>40) else 3)
+        })
+    context = {
+        'messages':serialized_messages
+    }
+    return JsonResponse(context)
+
+def open_message(request, id):
+    # 교수님 코인 1개 감소
+    professor = get_object_or_404(Professor, pk=1)
+    professor.coins = professor.coins - 1
+    professor.save()
+    # 메세지 오픈 여부 DB 변경
+    message = get_object_or_404(Message, pk=id)
+    message.is_locked= False
+    message.save()
+    context = {
+        
+    }
+    return JsonResponse(context)
