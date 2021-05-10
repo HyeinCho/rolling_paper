@@ -1,17 +1,26 @@
 [
   {
+    "model": "ssafy5_3.professor",
+    "pk": 1,
+    "fields": {
+      "name": "juan",
+      "coins": 0,
+      "game_clear": "False"
+    }
+  },
+  {
     "model": "ssafy5_3.student",
     "pk": 1,
     "fields": {
       "name": "강현구",
-      "nickname": "미답",
+      "nickname": "현구코인",
       "webex_img": "/media/webex/1.png",
-      "profile_img": "/media/profile/2.jpg",
+      "profile_img": "/media/profile/1.jpg",
       "name_img": "/media/name/1.png",
-      "card_img": "/media/card/2.jpg",
+      "card_img": "/media/card/1.jpg",
       "flag": "False",
-      "song": "프렌즈밴드의 생일축하 연주 - 카카오프렌즈",
-      "song_url": "https://www.youtube.com/watch?v=AWrXKyFzg0o",
+      "song": "How Far I'll Go - Auli'i Cravalho",
+      "song_url": "https://www.youtube.com/watch?v=cPAbx5kgCJo",
       "git_url": "",
       "insta_url": "",
       "phone": "",
@@ -365,7 +374,7 @@
     "pk": 20,
     "fields": {
       "name": "조혜인",
-      "nickname": "",
+      "nickname": "조조교님",
       "webex_img": "/media/webex/20.png",
       "profile_img": "/media/profile/20.jpg",
       "name_img": "/media/name/20.png",
@@ -422,7 +431,7 @@
     "pk": 23,
     "fields": {
       "name": "황지원",
-      "nickname": "",
+      "nickname": "덕삼",
       "webex_img": "/media/webex/23.png",
       "profile_img": "/media/profile/23.jpg",
       "name_img": "/media/name/23.png",
