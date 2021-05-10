@@ -1,13 +1,14 @@
 [
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 1,
+    "fields": {
       "name": "강현구",
       "nickname": "미답",
       "webex_img": "/media/webex/1.png",
-      "profile_img": "/media/profile/1.jpg",
+      "profile_img": "/media/profile/2.jpg",
       "name_img": "/media/name/1.png",
-      "card_img": "/media/card/1.jpg",
+      "card_img": "/media/card/2.jpg",
       "flag": "False",
       "song": "프렌즈밴드의 생일축하 연주 - 카카오프렌즈",
       "song_url": "https://www.youtube.com/watch?v=AWrXKyFzg0o",
@@ -19,7 +20,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 2,
+    "fields": {
       "name": "강혜원",
       "nickname": "골프채",
       "webex_img": "/media/webex/2.png",
@@ -37,7 +39,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 3,
+    "fields": {
       "name": "권오우",
       "nickname": "나또",
       "webex_img": "/media/webex/3.png",
@@ -55,7 +58,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 4,
+    "fields": {
       "name": "권희은",
       "nickname": "반장님 저격수",
       "webex_img": "/media/webex/4.png",
@@ -73,7 +77,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 5,
+    "fields": {
       "name": "김주현",
       "nickname": "감투왕",
       "webex_img": "/media/webex/5.png",
@@ -91,7 +96,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 6,
+    "fields": {
       "name": "김혜인",
       "nickname": "겨울맘",
       "webex_img": "/media/webex/6.png",
@@ -109,7 +115,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 7,
+    "fields": {
       "name": "박준",
       "nickname": "박준",
       "webex_img": "/media/webex/7.png",
@@ -127,7 +134,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 8,
+    "fields": {
       "name": "박준용",
       "nickname": "준드래곤",
       "webex_img": "/media/webex/8.png",
@@ -145,7 +153,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 9,
+    "fields": {
       "name": "안건우",
       "nickname": "꿈나무꺼누",
       "webex_img": "/media/webex/9.png",
@@ -163,7 +172,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 10,
+    "fields": {
       "name": "안기훈",
       "nickname": "t없ⓔ맑은0r0l",
       "webex_img": "/media/webex/10.png",
@@ -181,7 +191,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 11,
+    "fields": {
       "name": "안동준",
       "nickname": "안동준",
       "webex_img": "/media/webex/11.png",
@@ -199,7 +210,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 12,
+    "fields": {
       "name": "이규정",
       "nickname": "뀨",
       "webex_img": "/media/webex/12.png",
@@ -217,7 +229,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 13,
+    "fields": {
       "name": "이다영",
       "nickname": "README장인",
       "webex_img": "/media/webex/13.png",
@@ -235,7 +248,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 14,
+    "fields": {
       "name": "이민아",
       "nickname": "탈색하는꼰대3",
       "webex_img": "/media/webex/14.png",
@@ -253,7 +267,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 15,
+    "fields": {
       "name": "이우섭",
       "nickname": "쓰레기",
       "webex_img": "/media/webex/15.png",
@@ -271,7 +286,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 16,
+    "fields": {
       "name": "이태용",
       "nickname": "장발",
       "webex_img": "/media/webex/16.png",
@@ -289,7 +305,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 17,
+    "fields": {
       "name": "장진우",
       "nickname": "하회탈",
       "webex_img": "/media/webex/17.png",
@@ -307,7 +324,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 18,
+    "fields": {
       "name": "정희진",
       "nickname": "퐁듀",
       "webex_img": "/media/webex/18.png",
@@ -325,7 +343,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 19,
+    "fields": {
       "name": "조규태",
       "nickname": "막걸리",
       "webex_img": "/media/webex/19.png",
@@ -343,7 +362,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 20,
+    "fields": {
       "name": "조혜인",
       "nickname": "",
       "webex_img": "/media/webex/20.png",
@@ -361,7 +381,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 21,
+    "fields": {
       "name": "한상길",
       "nickname": "3반대표지각생",
       "webex_img": "/media/webex/21.png",
@@ -379,7 +400,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 22,
+    "fields": {
       "name": "한승희",
       "nickname": "야자대장",
       "webex_img": "/media/webex/22.png",
@@ -397,7 +419,8 @@
   },
   {
     "model": "ssafy5_3.student",
-    "fileds": {
+    "pk": 23,
+    "fields": {
       "name": "황지원",
       "nickname": "",
       "webex_img": "/media/webex/23.png",
