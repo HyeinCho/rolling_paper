@@ -10,6 +10,7 @@ urlpatterns = [
     path('stage2/balance/<int:pk>/', views.balance_game, name='balance_game'),
     path('stage2/balance/<int:game_pk>/<int:choice_pk>/', views.choose_one, name='choose_one'),
     path('stage3/', views.stage3, name='stage3'),
+    path('stage3/is_absent/', views.is_absent, name='is_absent'),
     path('bonus/', views.bonus, name='bonus'),
     path('bonus/<int:chat_id>/chat/', views.getChatMessage, name='chat'),
     path('rewards/', views.rewards, name='rewards'),

@@ -17,32 +17,32 @@
     {% comment %} 사람들 화면 {% endcomment %}
     <div class="col-9 d-flex flex-column p-1">
       {% comment %} 각 행 {% endcomment %}
-      <div class="firstrow d-flex justify-content-center row-1 row-cols-5 mt-5">
+      <div id="row1" class="firstrow d-flex justify-content-center row-1 row-cols-5 mt-5">
         <img src="/media/webex/juan.png" class="col p-0" style="width: 20%"></img>
         {% for student in row1 %}
           <img src="{{ student.webex_img }}" class="col p-0" style="width: 20%"></img>        
         {% endfor %}
       </div>
-      <div class="secondrow d-flex justify-content-center row-1 row-cols-5">
+      <div id="row2" class="secondrow d-flex justify-content-center row-1 row-cols-5">
         {% for student in row2 %}
           <img src="{{ student.webex_img }}" class="col p-0" style="width: 20%"></img>        
         {% endfor %}
       </div>
-      <div class="thirdrow d-flex justify-content-center row-1 row-cols-5">
+      <div id="row3" class="thirdrow d-flex justify-content-center row-1 row-cols-5">
         {% for student in row3 %}
           <img src="{{ student.webex_img }}" class="col p-0" style="width: 20%"></img>        
         {% endfor %}
       </div>
-      <div class="forthrow d-flex justify-content-center row-1 row-cols-5">
+      <div id="row4" class="forthrow d-flex justify-content-center row-1 row-cols-5">
         {% for student in row4 %}
           <img src="{{ student.webex_img }}" class="col p-0" style="width: 20%"></img>        
         {% endfor %}
       </div>
-      <div class="fifthrow d-flex justify-content-center row-1 row-cols-5 mb-5">
+      <div id="row5" class="fifthrow d-flex justify-content-center row-1 row-cols-5 mb-5">
         <img src="{{ row5.webex_img }}" class="col p-0" style="width: 20%"></img>
-         {% for student in absent_students %}
+        {% comment %} {% for student in absent_students %}
           <img src="{{ student.webex_img }}" class="col p-0" style="width: 20%"></img>        
-        {% endfor %}
+        {% endfor %} {% endcomment %}
       </div>
     </div>
     {% comment %} 채팅창 {% endcomment %}
@@ -51,7 +51,7 @@
         <span class="mx-2 my-1"><i class="fas fa-sort-down"></i>채팅</span>
         <span class="mx-2 my-1"><i class="fas fa-times"></i></span>
       </div>
-      <ul class="p-0" style="height: 75%">
+      <ul id="chatting" class="p-0" style="height: 75%">
         <div class="mx-2" style="font-size: 0.9rem">서울_3반_이규정 : 오늘 점심 뭐 드셨나요?</div>
         <div class="mx-2" style="font-size: 0.9rem">서울_3반_이규정 : 오늘도 사람이 좀 부족하네요</div>
         <div class="mx-2" style="font-size: 0.9rem">서울_3반_이규정 : 교수님 지금 누가 없나요?</div>
@@ -96,13 +96,49 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
   form = document.querySelector('#answer')
+  const nowAttended = []
+
+  const nowAttendedId = []
+
   form.addEventListener('submit', event => {
     event.preventDefault()
     
     const sentence = event.target[0].value
-    let absents = event.target.dataset.absents
 
-    console.log(absents)
+    axios.get('http://127.0.0.1:8000/game/stage3/is_absent/')
+    .then((response) => {
+      const absents = response.data.absents
+      for (absent in absents) {
+        const absentId = absents[absent].id
+        const absentName = absents[absent].name
+        const absentWebexImg = absents[absent].webex_img
+        const absentFlag = absents[absent].flag
+        if (sentence.includes(absentName) && !nowAttended.includes(absentName)) {
+          const row5 = document.querySelector('#row5')
+          const webexImg = document.createElement('img')
+
+          webexImg.setAttribute('class', 'col p-0')
+          webexImg.setAttribute('style', 'width: 20%')
+          webexImg.src = absentWebexImg
+          console.log(webexImg)
+          row5.append(webexImg)
+
+          nowAttended.push(absentName)
+          nowAttendedId.push(absentId)
+
+        }
+      }
+      // 채팅 추가되는 부분
+      const chatting = document.querySelector('#chatting')
+      const chat = document.createElement('div')
+
+      chat.setAttribute('class', 'mx-2')
+      chat.setAttribute('style', 'font-size: 0.9rem')
+      chat.innerText = 'juan : ' + sentence
+      
+      console.log(chat)
+      chatting.append(chat)
+    })
 
     event.target.reset()
   })

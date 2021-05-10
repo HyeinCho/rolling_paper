@@ -159,7 +159,6 @@ def stage3(request):
     row3 = attended_students[9:14]
     row4 = attended_students[14:19]
     row5 = attended_students[19]
-    absent_students = Student.objects.filter(flag=False)
     context = {
         'attended_students': attended_students,
         'row1': row1,
@@ -167,14 +166,25 @@ def stage3(request):
         'row3': row3,
         'row4': row4,
         'row5': row5,
-        'absent_students': absent_students
     }    
     return render(request, 'game/stage3.html', context)
 
-def isabsent(request):
-    absent_students = Student.objects.filter(flag=False)
-    print(absent_students)
-
+def is_absent(request):
+    absent_students = get_list_or_404(Student)
+    serialized_students = []
+    for student in absent_students:
+        if student.flag == False:
+            student_name = student.name[1:]
+            serialized_students.append({
+                'id': student.pk,
+                'name': student_name,
+                'webex_img': str(student.webex_img),
+                'flag': student.flag,
+            })
+    context = {
+        'absents': serialized_students,
+    }
+    return JsonResponse(context)
 
 def bonus(request):
     return render(request, 'game/bonus.html')
