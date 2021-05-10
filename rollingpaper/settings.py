@@ -124,7 +124,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'game' / 'static',
+    BASE_DIR / 'rollingpaper' / 'static',
 ]
 
 

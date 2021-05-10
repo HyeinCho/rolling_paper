@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
-
 {% block content %}
-{% comment %} 스타일 {% endcomment %}
+{% comment %} 상단 : 받는 사람 {% endcomment %}
+<h1 class="text-center my-5">To. juan</h1>
+<hr>
+
+<!-- 스타일 -->
 <style>
     .big-text{
         font-size: 2rem;
@@ -11,19 +14,13 @@
     }
 </style>
 
+{% comment %} 본문 : 편지들 {% endcomment %}
 <div id="app">
-{% comment %} 상단 우측 : 열 수 있는 메세지 개수를 표시하는 버튼 {% endcomment %}
-<div class="d-flex flex-row-reverse my-3">
-    <button type="button" class="btn" :class="{'btn-primary':remainedNum}" style="width: 20%;">
-        열 수 있는 메세지 개수 <span class="badge bg-secondary" v-text="remainedNum"></span>
-    </button>
-</div>
-{% comment %} 본문 : 메세지 내용 {% endcomment %}
 <div class="row" data-masonry='{"percentPosition": true }'>
     <div class="col-6 col-lg-4 col-xl-3" v-for="(message, idx) in messages" :key="idx">
         <template v-if="message.isLocked">
             <!-- not opend message -->
-            <div class="card text-white mb-3 bg-secondary" style="max-width: 20rem; cursor:pointer;" @click="openCard(idx)" >
+            <div class="card text-white mb-3 bg-secondary" style="max-width: 20rem;">
             <div class="card-header">From. <i class="fas fa-user-lock"></i></div>
             <div class="card-body">
                 <p class="card-text text-center"> <i class="fas fa-lock"></i> </p>
@@ -61,7 +58,6 @@
     const app = new Vue({
         el: "#app",
         data: {
-            remainedNum: 0, // 열 수 있는 메세지 개수
             // 부트스트랩 Card 에 적용되는 배경 색상 리스트
             cardColors: [
                 'bg-primary', 'bg-success', 'bg-warning', 'bg-danger', 'bg-dark', 'bg-info'
@@ -81,32 +77,7 @@
             // DB에서 가져온 Messages 데이터
             messages: null
         },
-        methods: {
-            // on click 시 호출되는 카드 열기 함수
-            openCard :function(id){
-                if (this.remainedNum > 0){
-                    this.messages[id].color = _.sample(this.cardColors)
-                    this.messages[id].fontColor = this.textColors[this.messages[id].color]
-                    this.messages[id].isLocked = false
-                    this.remainedNum -= 1
-                    const pk = this.messages[id].id
-                    axios({
-                        method:'get',
-                        url:BASE_URL +`/openmessage/${pk}/`,
-                    })
-                }
-            },
-        },
         created:function(){
-            // load coins
-            axios({
-                method:'get',
-                url: BASE_URL+'/coin/',
-            }).then(response =>{
-                this.remainedNum = response.data.coin
-            }).catch(err => {
-                console.log(err)
-            })
 
             // load messages
             axios({

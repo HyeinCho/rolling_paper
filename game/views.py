@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from ssafy5_3.models import Student
 from .models import Card, ChatMessage, BalanceGame, Nickname
-from ssafy5_3.models import Message
+from ssafy5_3.models import Message, Professor
 from random import randint, random
 
 @login_required
@@ -33,7 +33,10 @@ def stage1(request):
 
 
 def stage2(request):
-    if not Card.objects.all(): # 나중에 포스트로 바꿀거임
+    # if not Card.objects.all(): # 나중에 포스트로 바꿀거임
+    if request.method == 'POST':
+        Card.objects.all().delete()
+
         for _ in range(20):
             while True:
                 student = Student.objects.order_by("?").first()
@@ -152,6 +155,17 @@ def getHint(request, pk):
         return JsonResponse(data)
 
 
+@require_POST
+def endGame2(request):
+    # students = Student.objects.all()
+    cards = Card.objects.all()
+    for card in cards:
+        student = Student.objects.get(pk=card.student_id)
+        student.flag = True
+        student.save()
+    
+    return redirect(bonus)
+
 def stage3(request):
     attended_students = sorted(Student.objects.filter(flag=True), key=lambda x: random())
     row1 = attended_students[:4]
@@ -202,7 +216,7 @@ def getChatMessage(request, chat_id):
     return JsonResponse(context)
 
 def rewards(request):
-    messages = Message.objects.all()
+    messages = get_list_or_404(Message)
     context = {
         'messages' : messages,
     }

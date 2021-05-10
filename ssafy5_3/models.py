@@ -19,12 +19,19 @@ class Student(models.Model):
         return self.name
     
 
+    def __str__(self):
+        return f'{self.pk} - {self.name}'
+    
+
 
 class Professor(models.Model):
     name = models.CharField(max_length=10)
     webex_img = models.ImageField(upload_to='webex/')
     coins = models.IntegerField()
     game_clear = models.BooleanField()
+
+    def __str__(self):
+        return f'{self.pk} - {self.name}'
     
 
 class Greeting(models.Model):
@@ -41,3 +48,10 @@ class Comment(models.Model):
 class Message(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE, null=True, blank=True)
     content = models.TextField()
+    is_locked = models.BooleanField(default=True)
+
+    def __str__(self):
+        if self.student:
+            return f'{self.student.name} - {self.content}'
+        else:
+            return f'{self.content}'
