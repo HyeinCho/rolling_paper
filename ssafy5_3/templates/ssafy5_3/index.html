@@ -2,8 +2,17 @@
 {% load static %}
 {% load bootstrap5 %}
 
+{% comment %} 화면 상단 네비게이션 바 {% endcomment %}
+{% block navbar %}
+  {% include 'nav.html' %}
+  <script>
+    const iconSelected = document.querySelector('#icon-game')
+    iconSelected.classList.add('bold-icon')
+  </script>
+{% endblock navbar %}
+
+{% comment %} 본문 {% endcomment %}
 {% block index %}
-  {% include "nav.html" %}
   <div class='container '>
     <div class="d-flex justify-content-center mt-5">
       <img src="/media/{{ professor.webex_img }}" class="rounded-circle border border-5" alt="juan"><br>
