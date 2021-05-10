@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% comment %} 스타일 {% endcomment %}
 <style>
     .big-text{
         font-size: 2rem;
@@ -8,17 +9,18 @@
     .middle-text{
         font-size: 1.5rem;
     }
-
 </style>
 
 <div id="app">
+{% comment %} 상단 우측 : 열 수 있는 메세지 개수를 표시하는 버튼 {% endcomment %}
 <div class="d-flex flex-row-reverse my-3">
     <button type="button" class="btn" :class="{'btn-primary':remainedNum}" style="width: 20%;">
         열 수 있는 메세지 개수 <span class="badge bg-secondary" v-text="remainedNum"></span>
     </button>
 </div>
+{% comment %} 본문 : 메세지 내용 {% endcomment %}
 <div class="row" data-masonry='{"percentPosition": true }'>
-    <div class="col-3" v-for="(message, idx) in messages" :key="idx">
+    <div class="col-6 col-lg-4 col-xl-3" v-for="(message, idx) in messages" :key="idx">
         <template v-if="message.isLocked">
             <!-- not opend message -->
             <div class="card text-white mb-3 bg-secondary" style="max-width: 20rem; cursor:pointer;" @click="openCard(idx)" >
@@ -32,6 +34,7 @@
             <div class="card mb-3" :class="[message.color, message.fontColor]" style="max-width: 20rem;">
             <div class="card-header">From. <span v-html="message.name"><i class="fas fa-user-lock"></i></span></div>
             <div class="card-body">
+                <!-- 텍스트 길이에 따라 적용되는 스타일(글씨크기)가 달라진다. -->
                 <template v-if="message.textSize===1">
                     <p class="card-text text-center" v-html="message.content"> </p>
                 </template>
@@ -58,10 +61,12 @@
     const app = new Vue({
         el: "#app",
         data: {
-            remainedNum: 0,
+            remainedNum: 0, // 열 수 있는 메세지 개수
+            // 부트스트랩 Card 에 적용되는 배경 색상 리스트
             cardColors: [
                 'bg-primary', 'bg-success', 'bg-warning', 'bg-danger', 'bg-dark', 'bg-info'
             ],
+            // 부트스트랩 Card 에 적용되는 폰트 색상 리스트
             textColors: {
                 'bg-primary': 'text-white', 
                 'bg-success':'text-white', 
@@ -70,11 +75,14 @@
                 'bg-dark':'text-white', 
                 'bg-info':'text-dark' 
             },
+            // 값이 비어있을 때 default 출력할 icon
             name : '<i class="fas fa-user-lock"></i>',
             content : '<i class="fas fa-lock"></i>',
+            // DB에서 가져온 Messages 데이터
             messages: null
         },
         methods: {
+            // on click 시 호출되는 카드 열기 함수
             openCard :function(id){
                 if (this.remainedNum > 0){
                     this.messages[id].color = _.sample(this.cardColors)
@@ -88,9 +96,6 @@
                     })
                 }
             },
-        },
-        computed: {
-            
         },
         created:function(){
             // load coins

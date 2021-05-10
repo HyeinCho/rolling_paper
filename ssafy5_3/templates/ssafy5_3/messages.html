@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1 class="text-center my-3">To. juan</h1>
+{% comment %} 상단 : 받는 사람 {% endcomment %}
+<h1 class="text-center my-5">To. juan</h1>
 <hr>
 
+<!-- 스타일 -->
 <style>
     .big-text{
         font-size: 2rem;
@@ -10,12 +12,12 @@
     .middle-text{
         font-size: 1.5rem;
     }
-
 </style>
 
+{% comment %} 본문 : 편지들 {% endcomment %}
 <div id="app">
 <div class="row" data-masonry='{"percentPosition": true }'>
-    <div class="col-3" v-for="(message, idx) in messages" :key="idx">
+    <div class="col-6 col-lg-4 col-xl-3" v-for="(message, idx) in messages" :key="idx">
         <template v-if="message.isLocked">
             <!-- not opend message -->
             <div class="card text-white mb-3 bg-secondary" style="max-width: 20rem;">
@@ -29,6 +31,7 @@
             <div class="card mb-3" :class="[message.color, message.fontColor]" style="max-width: 20rem;">
             <div class="card-header">From. <span v-html="message.name"><i class="fas fa-user-lock"></i></span></div>
             <div class="card-body">
+                <!-- 텍스트 길이에 따라 적용되는 스타일(글씨크기)가 달라진다. -->
                 <template v-if="message.textSize===1">
                     <p class="card-text text-center" v-html="message.content"> </p>
                 </template>
@@ -55,9 +58,11 @@
     const app = new Vue({
         el: "#app",
         data: {
+            // 부트스트랩 Card 에 적용되는 배경 색상 리스트
             cardColors: [
                 'bg-primary', 'bg-success', 'bg-warning', 'bg-danger', 'bg-dark', 'bg-info'
             ],
+            // 부트스트랩 Card 에 적용되는 폰트 색상 리스트
             textColors: {
                 'bg-primary': 'text-white', 
                 'bg-success':'text-white', 
@@ -66,14 +71,11 @@
                 'bg-dark':'text-white', 
                 'bg-info':'text-dark' 
             },
+            // 값이 비어있을 때 default 출력할 icon
             name : '<i class="fas fa-user-lock"></i>',
             content : '<i class="fas fa-lock"></i>',
+            // DB에서 가져온 Messages 데이터
             messages: null
-        },
-        methods: {
-        },
-        computed: {
-            
         },
         created:function(){
 
