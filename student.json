@@ -1,0 +1,416 @@
+[
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "강현구",
+      "nickname": "미답",
+      "webex_img": "/media/webex/1.png",
+      "profile_img": "/media/profile/1.jpg",
+      "name_img": "/media/name/1.png",
+      "card_img": "/media/card/1.jpg",
+      "flag": "False",
+      "song": "프렌즈밴드의 생일축하 연주 - 카카오프렌즈",
+      "song_url": "https://www.youtube.com/watch?v=AWrXKyFzg0o",
+      "git_url": "",
+      "insta_url": "",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "강혜원",
+      "nickname": "골프채",
+      "webex_img": "/media/webex/2.png",
+      "profile_img": "/media/profile/2.jpg",
+      "name_img": "/media/name/2.png",
+      "card_img": "/media/card/2.jpg",
+      "flag": "False",
+      "song": "함께라는 이유 - 포레스텔라",
+      "song_url": "https://www.youtube.com/watch?v=Xmq8csX9R9c",
+      "git_url": "https://github.com/khw02270",
+      "insta_url": "https://www.instagram.com/hyewoniee_k/",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "권오우",
+      "nickname": "나또",
+      "webex_img": "/media/webex/3.png",
+      "profile_img": "/media/profile/3.png",
+      "name_img": "/media/name/3.png",
+      "card_img": "/media/card/3.jpg",
+      "flag": "False",
+      "song": "오마이걸 - 비밀정원",
+      "song_url": "https://www.youtube.com/watch?v=yrCU2ADPPYE",
+      "git_url": "https://github.com/ohwoo-kwon",
+      "insta_url": "https://www.instagram.com/kow_oh",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "권희은",
+      "nickname": "반장님 저격수",
+      "webex_img": "/media/webex/4.png",
+      "profile_img": "/media/profile/4.jpg",
+      "name_img": "/media/name/4.png",
+      "card_img": "/media/card/4.jpg",
+      "flag": "False",
+      "song": "이름에게 - 아이유",
+      "song_url": "https://www.youtube.com/watch?v=JSOBF_WhqEM",
+      "git_url": "",
+      "insta_url": "https://www.instagram.com/heuinee777/",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "김주현",
+      "nickname": "감투왕",
+      "webex_img": "/media/webex/5.png",
+      "profile_img": "/media/profile/5.jpg",
+      "name_img": "/media/name/5.png",
+      "card_img": "/media/card/5.jpg",
+      "flag": "False",
+      "song": "당신과는 천천히 - 장범준",
+      "song_url": "https://www.youtube.com/watch?v=-wwuoWFmgq4",
+      "git_url": "https://github.com/Joohyeon-Jacob",
+      "insta_url": "https://www.instagram.com/joohyeon_greg/",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "김혜인",
+      "nickname": "겨울맘",
+      "webex_img": "/media/webex/6.png",
+      "profile_img": "/media/profile/6.jpg",
+      "name_img": "/media/name/6.png",
+      "card_img": "/media/card/6.jpg",
+      "flag": "False",
+      "song": "프렌즈밴드의 생일축하 연주 - 카카오프렌즈",
+      "song_url": "https://www.youtube.com/watch?v=AWrXKyFzg0o",
+      "git_url": "https://github.com/hyeinkim1305",
+      "insta_url": "",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "박준",
+      "nickname": "박준",
+      "webex_img": "/media/webex/7.png",
+      "profile_img": "/media/profile/7.jpg",
+      "name_img": "/media/name/7.png",
+      "card_img": "/media/card/7.jpg",
+      "flag": "False",
+      "song": "커피 한 잔 할래요 - 최준",
+      "song_url": "https://www.youtube.com/watch?v=OYQqlGzz6Cg",
+      "git_url": "",
+      "insta_url": "https://www.instagram.com/storybyjune_",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "박준용",
+      "nickname": "준드래곤",
+      "webex_img": "/media/webex/8.png",
+      "profile_img": "/media/profile/8.gif",
+      "name_img": "/media/name/8.png",
+      "card_img": "/media/card/8.jpg",
+      "flag": "False",
+      "song": "빨간 차 - 디핵",
+      "song_url": "https://www.youtube.com/watch?v=1prQI9iB168",
+      "git_url": "https://github.com/JunyongPark2",
+      "insta_url": "",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "안건우",
+      "nickname": "꿈나무꺼누",
+      "webex_img": "/media/webex/9.png",
+      "profile_img": "/media/profile/9.jpg",
+      "name_img": "/media/name/9.png",
+      "card_img": "/media/card/9.jpg",
+      "flag": "False",
+      "song": "프렌즈밴드의 생일축하 연주 - 카카오프렌즈",
+      "song_url": "https://www.youtube.com/watch?v=AWrXKyFzg0o",
+      "git_url": "https://github.com/ahngeunwoo96",
+      "insta_url": "https://www.instagram.com/gunnnnnu_",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "안기훈",
+      "nickname": "t없ⓔ맑은0r0l",
+      "webex_img": "/media/webex/10.png",
+      "profile_img": "/media/profile/10.jpg",
+      "name_img": "/media/name/10.png",
+      "card_img": "/media/card/10.jpg",
+      "flag": "False",
+      "song": "거꾸로 강을 거슬러 오르는 저 힘찬 연어들처럼 - 강산에",
+      "song_url": "https://www.youtube.com/watch?v=tLfPWyfHfWg",
+      "git_url": "https://github.com/KiHoonAhn1",
+      "insta_url": "https://www.instagram.com/ahn_kiiih",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "안동준",
+      "nickname": "안동준",
+      "webex_img": "/media/webex/11.png",
+      "profile_img": "/media/profile/11.jpg",
+      "name_img": "/media/name/11.png",
+      "card_img": "/media/card/11.jpg",
+      "flag": "False",
+      "song": "LIKEY - 트와이스",
+      "song_url": "https://www.youtube.com/watch?v=Dqn65yZYswI",
+      "git_url": "",
+      "insta_url": "https://www.instagram.com/andongjun903",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "이규정",
+      "nickname": "뀨",
+      "webex_img": "/media/webex/12.png",
+      "profile_img": "/media/profile/12.jpg",
+      "name_img": "/media/name/12.png",
+      "card_img": "/media/card/12.jpg",
+      "flag": "False",
+      "song": "불도저 - 스윙스",
+      "song_url": "https://www.youtube.com/watch?v=qOGR3qxJhcU",
+      "git_url": "",
+      "insta_url": "https://www.instagram.com/2gudeong",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "이다영",
+      "nickname": "README장인",
+      "webex_img": "/media/webex/13.png",
+      "profile_img": "/media/profile/13.jpg",
+      "name_img": "/media/name/13.png",
+      "card_img": "/media/card/13.jpg",
+      "flag": "False",
+      "song": "사장님 도박은 재미로 하셔야 합니다 - BIBI",
+      "song_url": "https://www.youtube.com/watch?v=UelGHfjtXA4",
+      "git_url": "https://github.com/allzero-works",
+      "insta_url": "https://www.instagram.com/allco_okie/",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "이민아",
+      "nickname": "탈색하는꼰대3",
+      "webex_img": "/media/webex/14.png",
+      "profile_img": "/media/profile/14.jpg",
+      "name_img": "/media/name/14.png",
+      "card_img": "/media/card/14.jpg",
+      "flag": "False",
+      "song": "8282 - 다비치",
+      "song_url": "https://www.youtube.com/watch?v=FWTfKpZ0VWU",
+      "git_url": "",
+      "insta_url": "https://instagram.com/nariday_nariway?igshid=hxagf1fc1bkw",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "이우섭",
+      "nickname": "쓰레기",
+      "webex_img": "/media/webex/15.png",
+      "profile_img": "/media/profile/15.jpg",
+      "name_img": "/media/name/15.png",
+      "card_img": "/media/card/15.jpg",
+      "flag": "False",
+      "song": "달라달라 - itzy",
+      "song_url": "https://www.youtube.com/watch?v=uzt5RZKi3iI",
+      "git_url": "",
+      "insta_url": "https://instagram.com/woo_sub2",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "이태용",
+      "nickname": "장발",
+      "webex_img": "/media/webex/16.png",
+      "profile_img": "/media/profile/16.jpg",
+      "name_img": "/media/name/16.png",
+      "card_img": "/media/card/16.png",
+      "flag": "False",
+      "song": "프렌즈밴드의 생일축하 연주 - 카카오프렌즈",
+      "song_url": "https://www.youtube.com/watch?v=AWrXKyFzg0o",
+      "git_url": "",
+      "insta_url": "https://instagram.com/lee.tae_yong",
+      "phone": "010-2536-4375",
+      "email": "tyl1996@naver.com"
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "장진우",
+      "nickname": "하회탈",
+      "webex_img": "/media/webex/17.png",
+      "profile_img": "/media/profile/17.jpg",
+      "name_img": "/media/name/17.png",
+      "card_img": "/media/card/17.jpg",
+      "flag": "False",
+      "song": "Counting Stars - One Republic",
+      "song_url": "https://www.youtube.com/watch?v=hT_nvWreIhg",
+      "git_url": "https://github.com/Jang-jinwoo",
+      "insta_url": "https://instagram.com/jinwoooo_94",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "정희진",
+      "nickname": "퐁듀",
+      "webex_img": "/media/webex/18.png",
+      "profile_img": "/media/profile/18.jpg",
+      "name_img": "/media/name/18.png",
+      "card_img": "/media/card/18.jpg",
+      "flag": "False",
+      "song": "사랑한대 - 스탠딩 에그",
+      "song_url": "https://www.youtube.com/watch?v=WWPSJUfIick",
+      "git_url": "https://github.com/sksgmlwlsl34",
+      "insta_url": "https://instagram.com/jhj_032296",
+      "phone": "010-3008-6670",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "조규태",
+      "nickname": "막걸리",
+      "webex_img": "/media/webex/19.png",
+      "profile_img": "/media/profile/19.jpg",
+      "name_img": "/media/name/19.png",
+      "card_img": "/media/card/19.jpg",
+      "flag": "False",
+      "song": "프렌즈밴드의 생일축하 연주 - 카카오프렌즈",
+      "song_url": "https://www.youtube.com/watch?v=AWrXKyFzg0o",
+      "git_url": "https://github.com/Gyutae-Jo",
+      "insta_url": "",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "조혜인",
+      "nickname": "",
+      "webex_img": "/media/webex/20.png",
+      "profile_img": "/media/profile/20.jpg",
+      "name_img": "/media/name/20.png",
+      "card_img": "/media/card/20.jpg",
+      "flag": "False",
+      "song": "캔디 - 백현",
+      "song_url": "https://www.youtube.com/watch?v=bM5udoON-6w",
+      "git_url": "https://github.com/HyeinCho",
+      "insta_url": "https://www.instagram.com/hyeinee._",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "한상길",
+      "nickname": "3반대표지각생",
+      "webex_img": "/media/webex/21.png",
+      "profile_img": "/media/profile/21.jpg",
+      "name_img": "/media/name/21.png",
+      "card_img": "/media/card/21.jpg",
+      "flag": "False",
+      "song": "La Libertad - Alvaro Soler",
+      "song_url": "https://www.youtube.com/watch?v=okAqaED2w4g",
+      "git_url": "",
+      "insta_url": "https://www.instagram.com/Hsang712",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "한승희",
+      "nickname": "야자대장",
+      "webex_img": "/media/webex/22.png",
+      "profile_img": "/media/profile/22.jpg",
+      "name_img": "/media/name/22.png",
+      "card_img": "/media/card/22.jpg",
+      "flag": "False",
+      "song": "Dare To Live(Vivere) - 고은성, 백인태, 손태진, 유슬기 ",
+      "song_url": "https://www.youtube.com/watch?v=GcTtNWg9K0Y",
+      "git_url": "https://github.com/chengxxi",
+      "insta_url": "https://www.instagram.com/chengxxi",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "fileds": {
+      "name": "황지원",
+      "nickname": "",
+      "webex_img": "/media/webex/23.png",
+      "profile_img": "/media/profile/23.jpg",
+      "name_img": "/media/name/23.png",
+      "card_img": "/media/card/23.png",
+      "flag": "False",
+      "song": "데스파시토 - 한상길",
+      "song_url": "https://www.youtube.com/watch?v=4bmUFRxNEIg",
+      "git_url": "github.com/WonHwang",
+      "insta_url": "https://www.instagram.com/doodoongsil.h",
+      "phone": "",
+      "email": ""
+    }
+  }
+]

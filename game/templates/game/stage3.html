@@ -1,53 +1,104 @@
 {% extends 'base.html' %}
 
-{% block content %}
-<div>
-  <div class="col-11 row d-flex justify-content-center align-items-stretch" style="background-color: #E0E0E0">
-    <div class="col-8 d-flex flex-column">
-      <div class="d-flex justify-content-center row">
-        <p class="col">1</p>
-        <p class="col">2</p>
-        <p class="col">3</p>
-        <p class="col">4</p>
-        <p class="col">5</p>
+{% block webex %}
+<div class="d-flex justify-content-center align-items-center">
+  <div class="col-11 row d-flex justify-content-around align-items-stretch p-0" style="background-color: #E0E0E0">
+    <div class="col-12 d-flex justify-content-between align-items-center m-0 p-0">
+      <div>
       </div>
-      <div class="d-flex justify-content-center row">
-        <p class="col">6</p>
-        <p class="col">7</p>
-        <p class="col">8</p>
-        <p class="col">9</p>
-        <p class="col">10</p>
+      <div>
+        <p class="text-center m-1"><img src="/media/webex/webex.png" style="width: 22px"> Cisco Webex Meetings</p>
       </div>
-      <div class="d-flex justify-content-center row">
-        <p class="col">11</p>
-        <p class="col">12</p>
-        <p class="col">13</p>
-        <p class="col">14</p>
-        <p class="col">15</p>
-      </div>
-      <div class="d-flex justify-content-center row">
-        <p class="col">16</p>
-        <p class="col">17</p>
-        <p class="col">18</p>
-        <p class="col">19</p>
-        <p class="col">20</p>
-      </div>
-      <div class="d-flex justify-content-center row">
-        <p class="col">21</p>
-        <p class="col">22</p>
-        <p class="col">23</p>
-        <p class="col">something</p>
-        <p class="col">something</p>
+      <div>
+        <p class="text-center m-1" style="font-size: 0.75rem">미팅 정보 | 연결됨</p>
       </div>
     </div>
-    <div class="col-3 d-flex align-items-stretch">
-      <div class="col-12" style="background-color: #FFFFFF">
-        <p>somthing</p>
+    <hr class="m-0">
+    {% comment %} 사람들 화면 {% endcomment %}
+    <div class="col-9 d-flex flex-column p-1">
+      {% comment %} 각 행 {% endcomment %}
+      <div class="d-flex justify-content-center row-1 row-cols-5 mt-5">
+        <img src="/media/webex/1.png" class="col p-0" ></img>
+        <img src="/media/webex/2.png" class="col p-0" ></img>
+        <img src="/media/webex/3.png" class="col p-0" ></img>
+        <img src="/media/webex/4.png" class="col p-0" ></img>
+        <img src="/media/webex/5.png" class="col p-0" ></img>
+      </div>
+      <div class="d-flex justify-content-center row-1">
+        <img src="/media/webex/1.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/2.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/3.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/4.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/5.png" class="col p-0" style="width: 20%"></img>
+      </div>
+      <div class="d-flex justify-content-center row-1">
+        <img src="/media/webex/1.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/2.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/3.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/4.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/5.png" class="col p-0" style="width: 20%"></img>
+      </div>
+      <div class="d-flex justify-content-center row-1">
+        <img src="/media/webex/1.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/2.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/3.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/4.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/5.png" class="col p-0" style="width: 20%"></img>
+      </div>
+      <div class="d-flex justify-content-center row-1 mb-5">
+        <img src="/media/webex/1.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/2.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/3.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/4.png" class="col p-0" style="width: 20%"></img>
+        <img src="/media/webex/5.png" class="col p-0" style="width: 20%"></img>
       </div>
     </div>
-    <img src="/../../../data/이미지/웹엑스.png" alt="">
+    {% comment %} 채팅창 {% endcomment %}
+    <div class="col-3 flex-column p-0" style="background-color: #FFFFFF">
+      <div class="d-flex justify-content-between">
+        <span class="mx-2 my-1"><i class="fas fa-sort-down"></i>채팅</span>
+        <span class="mx-2 my-1"><i class="fas fa-times"></i></span>
+      </div>
+      <ul class="p-0" style="height: 75%">
+        <div class="mx-2" style="font-size: 0.9rem">서울_3반_이규정 : 오늘 점심 뭐 드셨나요?</div>
+        <div class="mx-2" style="font-size: 0.9rem">서울_3반_이규정 : 오늘도 사람이 좀 부족하네요</div>
+        <div class="mx-2" style="font-size: 0.9rem">서울_3반_이규정 : 교수님 지금 누가 없나요?</div>
+      </ul>
+      <hr class="m-0">
+      <div class="col-12">
+        <form class="answer">
+          {% comment %} <textarea placeholder="정답을 입력하세요." class="border-0"></textarea> {% endcomment %}
+          <input type="text" col="2" size="40" placeholder="정답을 입력하세요." class="border-0" autofocus>
+        </form>
+      </div>
+    </div>
+    <hr class="m-0">
+    {% comment %} 버튼 {% endcomment %}
+    <div class="col-12 d-flex justify-content-between">
+      {% comment %} 빈 공간 {% endcomment %}
+      <div></div>
+      {% comment %} 가운데 버튼 6개 {% endcomment %}
+      <div>
+        <button class="btn btn-light rounded-pill my-2 mx-1" style="font-size: 0.75rem"><i class="fas fa-microphone-slash"></i> 음소거 해제</button>
+        <button class="btn btn-light rounded-pill my-2 mx-1" style="font-size: 0.75rem"><i class="fas fa-video-slash"></i> 비디오 시작</button>
+        <button class="btn btn-light rounded-pill my-2 mx-1" style="font-size: 0.75rem"><i class="far fa-caret-square-up"></i> 공유</button>
+        <button class="btn btn-light rounded-circle my-2 mx-1" style="font-size: 0.75rem"><i class="far fa-grin-wink"></i></button>
+        <button class="btn btn-light rounded-circle my-2 mx-1" style="font-size: 0.75rem"><i class="fas fa-ellipsis-h"></i></button>
+        <button class="btn btn-danger rounded-circle my-2 mx-1" style="font-size: 0.75rem"><i class="fas fa-times"></i></button>
+      </div>
+      {% comment %} 오른쪽 버튼 그룹 div 두번 감쌈 {% endcomment %}
+      <div class="p-2">
+        <div class="btn-group bg-light rounded-pill" role="group">
+          <button class="btn btn-light rounded-pill px-2 m-0" style="font-size: 0.7rem"><i class="far fa-user"></i> 참가자</button>
+          <button class="btn btn-light rounded-pill px-2 m-0" style="font-size: 0.7rem"><i class="far fa-comment-dots"></i> 채팅</button>
+          <button class="btn btn-light rounded-pill px-2 m-0" style="font-size: 0.7rem"><i class="fas fa-ellipsis-h"></i></button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<script></script>
+<script>
+  
+</script>
 {% endblock %}
