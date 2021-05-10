@@ -14,6 +14,10 @@ class Student(models.Model):
     insta_url = models.CharField(max_length=100, blank=True)
     phone = models.CharField(max_length=100, blank=True)
     email = models.CharField(max_length=100, blank=True)
+    
+    def __str__(self):
+        return self.name
+    
 
 
 class Professor(models.Model):
