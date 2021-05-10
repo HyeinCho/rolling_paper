@@ -54,7 +54,7 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 <script>
-    // const BASE_URL = 'http://127.0.0.1:8000/'
+    const BASE_URL = 'http://127.0.0.1:8000/game'
     const app = new Vue({
         el: "#app",
         data: {
@@ -81,8 +81,11 @@
                     this.messages[id].fontColor = this.textColors[this.messages[id].color]
                     this.messages[id].isLocked = false
                     this.remainedNum -= 1
-
-                    
+                    const pk = this.messages[id].id
+                    axios({
+                        method:'get',
+                        url:BASE_URL +`/openmessage/${pk}/`,
+                    })
                 }
             },
         },
@@ -93,7 +96,7 @@
             // load coins
             axios({
                 method:'get',
-                url:'http://127.0.0.1:8000/game/coin/',
+                url: BASE_URL+'/coin/',
             }).then(response =>{
                 this.remainedNum = response.data.coin
             }).catch(err => {
@@ -103,7 +106,7 @@
             // load messages
             axios({
                 method:'get',
-                url:'http://127.0.0.1:8000/game/messages/',
+                url:BASE_URL +'/messages/',
             }).then(response =>{
                 this.messages = _.shuffle(response.data.messages)
             }).catch(err => {

@@ -13,8 +13,4 @@ urlpatterns = [
     path('bonus/', views.bonus, name='bonus'),
     path('bonus/<int:chat_id>/chat/', views.getChatMessage, name='chat'),
     path('rewards/', views.rewards, name='rewards'),
-    path('coin/', views.load_coin, name='coin'),
-    path('messages/', views.load_messages, name='messages'),
-    path('openmessage/<int:id>/', views.open_message, name='openMessage'),
-
 ]
