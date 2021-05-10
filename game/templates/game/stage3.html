@@ -17,40 +17,32 @@
     {% comment %} 사람들 화면 {% endcomment %}
     <div class="col-9 d-flex flex-column p-1">
       {% comment %} 각 행 {% endcomment %}
-      <div class="d-flex justify-content-center row-1 row-cols-5 mt-5">
-        <img src="/media/webex/1.png" class="col p-0" ></img>
-        <img src="/media/webex/2.png" class="col p-0" ></img>
-        <img src="/media/webex/3.png" class="col p-0" ></img>
-        <img src="/media/webex/4.png" class="col p-0" ></img>
-        <img src="/media/webex/5.png" class="col p-0" ></img>
+      <div class="firstrow d-flex justify-content-center row-1 row-cols-5 mt-5">
+        <img src="/media/webex/juan.png" class="col p-0" style="width: 20%"></img>
+        {% for student in row1 %}
+          <img src="{{ student.webex_img }}" class="col p-0" style="width: 20%"></img>        
+        {% endfor %}
       </div>
-      <div class="d-flex justify-content-center row-1">
-        <img src="/media/webex/1.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/2.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/3.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/4.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/5.png" class="col p-0" style="width: 20%"></img>
+      <div class="secondrow d-flex justify-content-center row-1 row-cols-5">
+        {% for student in row2 %}
+          <img src="{{ student.webex_img }}" class="col p-0" style="width: 20%"></img>        
+        {% endfor %}
       </div>
-      <div class="d-flex justify-content-center row-1">
-        <img src="/media/webex/1.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/2.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/3.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/4.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/5.png" class="col p-0" style="width: 20%"></img>
+      <div class="thirdrow d-flex justify-content-center row-1 row-cols-5">
+        {% for student in row3 %}
+          <img src="{{ student.webex_img }}" class="col p-0" style="width: 20%"></img>        
+        {% endfor %}
       </div>
-      <div class="d-flex justify-content-center row-1">
-        <img src="/media/webex/1.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/2.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/3.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/4.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/5.png" class="col p-0" style="width: 20%"></img>
+      <div class="forthrow d-flex justify-content-center row-1 row-cols-5">
+        {% for student in row4 %}
+          <img src="{{ student.webex_img }}" class="col p-0" style="width: 20%"></img>        
+        {% endfor %}
       </div>
-      <div class="d-flex justify-content-center row-1 mb-5">
-        <img src="/media/webex/1.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/2.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/3.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/4.png" class="col p-0" style="width: 20%"></img>
-        <img src="/media/webex/5.png" class="col p-0" style="width: 20%"></img>
+      <div class="fifthrow d-flex justify-content-center row-1 row-cols-5 mb-5">
+        <img src="{{ row5.webex_img }}" class="col p-0" style="width: 20%"></img>
+         {% for student in absent_students %}
+          <img src="{{ student.webex_img }}" class="col p-0" style="width: 20%"></img>        
+        {% endfor %}
       </div>
     </div>
     {% comment %} 채팅창 {% endcomment %}
@@ -65,12 +57,15 @@
         <div class="mx-2" style="font-size: 0.9rem">서울_3반_이규정 : 교수님 지금 누가 없나요?</div>
       </ul>
       <hr class="m-0">
+
       <div class="col-12">
-        <form class="answer">
+      {% comment %} 정답 입력창 {% endcomment %}
+        <form id="answer" data-absents="{{ absent_students }}">
           {% comment %} <textarea placeholder="정답을 입력하세요." class="border-0"></textarea> {% endcomment %}
           <input type="text" col="2" size="40" placeholder="정답을 입력하세요." class="border-0" autofocus>
         </form>
       </div>
+
     </div>
     <hr class="m-0">
     {% comment %} 버튼 {% endcomment %}
@@ -98,7 +93,18 @@
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
-  
+  form = document.querySelector('#answer')
+  form.addEventListener('submit', event => {
+    event.preventDefault()
+    
+    const sentence = event.target[0].value
+    let absents = event.target.dataset.absents
+
+    console.log(absents)
+
+    event.target.reset()
+  })
 </script>
 {% endblock %}

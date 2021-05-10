@@ -334,5 +334,27 @@
       
       "content": "당황하실 때 빨개지는 얼굴\n잊지 못할 것 같습니다"
     }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 43,
+    "fields": {
+      "student": 1,
+      "content": "항상 늦게 과제 제출에도 기달려주시고, 조금 벅차할때 도와주셨어서 항상 감사했습니다!"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 44,
+    "fields": {
+      "content": "여러분 수고하셨어요 내일 봬요~ 안⬆녕~"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 45,
+    "fields": {
+      "content": "???: 저 실제로 보면 진짜 잘생겼는데"
+    }
   }
 ]
