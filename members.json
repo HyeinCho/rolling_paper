@@ -4,6 +4,7 @@
     "pk": 1,
     "fields": {
       "name": "juan",
+      "webex_img": "/media/webex/juan.png",
       "coins": 0,
       "game_clear": "False"
     }
@@ -22,8 +23,8 @@
       "song": "How Far I'll Go - Auli'i Cravalho",
       "song_url": "https://www.youtube.com/watch?v=cPAbx5kgCJo",
       "git_url": "",
-      "insta_url": "",
-      "phone": "",
+      "insta_url": "https://www.instagram.com/hg_kang7",
+      "phone": "010-5039-2540",
       "email": ""
     }
   },
