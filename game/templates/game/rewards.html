@@ -54,7 +54,7 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 <script>
-    const BASE_URL = 'http://127.0.0.1:8000/game'
+    const BASE_URL = 'http://127.0.0.1:8000/ssafy5-3'
     const app = new Vue({
         el: "#app",
         data: {
@@ -106,7 +106,7 @@
             // load messages
             axios({
                 method:'get',
-                url:BASE_URL +'/messages/',
+                url:BASE_URL +'/loadmessages/',
             }).then(response =>{
                 this.messages = _.shuffle(response.data.messages)
             }).catch(err => {

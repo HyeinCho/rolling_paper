@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
+from django.http import JsonResponse
 from django.views.decorators.http import require_POST
-from .models import Student, Professor, Greeting, Comment
+from .models import Student, Professor, Greeting, Comment, Message
 
 def index(request):
     students = Student.objects.all()
@@ -11,6 +12,9 @@ def index(request):
 
 
 def messages(request):
+    context = {
+
+    }
     return render(request, 'ssafy5_3/messages.html', context)
 
 

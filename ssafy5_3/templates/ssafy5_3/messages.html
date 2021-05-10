@@ -1,7 +1,93 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>To. juan</h1>
+<h1 class="text-center my-3">To. juan</h1>
 <hr>
 
+<style>
+    .big-text{
+        font-size: 2rem;
+    }
+    .middle-text{
+        font-size: 1.5rem;
+    }
 
+</style>
+
+<div id="app">
+<div class="row" data-masonry='{"percentPosition": true }'>
+    <div class="col-3" v-for="(message, idx) in messages" :key="idx">
+        <template v-if="message.isLocked">
+            <!-- not opend message -->
+            <div class="card text-white mb-3 bg-secondary" style="max-width: 20rem;">
+            <div class="card-header">From. <i class="fas fa-user-lock"></i></div>
+            <div class="card-body">
+                <p class="card-text text-center"> <i class="fas fa-lock"></i> </p>
+            </div>
+        </template>
+        <template v-else>
+            <!-- opened message -->
+            <div class="card mb-3" :class="[message.color, message.fontColor]" style="max-width: 20rem;">
+            <div class="card-header">From. <span v-html="message.name"><i class="fas fa-user-lock"></i></span></div>
+            <div class="card-body">
+                <template v-if="message.textSize===1">
+                    <p class="card-text text-center" v-html="message.content"> </p>
+                </template>
+                <template v-else-if="message.textSize===2">
+                    <p class="card-text text-center middle-text" v-html="message.content"> </p>
+                </template>
+                <template v-else>
+                    <p class="card-text text-center big-text" v-html="message.content"> </p>
+                </template>
+            </div>
+        </template>
+        </div>
+    </div>
+
+</div>
+</div>
+<!-- CDN -->
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+<script>
+    const BASE_URL = 'http://127.0.0.1:8000/ssafy5-3'
+    const app = new Vue({
+        el: "#app",
+        data: {
+            cardColors: [
+                'bg-primary', 'bg-success', 'bg-warning', 'bg-danger', 'bg-dark', 'bg-info'
+            ],
+            textColors: {
+                'bg-primary': 'text-white', 
+                'bg-success':'text-white', 
+                'bg-warning':'text-dark', 
+                'bg-danger':'text-white', 
+                'bg-dark':'text-white', 
+                'bg-info':'text-dark' 
+            },
+            name : '<i class="fas fa-user-lock"></i>',
+            content : '<i class="fas fa-lock"></i>',
+            messages: null
+        },
+        methods: {
+        },
+        computed: {
+            
+        },
+        created:function(){
+
+            // load messages
+            axios({
+                method:'get',
+                url:BASE_URL +'/loadmessages/',
+            }).then(response =>{
+                this.messages = _.shuffle(response.data.messages)
+            }).catch(err => {
+                console.log(err)
+            })
+            
+        }
+    })
+</script>
 {% endblock content %}
