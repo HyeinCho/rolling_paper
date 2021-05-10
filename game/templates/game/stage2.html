@@ -168,6 +168,46 @@
           this.clicked = false
           this.btn_msg = `힌트빰 ${this.hint}`
         },
+
+        getHint: function(){
+          axios.get('http://127.0.0.1:8000/game/stage2/get_hint/1/')
+          .then (response => {
+            forms.forEach(form => {
+              const cardId = form.dataset.cardId
+              axios({
+                method: 'post',
+                url: `http://127.0.0.1:8000/game/stage2/get_hint/${cardId}/`,
+                headers: {'X-CSRFToken': csrftoken},
+              })
+              .then (response => {
+                const card_url = response.data.card_url
+                const clickCard = document.querySelector(`#card-${cardId}`)
+                clickCard.src = card_url
+              })
+            })
+            return response
+          })
+          .then (response => {
+            setTimeout(function() {
+              forms.forEach(form => {
+                const cardId = form.dataset.cardId
+                axios({
+                  method: 'post',
+                  url: `http://127.0.0.1:8000/game/stage2/get_hint/${cardId}/`,
+                  headers: {'X-CSRFToken': csrftoken},
+                })
+                .then (response => {
+                  const flipped = response.data.flipped
+
+                  if (!flipped) {
+                    const clickCard = document.querySelector(`#card-${cardId}`)
+                    clickCard.src = back_url
+                  }
+                })
+              })
+            }, 1500)      
+          })
+        },
         clickFirst: function () {
           axios({
             method: 'post',
@@ -179,6 +219,7 @@
             this.hint--
             this.game_pk++
             this.btn_msg = `힌트빰 ${this.hint}`
+            this.getHint()
           })
         },
         clickSecond: function () {
@@ -192,10 +233,12 @@
             this.hint--
             this.game_pk++
             this.btn_msg = `힌트빰 ${this.hint}`
+            this.getHint()
           })
         },
       },
       created: function () {
+        this.getHint()
         this.cancleGame()
       }
     })
