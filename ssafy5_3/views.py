@@ -2,9 +2,9 @@ from django.shortcuts import render, redirect
 from .models import Student, Professor, Greeting, Comment
 
 def index(request):
-    students = Student.objects.all()
+    professor = Professor.objects.get(pk=1)
     context = {
-        'students': students,
+        'professor': professor,
     }
     return render(request, 'ssafy5_3/index.html', context)
 

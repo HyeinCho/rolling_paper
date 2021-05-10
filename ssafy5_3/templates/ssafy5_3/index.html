@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bootstrap5 %}
 
-{% block content %}
-  <h1>확인</h1>
-
-  {% for student in students %}
-    <img src="{{ student.webex_img.url }}" alt="{{ student.name }}">
-  {% endfor %}
-{% endblock content %}
+{% block index %}
+  {% include "nav.html" %}
+  <div class='container '>
+    <div class="d-flex justify-content-center mt-5">
+      <img src="/media/{{ professor.webex_img }}" class="rounded-circle border border-5" alt="juan"><br>
+    </div>
+    <div class="d-flex justify-content-center mt-5">
+      <p class="mt-5 fs-1">서울 3반 <b>{{ professor.name }}</b>을 초대합니다.</p>
+    </div>
+  </div>
+{% endblock index %}
