@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
-from django.views.decorators.http import require_POST
+from django.views.decorators.http import require_POST, require_http_methods
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
@@ -92,7 +92,7 @@ def card_flip(request, pk):
         if flip_cards_cnt == 2: # 짝이 잘 맞음
             prev_id = card.pk
             current_progress = (cntAll + 1) / 20 * 100
-            if cntAll == 3:
+            if cntAll == 19:
                 completed = True
         else: # 짝 안맞음
             card.flip = 0
@@ -137,6 +137,19 @@ def choose_one(request, game_pk, choice_pk):
 
     data = {}
     return JsonResponse(data)
+
+
+@require_http_methods(['GET', 'POST'])
+def getHint(request, pk):
+    if request.method == 'GET':
+        return JsonResponse({})
+    elif request.method == 'POST':
+        card = get_object_or_404(Card, pk=pk)
+        data = {
+            'flipped': card.flip,
+            'card_url': '/media/' + str(card.card_img),
+        }
+        return JsonResponse(data)
 
 
 def stage3(request):
