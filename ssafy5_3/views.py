@@ -11,7 +11,7 @@ def index(request):
 
 
 def messages(request):
-    pass
+    return render(request, 'ssafy5_3/messages.html', context)
 
 
 def collegues(request):
