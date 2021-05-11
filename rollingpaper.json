@@ -1,0 +1,1309 @@
+[
+  {
+    "model": "ssafy5_3.professor",
+    "pk": 1,
+    "fields": {
+      "name": "juan",
+      "webex_img": "/media/webex/juan.png",
+      "coins": 0,
+      "game_clear": "False"
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 1,
+    "fields": {
+      "name": "강현구",
+      "nickname": "현구코인",
+      "webex_img": "/media/webex/1.png",
+      "profile_img": "/media/profile/1.jpg",
+      "name_img": "/media/name/1.png",
+      "card_img": "/media/card/1.jpg",
+      "flag": "False",
+      "song": "How Far I'll Go - Auli'i Cravalho",
+      "song_url": "https://www.youtube.com/watch?v=cPAbx5kgCJo",
+      "git_url": "",
+      "insta_url": "https://www.instagram.com/hg_kang7",
+      "phone": "010-5039-2540",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 2,
+    "fields": {
+      "name": "강혜원",
+      "nickname": "골프채",
+      "webex_img": "/media/webex/2.png",
+      "profile_img": "/media/profile/2.jpg",
+      "name_img": "/media/name/2.png",
+      "card_img": "/media/card/2.jpg",
+      "flag": "False",
+      "song": "함께라는 이유 - 포레스텔라",
+      "song_url": "https://www.youtube.com/watch?v=Xmq8csX9R9c",
+      "git_url": "https://github.com/khw02270",
+      "insta_url": "https://www.instagram.com/hyewoniee_k/",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 3,
+    "fields": {
+      "name": "권오우",
+      "nickname": "나또",
+      "webex_img": "/media/webex/3.png",
+      "profile_img": "/media/profile/3.png",
+      "name_img": "/media/name/3.png",
+      "card_img": "/media/card/3.jpg",
+      "flag": "False",
+      "song": "오마이걸 - 비밀정원",
+      "song_url": "https://www.youtube.com/watch?v=yrCU2ADPPYE",
+      "git_url": "https://github.com/ohwoo-kwon",
+      "insta_url": "https://www.instagram.com/kow_oh",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 4,
+    "fields": {
+      "name": "권희은",
+      "nickname": "반장님 저격수",
+      "webex_img": "/media/webex/4.png",
+      "profile_img": "/media/profile/4.jpg",
+      "name_img": "/media/name/4.png",
+      "card_img": "/media/card/4.jpg",
+      "flag": "False",
+      "song": "이름에게 - 아이유",
+      "song_url": "https://www.youtube.com/watch?v=JSOBF_WhqEM",
+      "git_url": "",
+      "insta_url": "https://www.instagram.com/heuinee777/",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 5,
+    "fields": {
+      "name": "김주현",
+      "nickname": "감투왕",
+      "webex_img": "/media/webex/5.png",
+      "profile_img": "/media/profile/5.jpg",
+      "name_img": "/media/name/5.png",
+      "card_img": "/media/card/5.jpg",
+      "flag": "False",
+      "song": "당신과는 천천히 - 장범준",
+      "song_url": "https://www.youtube.com/watch?v=-wwuoWFmgq4",
+      "git_url": "https://github.com/Joohyeon-Jacob",
+      "insta_url": "https://www.instagram.com/joohyeon_greg/",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 6,
+    "fields": {
+      "name": "김혜인",
+      "nickname": "겨울맘",
+      "webex_img": "/media/webex/6.png",
+      "profile_img": "/media/profile/6.jpg",
+      "name_img": "/media/name/6.png",
+      "card_img": "/media/card/6.jpg",
+      "flag": "False",
+      "song": "프렌즈밴드의 생일축하 연주 - 카카오프렌즈",
+      "song_url": "https://www.youtube.com/watch?v=AWrXKyFzg0o",
+      "git_url": "https://github.com/hyeinkim1305",
+      "insta_url": "",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 7,
+    "fields": {
+      "name": "박준",
+      "nickname": "박준",
+      "webex_img": "/media/webex/7.png",
+      "profile_img": "/media/profile/7.jpg",
+      "name_img": "/media/name/7.png",
+      "card_img": "/media/card/7.jpg",
+      "flag": "False",
+      "song": "커피 한 잔 할래요 - 최준",
+      "song_url": "https://www.youtube.com/watch?v=OYQqlGzz6Cg",
+      "git_url": "",
+      "insta_url": "https://www.instagram.com/storybyjune_",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 8,
+    "fields": {
+      "name": "박준용",
+      "nickname": "준드래곤",
+      "webex_img": "/media/webex/8.png",
+      "profile_img": "/media/profile/8.gif",
+      "name_img": "/media/name/8.png",
+      "card_img": "/media/card/8.jpg",
+      "flag": "False",
+      "song": "빨간 차 - 디핵",
+      "song_url": "https://www.youtube.com/watch?v=1prQI9iB168",
+      "git_url": "https://github.com/JunyongPark2",
+      "insta_url": "",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 9,
+    "fields": {
+      "name": "안건우",
+      "nickname": "꿈나무꺼누",
+      "webex_img": "/media/webex/9.png",
+      "profile_img": "/media/profile/9.jpg",
+      "name_img": "/media/name/9.png",
+      "card_img": "/media/card/9.jpg",
+      "flag": "False",
+      "song": "프렌즈밴드의 생일축하 연주 - 카카오프렌즈",
+      "song_url": "https://www.youtube.com/watch?v=AWrXKyFzg0o",
+      "git_url": "https://github.com/ahngeunwoo96",
+      "insta_url": "https://www.instagram.com/gunnnnnu_",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 10,
+    "fields": {
+      "name": "안기훈",
+      "nickname": "t없ⓔ맑은0r0l",
+      "webex_img": "/media/webex/10.png",
+      "profile_img": "/media/profile/10.jpg",
+      "name_img": "/media/name/10.png",
+      "card_img": "/media/card/10.jpg",
+      "flag": "False",
+      "song": "거꾸로 강을 거슬러 오르는 저 힘찬 연어들처럼 - 강산에",
+      "song_url": "https://www.youtube.com/watch?v=tLfPWyfHfWg",
+      "git_url": "https://github.com/KiHoonAhn1",
+      "insta_url": "https://www.instagram.com/ahn_kiiih",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 11,
+    "fields": {
+      "name": "안동준",
+      "nickname": "안동준",
+      "webex_img": "/media/webex/11.png",
+      "profile_img": "/media/profile/11.jpg",
+      "name_img": "/media/name/11.png",
+      "card_img": "/media/card/11.jpg",
+      "flag": "False",
+      "song": "LIKEY - 트와이스",
+      "song_url": "https://www.youtube.com/watch?v=Dqn65yZYswI",
+      "git_url": "",
+      "insta_url": "https://www.instagram.com/andongjun903",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 12,
+    "fields": {
+      "name": "이규정",
+      "nickname": "뀨",
+      "webex_img": "/media/webex/12.png",
+      "profile_img": "/media/profile/12.jpg",
+      "name_img": "/media/name/12.png",
+      "card_img": "/media/card/12.jpg",
+      "flag": "False",
+      "song": "불도저 - 스윙스",
+      "song_url": "https://www.youtube.com/watch?v=qOGR3qxJhcU",
+      "git_url": "",
+      "insta_url": "https://www.instagram.com/2gudeong",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 13,
+    "fields": {
+      "name": "이다영",
+      "nickname": "README장인",
+      "webex_img": "/media/webex/13.png",
+      "profile_img": "/media/profile/13.jpg",
+      "name_img": "/media/name/13.png",
+      "card_img": "/media/card/13.jpg",
+      "flag": "False",
+      "song": "사장님 도박은 재미로 하셔야 합니다 - BIBI",
+      "song_url": "https://www.youtube.com/watch?v=UelGHfjtXA4",
+      "git_url": "https://github.com/allzero-works",
+      "insta_url": "https://www.instagram.com/allco_okie/",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 14,
+    "fields": {
+      "name": "이민아",
+      "nickname": "탈색하는꼰대3",
+      "webex_img": "/media/webex/14.png",
+      "profile_img": "/media/profile/14.jpg",
+      "name_img": "/media/name/14.png",
+      "card_img": "/media/card/14.jpg",
+      "flag": "False",
+      "song": "8282 - 다비치",
+      "song_url": "https://www.youtube.com/watch?v=FWTfKpZ0VWU",
+      "git_url": "",
+      "insta_url": "https://instagram.com/nariday_nariway?igshid=hxagf1fc1bkw",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 15,
+    "fields": {
+      "name": "이우섭",
+      "nickname": "쓰레기",
+      "webex_img": "/media/webex/15.png",
+      "profile_img": "/media/profile/15.jpg",
+      "name_img": "/media/name/15.png",
+      "card_img": "/media/card/15.jpg",
+      "flag": "False",
+      "song": "달라달라 - itzy",
+      "song_url": "https://www.youtube.com/watch?v=uzt5RZKi3iI",
+      "git_url": "",
+      "insta_url": "https://instagram.com/woo_sub2",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 16,
+    "fields": {
+      "name": "이태용",
+      "nickname": "장발",
+      "webex_img": "/media/webex/16.png",
+      "profile_img": "/media/profile/16.jpg",
+      "name_img": "/media/name/16.png",
+      "card_img": "/media/card/16.png",
+      "flag": "False",
+      "song": "프렌즈밴드의 생일축하 연주 - 카카오프렌즈",
+      "song_url": "https://www.youtube.com/watch?v=AWrXKyFzg0o",
+      "git_url": "",
+      "insta_url": "https://instagram.com/lee.tae_yong",
+      "phone": "010-2536-4375",
+      "email": "tyl1996@naver.com"
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 17,
+    "fields": {
+      "name": "장진우",
+      "nickname": "하회탈",
+      "webex_img": "/media/webex/17.png",
+      "profile_img": "/media/profile/17.jpg",
+      "name_img": "/media/name/17.png",
+      "card_img": "/media/card/17.jpg",
+      "flag": "False",
+      "song": "Counting Stars - One Republic",
+      "song_url": "https://www.youtube.com/watch?v=hT_nvWreIhg",
+      "git_url": "https://github.com/Jang-jinwoo",
+      "insta_url": "https://instagram.com/jinwoooo_94",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 18,
+    "fields": {
+      "name": "정희진",
+      "nickname": "퐁듀",
+      "webex_img": "/media/webex/18.png",
+      "profile_img": "/media/profile/18.jpg",
+      "name_img": "/media/name/18.png",
+      "card_img": "/media/card/18.jpg",
+      "flag": "False",
+      "song": "사랑한대 - 스탠딩 에그",
+      "song_url": "https://www.youtube.com/watch?v=WWPSJUfIick",
+      "git_url": "https://github.com/sksgmlwlsl34",
+      "insta_url": "https://instagram.com/jhj_032296",
+      "phone": "010-3008-6670",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 19,
+    "fields": {
+      "name": "조규태",
+      "nickname": "막걸리",
+      "webex_img": "/media/webex/19.png",
+      "profile_img": "/media/profile/19.jpg",
+      "name_img": "/media/name/19.png",
+      "card_img": "/media/card/19.jpg",
+      "flag": "False",
+      "song": "프렌즈밴드의 생일축하 연주 - 카카오프렌즈",
+      "song_url": "https://www.youtube.com/watch?v=AWrXKyFzg0o",
+      "git_url": "https://github.com/Gyutae-Jo",
+      "insta_url": "",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 20,
+    "fields": {
+      "name": "조혜인",
+      "nickname": "조조교님",
+      "webex_img": "/media/webex/20.png",
+      "profile_img": "/media/profile/20.jpg",
+      "name_img": "/media/name/20.png",
+      "card_img": "/media/card/20.jpg",
+      "flag": "False",
+      "song": "캔디 - 백현",
+      "song_url": "https://www.youtube.com/watch?v=bM5udoON-6w",
+      "git_url": "https://github.com/HyeinCho",
+      "insta_url": "https://www.instagram.com/hyeinee._",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 21,
+    "fields": {
+      "name": "한상길",
+      "nickname": "3반대표지각생",
+      "webex_img": "/media/webex/21.png",
+      "profile_img": "/media/profile/21.jpg",
+      "name_img": "/media/name/21.png",
+      "card_img": "/media/card/21.jpg",
+      "flag": "False",
+      "song": "La Libertad - Alvaro Soler",
+      "song_url": "https://www.youtube.com/watch?v=okAqaED2w4g",
+      "git_url": "",
+      "insta_url": "https://www.instagram.com/Hsang712",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 22,
+    "fields": {
+      "name": "한승희",
+      "nickname": "야자대장",
+      "webex_img": "/media/webex/22.png",
+      "profile_img": "/media/profile/22.jpg",
+      "name_img": "/media/name/22.png",
+      "card_img": "/media/card/22.jpg",
+      "flag": "False",
+      "song": "Dare To Live(Vivere) - 고은성, 백인태, 손태진, 유슬기 ",
+      "song_url": "https://www.youtube.com/watch?v=GcTtNWg9K0Y",
+      "git_url": "https://github.com/chengxxi",
+      "insta_url": "https://www.instagram.com/chengxxi",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.student",
+    "pk": 23,
+    "fields": {
+      "name": "황지원",
+      "nickname": "덕삼",
+      "webex_img": "/media/webex/23.png",
+      "profile_img": "/media/profile/23.jpg",
+      "name_img": "/media/name/23.png",
+      "card_img": "/media/card/23.png",
+      "flag": "False",
+      "song": "데스파시토 - 한상길",
+      "song_url": "https://www.youtube.com/watch?v=4bmUFRxNEIg",
+      "git_url": "github.com/WonHwang",
+      "insta_url": "https://www.instagram.com/doodoongsil.h",
+      "phone": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 1,
+    "fields": {
+      "student": 2,
+      "is_locked": "True",
+      "content": "벌써 SSAFY 1학기가 거의 지나가고 5월이 되었네요.\n 항상 친절하고 재미있게 가르쳐주셔서 감사합니다. \n교수님의 가르침 덕분에 코딩에 대해 하나도 몰랐던 제가 SSAFY 과정을 따라갈 수 있었어요.\n마지막이 다가오는게 벌써 아쉽게 느껴집니다.\n서울 3반의 교수님이 되어주셔서 감사합니다!!"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 2,
+    "fields": {
+      "is_locked": "True",
+      "content": "27살이신 변승환 교수님!!\n코로나로 인해 한 학기동안 실물 한 번 못 뵙다니 너무 아쉽습니다.\n교수님 덕분에 SSAFY의 한 학기를 재미있고 보람있게 보낼 수 있었습니다.\n항상 감사합니다!!"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 3,
+    "fields": {
+      "student": 3,
+      "is_locked": "True",
+      "content": "6개월 동안 저희를 품어주셔서 감사합니다"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 4,
+    "fields": {
+      "is_locked": "True",
+      "content": "이제 저희는 교수님의 품에서 나와 거친 파도에 서핑하러 가보겠습니다 ㅠㅠ"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 5,
+    "fields": {
+      "student": 4,
+      "is_locked": "True",
+      "content": "한학기동안 버틸 수 있었던 것은 모두 교수님 덕분입니다! 한밤중에도 질문받아주시고 제가 계속 이상한거 물어봐도 하나도 화안내고 상냥하게 답해주셔서 정말 감사합니다(정말..정말 많이 물어봤는데..ㅎㅎ....) 처음 해보는 코딩을 이만큼 해낼 수 있었던 것은 정말 교수님덕분이라고밖에 말할 수 없습니다.. 앞으로 어떠한 일을 하던 이번 한학기에 배운 것들이 매우 큰 기반이 될 것이라고 확신합니다! 대학을 졸업하고 스승님을 만나게 될줄 몰랐는데 이렇게 좋은 스승님을 만나 감사하고 행복합니다 ^^"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 6,
+    "fields": {
+      "is_locked": "True",
+      "content": "교수님은 365일 20시간씩 일하시나요? 언제 쉬시는지 궁금합니다(진지합니다)"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 7,
+    "fields": {
+      "student": 5,
+      "is_locked": "True",
+      "content": "힘든 시기 이겨낼 수 있도록 용기 주셔서 감사합니다 교수님😎"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 8,
+    "fields": {
+      "is_locked": "True",
+      "content": "변: 변함없이\n승: 승승장구할 3반의 앞날을\n환: 환하게 비춰주는 교수님은 그저 (☆▽☆)"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 9,
+    "fields": {
+      "student": 6,
+      "is_locked": "True",
+      "content": "교수님 항상 매타모스트에 따뜻한 인사 감사했습니다 ♡ 덕분에 힘내서 공부할 수 있었어요. 수업도 친절하게 잘 가르쳐주셔서 많이 배웠습니다! 잊지 못할거에요"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 10,
+    "fields": {
+      "is_locked": "True",
+      "content": "교수님의 잘생긴 얼굴(자칭하신)을 한번도 못봬다니 너무 아쉬워요"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 11,
+    "fields": {
+      "student": 7,
+      "is_locked": "True",
+      "content": "교수님 안녕하세요!\n항상 깔끔하고 명쾌하게 설명해주셔서 감사한 말씀 먼저 드립니다 ㅎㅎ\n가시적으로 나타나서인지, 웹 수업은 뭔가 흥미가 생기는 느낌이에요!\n전면 온라인 수업으로 전환하여 진행한 탓에 조금 아쉽긴 하지만,\n큰 지장없이 여기까지 달려온 것도 교수님 덕분입니다 ㅎㅎ\n한 학기동안 정말 고생 많으셨어요! 오프라인에서 뵙길 바랍니다!"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 12,
+    "fields": {
+      "is_locked": "True",
+      "content": "수고하셨습니다 행님!"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 13,
+    "fields": {
+      "student": 8,
+      "is_locked": "True",
+      "content": "언능 취업해서 꽃 사들고 멀캠가겠습니다 교수님 ㅎㅎ 항상 친절하게 잘 알려주셔서 감사합니다. 만수무강하세요."
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 14,
+    "fields": {
+      "is_locked": "True",
+      "content": "교수님 지금처럼 짧은 머리 너무 잘어울리십니다. 장동건 같습니다."
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 15,
+    "fields": {
+      "student": 9,
+      "is_locked": "True",
+      "content": "1학기동안 고생많으셨습니다.\n덕분에 지루할수도 있었던 수업을 열심히 들었습니다.\n감사합니다!!"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 16,
+    "fields": {
+      "is_locked": "True",
+      "content": "변: 변태야\n승: 승환쌤밖에 모르는\n환: 죄송합니다"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 17,
+    "fields": {
+      "student": 10,
+      "is_locked": "True",
+      "content": "교수님 그동안 정말 감사했습니다! 이렇게 스윗한 교수님은 다시 만날 수 없을 거에요! 1학기의 끝이 정말 멀어 보였는데 벌써 끝나간다는게 믿기지 않고 아쉽기도 하네요... 제일 멋진 교수님을 만난 덕분에 더 많이 배웠습니다! 감사합니다!"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 18,
+    "fields": {
+      "is_locked": "True",
+      "content": "제가 SSAFY에 있었던 일을 재미있게 기억해주시고 또 저를 응원해주시는 교수님께 너무 감사의 말씀을 드립니다. 싸피에서 공부가 부족하고 불성실한 사람들이 여럿 있죠. 저는 그런일은 있어서는 안된다고 생각합니다. 저를 사랑해주시고 응원해주시는 교수님이 있기에 제가 이렇게 성공하고 먹고살 수 있는것인데 말입니다. 저는 교수님과 소통하고 저를 발전시켜 나가는 것이 중요한 것이라고 생각합니다. 발전 하니까 생각나는건데 여러분이 자기 자신을 더욱 발전시키고 나아갈 수 있어야 합니다. 자기자신의 모습에 만족하고 자신을 사랑하며 사는 것도 좋지만 현실에 안주해서는 큰 꿈을 이룰 수 없다고 생각합니다. 자기자신을 발전시키기 위해서는 먼저 자신의 상태가 어떤지 확인하는 것이 가장 중요합니다. 자기 자신을 알고난 후에야 자신의 목표와 비교해서 발전할 수 있는데 중요한 것은 포기하지 않고 꾸준히 하는 것입니다. 이 꾸준히는 모두에게 필요한 것인데 교육생들이 공부를 할 때에도 목표를 위해 꾸준하게 계속 공부하는 것이 중요합니다. 꾸준한것 하는데 저는 사람이 한결같아야 한다고 생각합니다. 쉽사리 변치 않고 굳게 이어가는 마음가짐이야말로 본받을만한 위인들이 그 자리에 서게 된 이유라고 저는 생각합니다. 위인하니까 또 떠오르는게 있는데 변승환 교수님이 진짜 위인이십니다"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 19,
+    "fields": {
+      "student": 11,
+      "is_locked": "True",
+      "content": "변승환 교수님의 가르침 잊지 않겠습니다..."
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 20,
+    "fields": {
+      "student": 12,
+      "is_locked": "True",
+      "content": "모든 장난 다 받아주시고 어려울 때마다 위안과 도움을 주신 변교수님 진심으로 감사드립니다. 덕분에 고난을 극복하고 싸피를 끝까지 잘 마무리할 수 있었습니다."
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 21,
+    "fields": {
+      "is_locked": "True",
+      "content": "😊😊😌😊😌😌😊😌😌😌😌\n제가 누군지 맞추면 기프티콘 드리겠습니다."
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 22,
+    "fields": {
+      "student": 13,
+      "is_locked": "True",
+      "content": "교수님의 실물이 존잘이시라고 누누히 들어왔는데, 코세글자 때문에 뵙지 못하고 하산하게 될 것 같아 불초제자 마음이 많이 아픕니다. 하지만 교수님의 가르침 잊지 않고 github에 저장해둘게요. 가끔 git repository가 기억날거에요. 교수님이 주신 별명 잊지 않으며 살아가겠습니다. 끝으로.. 엔터 빰.\n-다영-"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 23,
+    "fields": {
+      "is_locked": "True",
+      "content": "교수님 사시는 곳의 옆건물 공사를 지지합니다.\n-6기까지 옆건물 개발 지지 위원회-"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 24,
+    "fields": {
+      "student": 14,
+      "is_locked": "True",
+      "content": "교수님이 있어 제 2021년의 상반기는 훈훈했습니다. 매일 갬성 멘트 최고!!!!\n-민아-"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 25,
+    "fields": {
+      "is_locked": "True",
+      "content": "제 머리색이 검은색이 되는날 또 뵙기를"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 26,
+    "fields": {
+      "student": 15,
+      "is_locked": "True",
+      "content": "변승환 교수님 2학기에 뵐 수 있음 좋겠습니다!"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 27,
+    "fields": {
+      "student": 16,
+      "is_locked": "True",
+      "content": "농부 후안은 바리스타입니다.\n싸피 후안은 사랑입니다.\n벌써 5개월이 다 되어가는데 알고리즘 3주마다 포기하지 않고 여기까지 올 수 있었던 것은 juan 교수님 덕분입니다. 1학기가 끝나고, 싸피가 끝나도 저희를 위한 등대가 되어주시길 바랍니다.\n-이태용-"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 28,
+    "fields": {
+      "is_locked": "True",
+      "content": "￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\n|　오류 발생!　　　　　　　　　　　　　　　　　　　　　　[－][口][×] |\n|￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|\n|　네트워크 연결이 불량합니다. 웹엑스 연결이 끊어졌습니다.       　　　 |\n|　어떻게 하시겠습니까?　　　　　　　　　　　　　　　　　　　　 　|\n|　　　　＿＿＿＿＿＿　　　　＿＿＿＿＿＿　　　　＿＿＿＿＿　　　|\n| 　　　｜수업 진행    |　　　｜휴식시간　　｜ 　 　    | 빰!　　　 |　 　|\n|　　　　￣￣￣￣￣￣　　　　￣￣￣￣￣￣　　　　￣￣￣￣￣　　　|\n￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\n＿人人人人人人人人人＿\n＞                                  ＜\n＞              빰!               ＜\n＞                                  ＜\n￣ＹＹＹＹＹＹＹＹＹ￣\n\nᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ 스승의 날에 찾아가겠습니다 ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ ᕕ( ᐛ )ᕗ \n＼북-적／＼북-적／＼북-적／＼북-적／＼북-적／＼북-적／\nʕ•̫͡•ʕ•̫͡•ʔ•̫͡•ʔ•̫͡•ʕ•̫͡•ʔ•̫͡•ʔ•̫͡•ʕ•̫͡•ʔ•̫͡•ʔ•̫͡•ʕ•̫͡•ʔ•̫͡•ʔ•̫͡•ʕ•̫͡•ʔ•̫͡•ʔ•̫͡•ʕ•̫͡•ʔ•̫͡•ʔ•̫͡•ʕ•̫͡•ʔ•̫͡•ʔ•̫͡•ʕ•̫͡•ʔ"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 29,
+    "fields": {
+      "student": 17,
+      "is_locked": "True",
+      "content": "accouts, ariticles 들고 가도 잘 알려주셔서 감사합니다. \n\n별개로 항상 이렇게 이벤트 준비해주시는 분들도 바쁜 개인 일정 불구하고 열심히 준비해주셔서 항상 감사합니다. "
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 30,
+    "fields": {
+      "student": 18,
+      "is_locked": "True",
+      "content": "항상 편안하고 즐겁게 수업해주셔서 너무 감사합니다♥\n제가 부족해서 길을 잃을 때가 종종 있었지만, 교수님 덕분에 긴 시간 동안 한 번도 지루한 적 없이 너무 즐겁게 수업 잘 들었습니다!\n스윗한 교수님 만날 수 있어서 정말 행복했어요 ღ'ᴗ'ღ"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 31,
+    "fields": {
+      "is_locked": "True",
+      "content": "(오프라인 한정?) 존잘 교수님 나중에 꼭 한 번 뵙고 싶습니당 ㅎㅎ\n규정님 짝사랑하시는 마음 응원합니다...!"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 32,
+    "fields": {
+      "student": 19,
+      "is_locked": "True",
+      "content": "Oh captin My captin"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 33,
+    "fields": {
+      "is_locked": "True",
+      "content": "승환이형님 감사했습니다. 건강하세용"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 34,
+    "fields": {
+      "student": 20,
+      "is_locked": "True",
+      "content": "교수님 한 학기 동안 친절한 강의 감사했습니다. 교수님과 함께한 시간이 즐거웠고 행복했습니다. 교수님의 잘생긴 실물을 보지 못해서 아쉽지만, 3반 3명씩 짝지어서 교수님 만나러 가겠습니다!!! 2학기에 모르는거 있어서 갑자기 연락해도 답장해주셔야 해요!!!!!!!\n그리고 저랑 다영님, 상길님, 규정님 넷이서 열심히 만들었는데 칭찬 먼저 해주시고 해당 사이트에 대한 피드백 꼭 주세요! 고칠건 고쳐야하니까ㅎㅎ\n진짜로 감사했습니다!!!\n-조교 혜인-"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 35,
+    "fields": {
+      "is_locked": "True",
+      "content": "변: 변하면 안돼요! 6기를 맡아도 5기3반이 최고입니다\n승: 승환 교수님\n환: 환...환타 좋아하세요? ㅋㅋㅋㅋㅋ 전 싫어해요. (단호)\n-익명-"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 36,
+    "fields": {
+      "student": 21,
+      "is_locked": "True",
+      "content": "교수님 한 학기동안 좋은 수업 해주셔서 감사합니다. 대면강의로 직접 만나뵀으면 더 좋았을 텐데 아쉽네요. 그래도 교수님 덕분에 좋은 분위기 속에서 즐겁게 수업을 들을 수 있었던 것 같습니다. 감사합니다! -상길-"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 37,
+    "fields": {
+      "student": 22,
+      "is_locked": "True",
+      "content": "매일 아침을 여는 교수님의 스윗한 멘트와 훌륭한 가르침, 그리고 엔터 빰! 잊지 못할 거예요 감사합니다!"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 38,
+    "fields": {
+      "student": 23,
+      "is_locked": "True",
+      "content": "실명이라서 정말 감사하다는 말만 남기겠습니다 : )"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 39,
+    "fields": {
+      "is_locked": "True",
+      "content": "노래 한곡 해주세요"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 40,
+    "fields": {
+      "is_locked": "True",
+      "content": "변: 변승환 교수님 성함으로 삼행시 해보겠습니다.\n승: 승.. 죄송합니다."
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 41,
+    "fields": {
+      "is_locked": "True",
+      "content": "엔터 빰!"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 42,
+    "fields": {
+      "is_locked": "True",
+      "content": "당황하실 때 빨개지는 얼굴\n잊지 못할 것 같습니다"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 43,
+    "fields": {
+      "student": 1,
+      "is_locked": "True",
+      "content": "항상 늦게 과제 제출에도 기달려주시고, 조금 벅차할때 도와주셨어서 항상 감사했습니다!"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 44,
+    "fields": {
+      "is_locked": "True",
+      "content": "여러분 수고하셨어요 내일 봬요~ 안⬆녕~"
+    }
+  },
+  {
+    "model": "ssafy5_3.message",
+    "pk": 45,
+    "fields": {
+      "is_locked": "True",
+      "content": "???: 저 실제로 보면 진짜 잘생겼는데"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 1,
+    "fields": {
+      "professor": 1,
+      "content": "안녕하세요!\n싸피5기 서울3반 여러분!\n드디어 여러분들을 만나는 날이 왔네요 😄\n\n오늘 9시에 아침 조회? 마치시고\n아래 주소로 와주시면 됩니다!",
+      "created_at": "2021-01-13 08:33:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 2,
+    "fields": {
+      "professor": 1,
+      "content": "여러분 10시29분부터 시작합니다!\n아래 주소로 들어와주세요.\nhttps://ssafylive.webex.com/meet/juan",
+      "created_at": "2021-01-14 10:24:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 3,
+    "fields": {
+      "professor": 1,
+      "content": "벌써 스타트캠프의 마지막날이네요! 😄\n오늘도 9시에 모닝라이브 마치고\n아래 주소로 와주시면 됩니다!",
+      "created_at": "2021-01-15 08:37:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 4,
+    "fields": {
+      "professor": 1,
+      "content": "서울 3반 여러분! 정규 수업 첫날 아침이 밝았습니다!\n오늘부터 파이썬 수업이 시작됩니다.\nhttps://bit.ly/05-share 에 접속하셔서 오늘 수업 파일 2개를 다운로드 받아주시기 바랍니다. (python > 01 > 오전)\n해당 파일 2개를 python 폴더에 넣고 기다려주시면 됩니다.\n\n오전 라이브 강의 들으시고 저는 오후에 뵙겠습니다.\n오늘도 빠이팅입니다! 😄",
+      "created_at": "2021-01-18 08:22:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 5,
+    "fields": {
+      "professor": 1,
+      "content": "서울 3반 여러분!\n오늘은 개강 3주만에 입학식이 있는 날이네요 🤣\n본격 입학하신 만큼 오늘부터 또 새로운 마음으로\n즐겁게 시작할 수 있으면 좋겠습니다!\n\n9시에 https://ssafylive.webex.com/meet/juan 에서 봐요.",
+      "created_at": "2021-01-19 08:27:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 6,
+    "fields": {
+      "professor": 1,
+      "content": "어제 입학하신 서울3반 신입생 여러분\n좋은 아침입니다 ☀️\n오늘 오전 라이브 강의에서 사용할 강의자료를\nhttps://lab.ssafy.com/05/a/python\n여기에 준비해두었습니다.\n제가 올려드리는 수업자료 gitlab에서 clone 받으셨던 방법 그대로\n위 경로로 들어가셔서 해당자료 clone 받으시면 됩니다!\n\n오늘도 오전 라이브 강의 잘 들어보시고\n저는 점심이후에 https://ssafylive.webex.com/meet/juan 에서 뵙겠습니다 😄\n오늘도 빠이팅입니다!",
+      "created_at": "2021-01-20 08:21:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 7,
+    "fields": {
+      "professor": 1,
+      "content": "날씨가 많이 포근해진 아침이네요\n오늘은 9시에 모이도록 하겠습니다\nhttps://ssafylive.webex.com/meet/juan\n\n이따 보아요 🙂",
+      "created_at": "2021-01-21 08:34:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 8,
+    "fields": {
+      "professor": 1,
+      "content": "어느새 파이썬 정규수업 첫주의 금요일이네요!\n오늘은 여러분들의 금요일을 관통해서 지나갈\n관통프로젝트가 시작되는 날이기도 합니다.\n그동안 학습하셨던 내용을 바탕으로\n실제 데이터를 조작해보는 프로젝트가 기다리고 있으니\n9시부터 진행될 라이브 강의 잘 들어보시고, 저는 오후에 뵙겠습니다.\n(라이브 강의에서 공지되긴 하겠지만 다같이 몰리면 또 딜레이될 수 있으니\n여러분들 TMDB 사이트에 회원가입을 미리 해두시는 것도 좋을 것 같습니다.)\nhttps://www.themoviedb.org/?language=ko\n\n시국상 밖에서 불태우긴 힘들어졌지만 그래도 금요일이니\n코딩으로 불타는 금요일 만들어보시죠 😊",
+      "created_at": "2021-01-22 08:29:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 9,
+    "fields": {
+      "professor": 1,
+      "content": "여러분, 좋은 아침입니다! ☀️ \n주말 잘 보내셨나요?\n날씨가 많이 따뜻해서 봄이왔나? 싶었던 주말이었네요 😊 \n\n금일 진행될 파이썬 수업자료를\nhttps://lab.ssafy.com/05/a/python 에 올려 두었습니다.\n다들 git pull 하시고 수업 준비해주시면 되겠습니다!\n\n오전 라이브 강의 잘 들으시고\n오후에 봐요!",
+      "created_at": "2021-01-25 08:33:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 10,
+    "fields": {
+      "professor": 1,
+      "content": "오늘은 살짝 비가 올것같은 날씨네요 🌧️️️\n\n어제 월말평가 관계로 진행되지 못했던\n모듈 관련 내용이 깃랩에 업데이트 되었습니다.\nhttps://lab.ssafy.com/05/a/python\n오늘도 git pull 하고 준비해주시면 되겠습니다.\n\n그럼 잠시후에 9시에 봐요!  😊 ",
+      "created_at": "2021-01-26 08:25:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 11,
+    "fields": {
+      "professor": 1,
+      "content": "여러분, 좋은 아침입니다!\n오늘은 드디어 대망의 OOP 수업이 진행될 예정입니다\n다들 물떠놓고 기도드리고 오셨나요?   😀 \n\n오늘 수업을 위한 자료도 깃랩에 올려놓았으니\n내려받으시고 준비해주시면 됩니다.\n\n오늘도 오전 라이브 강의 잘 들어보시고\n저는 오후에 뵙겠습니다!",
+      "created_at": "2021-01-27 08:18:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 12,
+    "fields": {
+      "professor": 1,
+      "content": "좋은 아침입니다!\n벌써 파이썬 수업의 마지막 날이네요!\n오늘은 어제 수업했던 OOP 실습을 포함해서\n지금까지 학습하셨던 내용을 정리하는 시간을 가지려 합니다.\n\n그럼 잠시후 9시에 만나요 😀 \nhttps://ssafylive.webex.com/meet/juan",
+      "created_at": "2021-01-28 08:22:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 13,
+    "fields": {
+      "professor": 1,
+      "content": "일주일만에 한겨울로 바뀐 금요일이네요! ☃\n 어제 수업 후에 잠시 집앞에 나갔다가\n귀 떨어지는줄 알았네요 😵 \n\n오늘은 여러분들의 금요일 관통 프로젝트 두번째 날입니다.\n이번엔 지난주와 달리 json 형태로 데이터가 주어지지 않고\n여러분들이 직접 TMDB 영화정보 사이트에서\napi를 통해 데이터를 받아와서 처리할 예정이기 때문에\nTMDB 회원가입이 필요합니다.\n미리미리 가입절차 밟아두세요.\nhttps://www.themoviedb.org\n\n그럼 금요일에 만나는 오창희 교수님의\n오전 라이브 강의 잘 들어보시고\n(다음주 과목평가에 대한 상세공지도 있을 예정입니다!)\n오후에 뵙겠습니다! 🤗 ",
+      "created_at": "2021-01-29 08:19:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 14,
+    "fields": {
+      "professor": 1,
+      "content": "좋은 아침입니다!  ☀️ \n비교적 따뜻했던 주말 잘들 보내셨나요?\n\n긴듯 짧은듯 했던 2주간의 파이썬 기간이 지나고\n이번 주부터는 웹 수업이 진행될 예정입니다!\n그 첫 시간으로 오늘은 HTML과 CSS 에 대해 알아보겠습니다.\n\n그전에 9시부터 시작되는 과목평가 도 잘 풀어보시고,\n10시부터 시작되는 웹 라이브 강의 도 잘 들어보시고,\n점심 맛있게 드시고,\n저는 오후에 봐요 😄",
+      "created_at": "2021-02-01 08:19:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 15,
+    "fields": {
+      "professor": 1,
+      "content": "와 오늘 서울은 한파주의보까지 내려진 쌀쌀한 아침이네요!  🌬️\n\n오늘은 어제 여러분들을 스쳐지나간,파이썬 2주 했다고 그새 익숙해진 파이썬이 아니어서 어색했던,\nHTML, CSS를 다시한번 되짚어볼수 있는 시간을 가져보려 합니다!\n\n잠시후 9시에 만나요!\nhttps://ssafylive.webex.com/meet/juan\n\n요즘 날씨가 하루가 다르게 급변하고 있으니\n감기 조심하세요 여러분!",
+      "created_at": "2021-02-02 08:26:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 16,
+    "fields": {
+      "professor": 1,
+      "content": "우리 서울 3반 여러분! 잘 잤나요? 🤗 \n\n오늘은 어제까지 HTML, CSS 를 다뤄보면서\n조금은 불편했던 부분들을 보완해주는 개념들\nfloat, flex 그리고 bootstrap 까지 알아보는 시간이 있을 예정입니다.\n\n9시부터 진행되는 라이브 강의 잘 들어보시고\n저는 오후에 뵙겠습니다.\n\n이따 봐요! 서울 3반 쵝오!! 👍 ",
+      "created_at": "2021-02-03 08:17:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 17,
+    "fields": {
+      "professor": 1,
+      "content": "여러분! 잘 쉬셨나요?\n밤늦게까지 과제하시느라 수고하셨습니다..\n자정에 1차 제출후에 새벽까지...\n역시 서울3반의 열정에 다시한번 감동을... 또르륵... 😭 \n\n오늘도 쁠렉스와 부트스트랩으로\n스타일링 적용해보는 실습을 진행해보도록 하겠습니다.\n\n코휘 한잔씩들 하시고 잠깨시고 잠시후에 9시에 봐요!\nhttps://ssafylive.webex.com/meet/juan\n",
+      "created_at": "2021-02-04 08:20:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 18,
+    "fields": {
+      "professor": 1,
+      "content": "Good Morning! ☀️ \n여러분들이 기다리시던 금요일, \n여러분들이 기대하시던 프로젝트 날이 왔네요.\n\n지난 두번의 프로젝트에서\nAPI를 통해 받아온 json 데이터를 조작해봤다면\n오늘은 그 정제된 데이터를 사용자에게 \n어떻게 보기좋게 꾸며서 전달할 것인지를 가늠해볼 수 있는 시간이 될 수 있을 것 같습니다.\n여러분들의 기대를 만족시켜드릴만한 프로젝트였으면 좋겠네요. 😆 \n\n오늘도 9시에 라이브 강의가 진행되고\n점심 이후부터 프로젝트가 시작됩니다.\n라이브 강의 잘 들어보시고 이따 점심먹고 봐요!\n",
+      "created_at": "2021-02-05 08:26:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 19,
+    "fields": {
+      "professor": 1,
+      "content": "어제 저희 실습했던 코드(일명 삼성 버즈 홈페이지 코드)를\n참고하고 싶다는 의견 주신분이 있으셔서\n저희 홈워크샾 공유하는 깃랩에 올려드렸습니다.\n(커밋 메시지를 Day03_practice라고 올렸네요..)\n다음주 과목평가 보시기 전에 한번씩 훑어보시면 좋을 것 같습니다.\n\n지난 3.5주간 열정적으로 수업에 참여해주셔서 다시한번 감사드립니다.\n다가오는 알고리즘 집중 기간에도 지금처럼만 열심히하시면\n항상 좋은 결과 있으실꺼라 믿습니다. 👍 \n\n그럼 저는 꽃피는 3월에 돌아올께요! 🌸 \n서울 3반 빠이팅입니다!!",
+      "created_at": "2021-02-05 18:45:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 20,
+    "fields": {
+      "professor": 1,
+      "content": "서울 3반 여러분!\n오랜만입니다  🙋‍♂️ \n봄과 함께, 봄꽃보다는 한발 먼저 돌아왔네요 ㅎㅎ\n\n지난 4주간 알고리즘의 세계에 푹 빠져계셨을텐데\n덕분에 이제 파이썬 고수들이 되셨겠네요.\n일취월장하셨을 서울 3반 은둔 고수 여러분들,\n오늘부터는 파이썬 기반의 웹 프레임워크인 django 수업이 시작됩니다.\n9시부터 진행될 django 첫 라이브 강의 잘 들어보시고\n저는 오후에 얼굴보고 다시 인사할께요 😄",
+      "created_at": "2021-03-08 08:36:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 21,
+    "fields": {
+      "professor": 1,
+      "content": "좋은 아침입니다!\n\n오늘은 어제 처음 만난 장고의 템플릿 문법을 훑어보면서\n장고와 조금 더 가까워지는 시간을 가져보려 합니다.\n잠시후 9시에 웹엑스에서 봐요!\n\nhttps://ssafylive.webex.com/meet/juan",
+      "created_at": "2021-03-09 08:31:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 22,
+    "fields": {
+      "professor": 1,
+      "content": "여러분, 좋은 아침!\n\n어제까지 학습한 장고의 템플릿과 뷰는 연습이 되셨을테니\n오늘은 장고의 디자인 패턴에서 잠시 미뤄뒀던 모델에 대해서 알아보고 \n데이터베이스를 조작해보는 시간을 가져보려합니다.\n\n9시부터 라이브 강의 잘 들어보시고\n오후에 봐요 😄",
+      "created_at": "2021-03-10 08:38:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 23,
+    "fields": {
+      "professor": 1,
+      "content": "좋은 아침..이라고 하기엔\n오늘 바깥 공기는 너무 뿌옇네요 컥컥  😷 \n초미세먼지가 100을 넘는건 또 간만에 보는것 같군요\n\n바깥 공기가 저모냥이니 외출을 삼가시고\n실내에서 코딩으로 불타는 목요일을 만들어 보도록 하시죠! ㅎㅎ\n근데 이런 얘기 안해도 어제 새벽까지 너무나들 열심히 해주시는 모습에 또 한번 감동을.. 또르륵..\n오늘 피곤하신 분들이 꽤 있으실것 같은데\n개발자의 포션 ☕  한잔씩들 하시고 화이팅해봅시다!\n\n잠시후 9시에 봐요!  🤗 \nhttps://ssafylive.webex.com/meet/juan\n",
+      "created_at": "2021-03-11 08:35:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 24,
+    "fields": {
+      "professor": 1,
+      "content": "먼지가 채 걷히지 않은 아침이네요. 😷 \n다들 건강 해치지 않도록 조심해주세요.\n건강이 제일 중요합니다. 💪 \n\n오늘은 금요일에 만나는 4번째 프로젝트 데이입니다.\n오늘도 오후에 알고리즘 특강 등의 일정등이 있는 관계로\n프로젝트는 부담없는 수준으로 제공될 예정이니\n가벼운 마음으로 오전 라이브 강의 들어주시고,\n저는 점심먹고 오후에 뵙겠습니다! 😄\n",
+      "created_at": "2021-03-12 08:33:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 25,
+    "fields": {
+      "professor": 1,
+      "content": "매일같이 미세먼지가 창궐하는걸 보니\n봄이 오긴 왔나보네요 😷 \n\n오늘은 일타싸피 일석사조 HIT1GET4 의 날입니다!\n주말동안 수학공부는 좀 해보셨나요? \n오전 9시에 OT 잘 들어보시고\n안내에 따라 진행해주시면 됩니다!\n\n그럼 3월의 3번째 월요일도 빠이팅입니다! 💪 ",
+      "created_at": "2021-03-15 08:37:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 26,
+    "fields": {
+      "professor": 1,
+      "content": "중국발 황사가 밀려온다는 뉴스가 있었는데\n간밤에 비가 꽤나 온다 싶더니\n황사와 먼지를 싹 씻겨간 상콤한 아침이네요!  ☀️ \n\n오늘은 예고해드린대로\n장고가 제공해주는 입력양식, Form에 대해 알아보는 시간 가져보겠습니다.\n\n잠시후 9시부터 시작할께요!\nhttps://ssafylive.webex.com/meet/juan",
+      "created_at": "2021-03-16 08:36:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 27,
+    "fields": {
+      "professor": 1,
+      "content": "여러분, 좋은 아침입니다!\n\n오늘은 오후에 알고리즘 역량평가 가 있는 관계로\n오전에 라이브 강의만 있을 예정입니다.\n어제 학습했던 django의 form에 대한 내용과\n추가적인 내용들도 전달될 예정이니\n어서들 일어나셔서 라이브 강의 잘 들어주세요 😄\n",
+      "created_at": "2021-03-17 08:45:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 28,
+    "fields": {
+      "professor": 1,
+      "content": "좋은 아침입니다!\n\n오늘은 우리의 장고 프로젝트에서\n스태틱 파일을 처리하는 방법에 대해 알아보려 합니다.\n어서 세수도 좀 하시고 정신 챙기셔서\n잠시후 9시에 웹엑스에서 뵙겠습니다! 😄\n\nhttps://ssafylive.webex.com/meet/juan",
+      "created_at": "2021-03-18 08:38:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 29,
+    "fields": {
+      "professor": 1,
+      "content": "어느새 금요일 아침이 밝았네요! ☀️ \n\n오늘은 어제 저희가 다뤄봤던 스태틱 파일 활용과 관련된 추가적인 내용과 함께\n모델폼을 활용해보는 프로젝트가 진행될 예정입니다.\n오늘도 pjt05 레포지토리에 저 추가하시는거 잊지 마시고\nguest로 추가하지 않도록 해킹 주의! 해주세요  😆 \n\n그럼 9시 라이브 강의 잘 들어보시고\n오후에 봐요!\n",
+      "created_at": "2021-03-19 08:31:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 30,
+    "fields": {
+      "professor": 1,
+      "content": "불금과 주말 잘 보내셨나요?\n다시 새로운 한주가 시작됐네요!\n\n오늘은 우리의 프로젝트에 드디어 계정을 생성해보는 시간을 가져보려 합니다.\n그에 앞서서 지난주까지 학습하신 내용들을 점검하는\n과목평가가 9시부터 시행되니\n문제에서 요구하는 정확한 답안을 잘 작성해주시고,\n오전 라이브 강의도 잘 들어주시고,\n오후에 봐요 😄\n",
+      "created_at": "2021-03-22 08:38:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 31,
+    "fields": {
+      "professor": 1,
+      "content": "좋은 아침입니다!\n\n오늘은 어제 폭풍처럼 휘몰아쳤던 장고의 계정 인증 시스템을\n연습해보는 시간을 가져볼 예정입니다.\n몇몇 새로운 개념이 있긴 했었지만 오늘 다시 한번 정리하시면\n충분히 이해하실 수 있으리라 생각합니다. 😄\n\n그럼 잠시후 9시에 웹엑스에서 봐요!\nhttps://ssafylive.webex.com/meet/juan",
+      "created_at": "2021-03-23 08:30:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 32,
+    "fields": {
+      "professor": 1,
+      "content": "여러분! 아침입니다! 일어나요! ㅎㅎ\n\n오늘은 이제 우리 프로젝트 게시글에 댓글을 달아볼 겁니다.\n물론 이를 위해 필요한 개념들이 전달될 예정이니\n오전 라이브 강의를 잘 들어주셔야겠죠!?\n그리고 추가로,\n오늘부터 라이브 강의에서도 출석 점검이 있을 예정입니다!\n라이브강의에 집중해 주셔야 할 이유가 하나 더 생겼네요  😆 \n\n그럼 잠시후 라이브 강의 잘 들어보시고!\n이따 오후에 봐요! 😄",
+      "created_at": "2021-03-24 08:41:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 33,
+    "fields": {
+      "professor": 1,
+      "content": "여러분 잘 잤나요?\n아침입니다! 일어나요 어서!! ㅎㅎ\n인간적인 예의로라다가 세수는 하고 옵시다 ㅎㅎ\n\n오늘은 조금씩 복잡해지는 DB에 적절한 명령을 내리기 위해서\nRDBMS의 데이터를 관리하기 위해 설계된 SQL에 대해 알아보고\n해당 SQL과 같은 명령을 내릴 수 있는 ORM 명령어는 또 무엇인지\n알아보는 시간을 가져보도록 하겠습니다.\n\n그럼 세수하시고!\n잠시후 9시에 봐요! 😄\nhttps://ssafylive.webex.com/meet/juan",
+      "created_at": "2021-03-25 08:35:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 34,
+    "fields": {
+      "professor": 1,
+      "content": "좋은 아침입니다!\n어느새 여러분들이 기다리고 기대하시던 금요일! 프로젝트 날이 밝았습니다.\n\n오늘도 6시부터는 불금을 즐기겠다는 마음으로\n열정적으로 프로젝트에 임해주시면 좋겠습니다 🔥\n\n그럼 오전 라이브 강의 잘 들어보시고!\n이따 봐요 😄",
+      "created_at": "2021-03-26 08:34:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 35,
+    "fields": {
+      "professor": 1,
+      "content": "주말에 비오고 공기좋았는데..\n하루아침에 세상이 다시 노랗게 변했네요 😷 \n\n오늘은 지난주에 이어서 관통프로젝트에서도 살짝 접해보았던\n1:N model relation을 user : article, user : comment 까지 \n조금더 확장해보겠습니다.\n\n그리고 오후에는\n월말평가와 일타싸피 전국대항전이 진행되겠습니다.\n월말평가 예시문제를 공유해 드리니, 평가 전에 한번씩 확인해보세요!\n\n하루가 빨리 지나갈 것 같은 일정이네요.\n새로운 한주의 시작, 화이팅입니다! 🐱",
+      "created_at": "2021-03-29 08:39:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 36,
+    "fields": {
+      "professor": 1,
+      "content": "전국 4강에 올랐음에도\n품위와 기품을 유지하며\n마음으로만 응원하던 양반의 후예\n서울3반 여러분 잘 잤나요? 🤗 \n\n오늘은 1:N 실습편이 진행됩니다.\n우리 프로젝트에서도 실습해보고\n또 조금 다른 방식으로도 활용해볼 예정입니다.\n\n잠시후 9시에 봐요! 😄\nhttps://ssafylive.webex.com/meet/juan",
+      "created_at": "2021-03-30 08:43:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 37,
+    "fields": {
+      "professor": 1,
+      "content": "파란 하늘이 반가운 아침이네요!\n어제 프로님 얘기듣고 저녁때 산책을 나가봤는데\n서울에도 여기저기 벚꽃 🌸 이랑 나리나리개나리 🌼 가 많이 펴있더라구요\n여러분들도 저녁식사 후 간단한 동네 마실이라도 나가보시는걸 권장드립니다 ㅎㅎ\n\n오늘은 M:N 관계를 학습할 예정이고\n이제 여러분들의 장고 프로젝트는 인별그램에서 할 수 있는건 거의 다 할 수 있게 됩니다!\n\n오전 라이브 강의 잘 들어보시고!\n점심 맛있게 드시고 이따 봐요 😄",
+      "created_at": "2021-03-31 08:39:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 38,
+    "fields": {
+      "professor": 1,
+      "content": "4월이 시작했을뿐인데 날씨는 벌써 5월이네요 ☀️ \n\n오늘은 어제 마무리된 Model relationship을 정리해보는 시간을 가져보겠습니다.\n오늘 충분히 연습해서 알고리즘 집중기간이 지나도\n아무렇지 않게 인별그램을 뚝딱 만들 수 있는 수준이 되도록 해봅시다!\n\n그럼 잠시후 9시에 봐요!\nhttps://ssafylive.webex.com/meet/juan",
+      "created_at": "2021-04-01 08:38:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 39,
+    "fields": {
+      "professor": 1,
+      "content": "여전히 화창한 아침이네요!\n여러분 애플페이 는 한번 알아들 보셨나요? 😆 \n\n오늘은 금요일에 만나는 관통프로젝트 날입니다.\n이번엔 또 어떤 페어와 프로젝트를 하게되실지\n저도 많이 궁금해지네요 ㅎㅎ\n\n우선 잠시후 9시에 시작되는 라이브강의 부터 잘 들어주시고,\n오후에 봐요 🤗 \n",
+      "created_at": "2021-04-02 08:33:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 40,
+    "fields": {
+      "professor": 1,
+      "content": "서울 3반 여러분! 오랜만입니다 😄 \n3주간의 알고리듬 여정은 잘 보내고 오셨나요!?\n\n어느새 싸피 1학기 과정도 많이 지나가고\n마지막 1달 정도의 시간이 남아있네요!\n오늘부터 남은 1달은 다시 장고와 자바스크립트로\n여러분 만의 프로젝트를 완성해보는 시간을 가져보도록 하겠습니다!\n\n그럼 9시부터 오전 라이브 강의 잘 들어보시고,\n집나간 장고에 대한 기억을 다시 되살려보시고,\n저는 점심먹고 오후에 봐요!! ㅎㅎ",
+      "created_at": "2021-04-26 08:36:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 41,
+    "fields": {
+      "professor": 1,
+      "content": "여러분, 좋은 아침입니다!\n\n어제는 온통 알고리즘 평가 생각으로\n3주만에 다시 만난 장고와 제대로된 재회를 갖지 못하셨을테니\n오늘 코드도 같이 작성해보면서 익숙해져보는 시간을 가져볼 예정입니다!\n\n아직 안일어나신분들,\n지금 막일어나신분들,\n어여 침대에서 나오셔서 세수한번씩 하시고 \n맑은 정신으로 잠시후 9시에 봐요 😄\n\nhttps://ssafylive.webex.com/meet/juan",
+      "created_at": "2021-04-27 08:41:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 42,
+    "fields": {
+      "professor": 1,
+      "content": "좋은 아침입니다!\n\n3주 동안 열심히 장고 까먹고 돌아왔더니\n이틀동안 DRF의 시리얼라이저가 휘몰아쳤었는데\n오늘부터는 자바스크립트 코드가 다가옵니다.\n\n이 만남이 산뜻한 봄바람일지 또다른 폭풍일지\n잠시후 9시 공개될 예정이니\n많은 관심 부탁드리겠습니다. 😄\n\n라이브 잘 들어보시고!\n오후에 봐요 ㅎㅎ",
+      "created_at": "2021-04-28 08:43:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 43,
+    "fields": {
+      "professor": 1,
+      "content": "좋은 아침입니다!\n\n오늘은 자바스크립트 문법에 관련된 내용을 알아보는 시간을 가져볼 예정입니다!\n아직 어색한 자바스크립트와 친해져보는 시간이 되면 좋겠네요. 😆 \n\n그럼 잠시 후 9시에 봐요!\nhttps://ssafylive.webex.com/meet/juan",
+      "created_at": "2021-04-29 08:42:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 44,
+    "fields": {
+      "professor": 1,
+      "content": "점심 드시고 오시라는 멘트가 짧아졌다는 컴플레인이 있으셔서\n점심 드시고 오시라는 멘트를 어떻게 더 성의있게 친절하게 자세하게 전달해야 할까를 고민하다가\n쓸데없이 말이 길어지면 '저 사람 왜저래' 라고 생각하실 수도 있을 것 같아서\n이런 저런 고민하던 결과를 적다보니 이미 말이 길어졌네요.\n\n그러니 심플하게,\n점심드실 분들은 맛있게 드시고 \n한숨 주무실 분들은 푹 쉬시고\n12시반에 늦지않게 오세요!\n\n늦으면.. 알죠? 😆 \nhttps://ssafylive.webex.com/meet/juan",
+      "created_at": "2021-04-29 11:29:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 45,
+    "fields": {
+      "professor": 1,
+      "content": "왜 아직 주말이 아니지 싶으셨던 여러분,\n벌써 금요일입니다!🔥\n\n오늘은 오랜만에 다시 금요일을 관통하는 \n관통 페어 프로젝트 가 진행됩니다.\n오전 라이브 강의 잘 들어보시고,\n오후에 새로운 페어 와 API서버 슥슥 구축하고나면,\n하루종일 누워계실 수 있는 주말이 기다리고있으니\n빠이팅! 💪  입니다!",
+      "created_at": "2021-04-30 08:40:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 46,
+    "fields": {
+      "professor": 1,
+      "content": "금요일이라 그런지\n이모지들의 텐션도 한층 UP 돼있네요 🔥\n\n점심 맛있게 드시고!\n1시에 봐요!!",
+      "created_at": "2021-04-30 11:56:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 47,
+    "fields": {
+      "professor": 1,
+      "content": "오늘도 페어 프로젝트 진행하시느라고 수고 많이 하셨습니다!\n그러고보니 어느새 여러분들이 그렇게 애타게 찾으시던 주말이 왔네요.\n주말동안 너무 누워만 계시진 마시고  🛌 \n장고 프로젝트 다시 한번 만들어보면서\n다양한 에러들을 만나보시고, 해결해보시고 그러다보면\n다음주 과목평가 걱정은 자연스레 없어질것 같습니다.\n\n그 와중에 여러분들의 걱정을 더 덜어드리기 위한 예시 문제를 공유해드리니,\n꼭 한번씩 확인해주시고\n디버깅 과목평가 전원 PAAASSSSSS 합시다!!\n\n즐거운 주말 보내세요 😄",
+      "created_at": "2021-04-30 18:01:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 48,
+    "fields": {
+      "professor": 1,
+      "content": "와 벌써 5월이네요!\n주말 잘 보내셨나요?\n\n오늘은 자바스크립트를 좀더 심도있게 다뤄볼텐데\n그에 앞서서 디버깅 과목평가가 진행되겠습니다.\n주말동안 장고 프로젝트 한번씩은 만들어 보셨겠죠? 😄\n\n새로운 한 주도 빠이팅입니다!💪",
+      "created_at": "2021-05-03 08:31:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 49,
+    "fields": {
+      "professor": 1,
+      "content": "비예보도 있고해서 하늘은 흐리지만 그럼에도\n어른이날을 하루 앞둔 희망찬 화요일 아침이네요!\n\n오늘은 어제 예고되었던 대로\n장고 프로젝트에 몇몇 기능들을 AJAX 통신으로 처리할 수 있도록 해서\n사용자 경험을 향상시켜볼 수 있도록 하는 시간을 가져보겠습니다.\n과도한 흥분으로 심장이 너무 뛰지 않도록💓 주의해주세요.\n\n그럼 잠시 후 9시에 봐요!",
+      "created_at": "2021-05-04 08:31:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 50,
+    "fields": {
+      "professor": 1,
+      "content": "20대 중후반 어린이 여러분, 어린이날은 잘 보내셨나요?\n중간에 공휴일이 있다보니 벌써 목요일인게 \n확실히 일주일이 금방 가는 느낌이 있네요. ㅎㅎ\n\n오늘은 자바스크립트 기반의 프론트엔드 프레임워크 인\nVue.js 를 소개해 드릴 예정입니다! \n\n그럼 잠시 후 9시에 뵙겠습니다.",
+      "created_at": "2021-05-06 08:39:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 51,
+    "fields": {
+      "professor": 1,
+      "content": "이십대 꼬꼬마 여러분, 벌써 금요일이네요!😆\n\n오늘도 금요일을 관통할 프로젝트가 진행됩니다.\n잠시 후 9시부터 시작되는 라이브강의 도 잘 들어보시고\n관통 프로젝트 및 다음주 과목평가 안내도 놓치지마세요!\n\n그럼 저는 오후에 뵙겠습니다! 🤗",
+      "created_at": "2021-05-07 08:40:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 52,
+    "fields": {
+      "professor": 1,
+      "content": "여러분, 주말 잘 보내셨나요?\n황사가 싹 걷힌 촉촉한 월요일이네요!\n\n오늘은 지난주에 살짝 인사만 나눴던 Vue.js 를\n좀 더 딥하게 알아보는 시간을 가져보겠습니다.\n그리고 오늘 오후에 youtube api 를 사용해볼 예정이니\n혹시 아직 api key를 생성하지 않으신 분들은\n쉬는 시간 등을 통해서 꼭 확인해주세요!\n\n오늘 오전 과목평가 도 화이팅입니다!",
+      "created_at": "2021-05-10 08:28:00"
+    }
+  },
+  {
+    "model": "ssafy5_3.greeting",
+    "pk": 53,
+    "fields": {
+      "professor": 1,
+      "content": "여러분, 화창한 화요일 아침이네요!☀️\n\n오늘은 어제 알아봤던 vue component간의\npass props & emit event 에 대해 충분히 연습해 볼 수 있는 시간을 가져보려합니다.\n이런 데이터 흐름에서의 장단점을 경험해보고나면\n내일 학습할 vuex의 필요성도 느껴보실 수 있을 것 같습니다.\n\n그럼 잠시후 9시에 시작하도록 하겠습니다.\n세수하고 머리도 좀 빗고 깔꼼한 모습으로 봅시다 😄",
+      "created_at": "2021-05-11 08:33:00"
+    }
+  }
+]
