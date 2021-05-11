@@ -110,7 +110,7 @@ def card_flip(request, pk):
         'student_id': card.student_id,
         'prev_id': prev_id,
         'flipped': flipped,
-        'card_url': '/media/' + str(card.card_img),
+        'card_url': str(card.card_img),
         'completed': completed,
         'current_progress': current_progress,
     }
@@ -150,7 +150,7 @@ def getHint(request, pk):
         card = get_object_or_404(Card, pk=pk)
         data = {
             'flipped': card.flip,
-            'card_url': '/media/' + str(card.card_img),
+            'card_url': str(card.card_img),
         }
         return JsonResponse(data)
 
@@ -226,9 +226,8 @@ def getChatMessage(request, chat_id):
     }
     return JsonResponse(context)
 
-def rewards(request):
-    messages = get_list_or_404(Message)
+def rewards(request, stage_id):
     context = {
-        'messages' : messages,
+        'next_stage' : stage_id + 1,
     }
     return render(request, 'game/rewards.html', context)

@@ -14,5 +14,5 @@ urlpatterns = [
     path('stage3/is_absent/', views.is_absent, name='is_absent'),
     path('bonus/', views.bonus, name='bonus'),
     path('bonus/<int:chat_id>/chat/', views.getChatMessage, name='chat'),
-    path('rewards/', views.rewards, name='rewards'),
+    path('rewards/<int:stage_id>', views.rewards, name='rewards'),
 ]

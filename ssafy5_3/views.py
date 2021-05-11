@@ -97,6 +97,7 @@ def insert_coin(request, coin_num):
     professor.coins = professor.coins + coin_num
     professor.save()
 
-    return redirect('game:rewards')
+    stage_num = 1 if coin_num==9 else coin_num-9
+    return redirect('game:rewards', stage_num)
     
     
