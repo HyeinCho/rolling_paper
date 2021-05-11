@@ -1,0 +1,100 @@
+{% load bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+  <title>Document</title>
+  {% bootstrap_css %}
+  <style>
+    body {
+      margin: 0;
+    }
+    .left {
+      height: 100vh;
+    }
+    .right {
+      height: 95vh;
+      width: 90%;
+      overflow-y: scroll;
+    }
+</style>
+</head>
+<body>
+  <div class="d-flex align-items-start">
+    <nav class="sticky-top navbar flex-column align-items-start p-0 text-light left" style="background:#145dbf;">
+      <nav class="nav nav-pills flex-column">
+        <div style="background:#1153ab;" class="row m-0 py-1 align-items-center">
+          <div class="d-grid col-4 justify-content-end">
+            <img src="/media/{{ juan.webex_img }}" alt="{{ juan.name }}" style="width:30px; border-radius: 50%;">
+          </div>
+          <div class="d-grid col-8 p-0">
+            <span>5기 서울 3반 <br> @juan</span>
+          </div>
+        </div>
+
+        <div class="p-3">
+          <div class="row fw-bold py-2">
+            <span class="d-flex col-10">공개 채널</span>
+            <span class="d-flex col-2 ps-0"><i class="fas fa-plus"></i></span>
+          </div>
+          <ul class="nav-item ps-2" style="list-style: none;">
+            <li class="nav-item pb-1"><i class="fas fa-globe"></i> 1. SW 스타트 캠프</li>
+            <li class="nav-item pb-1"><i class="fas fa-globe text-info"></i> 2. 온라인 코칭</li>
+            <li class="nav-item pb-1"><i class="fas fa-globe"></i> 공지사항</li>
+            <li class="nav-item pb-1"><i class="fas fa-globe"></i> 보충학습/스터디모집</li>
+            <li class="nav-item pb-1"><i class="fas fa-globe"></i> 이벤트</li>
+            <li class="nav-item pb-1"><i class="fas fa-globe"></i> 일타싸피</li>
+            <li class="nav-item pb-1"><i class="fas fa-globe"></i> 잡담</li>
+          </ul>
+
+          <div class="row fw-bold py-2">
+            <span class="d-flex col-10">비공개 채널</span>
+            <span class="d-flex col-2 ps-0"><i class="fas fa-plus"></i></span>
+          </div>
+          <ul class="nav-item ps-2" style="list-style: none;">
+            <li class="nav-item pb-1"><i class="fas fa-lock-open text-info"></i> Juan 교수님 주접방</li>
+            <li class="nav-item pb-1"><i class="fas fa-lock"></i> QnA & Tip 공유방</li>
+          </ul>
+
+          <div class="row fw-bold py-2">
+            <span class="d-flex col-10">개인 메시지</span>
+            <span class="d-flex col-2 ps-0"><i class="fas fa-plus"></i></span>
+          </div>
+          <ul class="nav-item ps-2" style="list-style: none;">
+            <li class="nav-item pb-1"><i class="fas fa-user-times"></i> 코딩 이철민 교수</li>
+            <li class="nav-item pb-1"><i class="fas fa-user-times"></i> 최우영(교육프로)</li>
+            <li class="nav-item pb-1"><i class="fas fa-user-check text-info"></i> 서울_3반_조혜인</li>
+          </ul>
+        </div>
+      </nav>
+    </nav>
+
+    <div class="tab-content m-3 right" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+        {% for greeting in greetings %}
+          <div class="row">
+            <div class="d-grid col-1 justify-content-end">
+              <img src="/media/{{ juan.webex_img }}" alt="{{ juan.name }}" style="width:30px; border-radius: 50%;">
+            </div>
+            <div class="d-grid col-11">
+              <p><b>{{ juan.name }}</b> <small>{{ greeting.created_at }}</small></p>
+              {% for sentence in greeting.content %}
+                {% if sentence == ' ' %}
+                  <br>
+                {% else %}
+                  <div>{{ sentence }}</div>  
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <hr>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</body>
