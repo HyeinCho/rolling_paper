@@ -1,0 +1,784 @@
+[
+  {
+    "model": "game.balancegame",
+    "pk": 1,
+    "fields": {
+        "title": "누가 더 좋아?",
+        "question1": "5기 서울 3반",
+        "question2": "4기 서울 5반",
+        "vote1": 0,
+        "vote2": 0
+    }
+},
+{
+    "model": "game.balancegame",
+    "pk": 2,
+    "fields": {
+        "title": "최고의 간부는?",
+        "question1": "김주현(반장)",
+        "question2": "권오우(CA)",
+        "vote1": 0,
+        "vote2": 0
+    }
+},
+{
+    "model": "game.balancegame",
+    "pk": 3,
+    "fields": {
+        "title": "평생동안",
+        "question1": "사생활 노출",
+        "question2": "노출로 생활",
+        "vote1": 0,
+        "vote2": 0
+    }
+},
+{
+    "model": "game.balancegame",
+    "pk": 4,
+    "fields": {
+        "title": "어디로 여행갈래?",
+        "question1": "온두라스",
+        "question2": "소말리아",
+        "vote1": 0,
+        "vote2": 0
+    }
+},
+{
+    "model": "game.balancegame",
+    "pk": 5,
+    "fields": {
+        "title": "하루 24시간",
+        "question1": "화상강의 듣기",
+        "question2": "화상강의 하기",
+        "vote1": 0,
+        "vote2": 0
+    }
+},
+{
+    "model": "game.balancegame",
+    "pk": 6,
+    "fields": {
+        "title": "싸피밋업 부캐콘에 나간다면?",
+        "question1": "데스파시토 보컬",
+        "question2": "오우마이걸 댄스",
+        "vote1": 0,
+        "vote2": 0
+    }
+},
+{
+    "model": "game.balancegame",
+    "pk": 7,
+    "fields": {
+        "title": "평생 베라 한 가지 맛만 먹는다면?",
+        "question1": "민트초코",
+        "question2": "레인보우샤베트",
+        "vote1": 0,
+        "vote2": 0
+    }
+},
+{
+    "model": "game.balancegame",
+    "pk": 8,
+    "fields": {
+        "title": "스승의 날",
+        "question1": "철민 교수님 만나기",
+        "question2": "규정님 만나기",
+        "vote1": 0,
+        "vote2": 0
+    }
+},
+{
+    "model": "game.balancegame",
+    "pk": 9,
+    "fields": {
+        "title": "비 오는 날",
+        "question1": "젖은 양말 신기",
+        "question2": "새 신발 신기",
+        "vote1": 0,
+        "vote2": 0
+    }
+},
+{
+    "model": "game.balancegame",
+    "pk": 10,
+    "fields": {
+        "title": "무엇으로 살래?",
+        "question1": "탈모 원빈",
+        "question2": "풍성 김광규",
+        "vote1": 0,
+        "vote2": 0
+    }
+},
+{
+  "model": "game.nickname",
+  "pk": 1,
+  "fields": {
+    "student_nickname": "꽃규정",
+    "student_name": "이규정",
+    "flag": false
+  }
+},
+{
+  "model": "game.nickname",
+  "pk": 2,
+  "fields": {
+    "student_nickname": "조조교",
+    "student_name": "조혜인",
+    "flag": false
+  }
+},
+{
+  "model": "game.nickname",
+  "pk": 3,
+  "fields": {
+    "student_nickname": "데스파시토",
+    "student_name": "한상길",
+    "flag": false
+  }
+},
+{
+  "model": "game.nickname",
+  "pk": 4,
+  "fields": {
+    "student_nickname": "MD장인",
+    "student_name": "이다영",
+    "flag": false
+  }
+},
+{
+  "model": "game.nickname",
+  "pk": 5,
+  "fields": {
+    "student_nickname": "퐁듀엄마",
+    "student_name": "정희진",
+    "flag": false
+  }
+},
+{
+  "model": "game.nickname",
+  "pk": 6,
+  "fields": {
+    "student_nickname": "오우마이걸",
+    "student_name": "권오우",
+    "flag": false
+  }
+},
+{
+  "model": "game.nickname",
+  "pk": 7,
+  "fields": {
+    "student_nickname": "홈카페사장님",
+    "student_name": "이민아",
+    "flag": false
+  }
+},
+{
+  "model": "game.nickname",
+  "pk": 8,
+  "fields": {
+    "student_nickname": "갓덕삼",
+    "student_name": "황지원",
+    "flag": false
+  }
+},
+{
+  "model": "game.nickname",
+  "pk": 9,
+  "fields": {
+    "student_nickname": "준드래곤",
+    "student_name": "박준용",
+    "flag": false
+  }
+},
+{
+  "model": "game.nickname",
+  "pk": 10,
+  "fields": {
+    "student_nickname": "꿈나무꺼누",
+    "student_name": "안건우",
+    "flag": false
+  }
+},
+  {
+    "model": "game.chatuser",
+    "pk": 1, 
+    "fields": {
+      "name": "코인 가즈아", 
+      "initial": "KG", 
+      "fg_color": "808080", 
+      "bg_color": "222222"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 2, 
+    "fields": {
+      "name": "골프채", 
+      "initial": "GC", 
+      "fg_color": "808080", 
+      "bg_color": "000000"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 3, 
+    "fields": {
+      "name": "오우마이걸 팬", 
+      "initial": "OF", 
+      "fg_color": "8900c4", 
+      "bg_color": "fff203"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 4, 
+    "fields": {
+      "name": "반장님 저격수", 
+      "initial": "JJ", 
+      "fg_color": "ffbff2", 
+      "bg_color": "136356"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 5, 
+    "fields": {
+      "name": "Greg 짱", 
+      "initial": "GZ", 
+      "fg_color": "000000", 
+      "bg_color": "40ff8c"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 6, 
+    "fields": {
+      "name": "겨울엄마", 
+      "initial": "WM", 
+      "fg_color": "6b0f09", 
+      "bg_color": "ffa340"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 7, 
+    "fields": {
+      "name": "준이 오빠", 
+      "initial": "JO", 
+      "fg_color": "000000", 
+      "bg_color": "#ed0226"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 8, 
+    "fields": {
+      "name": "준드래곤", 
+      "initial": "JD", 
+      "fg_color": "000000", 
+      "bg_color": "00b509"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 9, 
+    "fields": {
+      "name": "꿈나무꺼누", 
+      "initial": "GG", 
+      "fg_color": "000000", 
+      "bg_color": "9c5032"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 10, 
+    "fields": {
+      "name": "t없ⓔ맑은0r0l", 
+      "initial": "TI", 
+      "fg_color": "6e20bd", 
+      "bg_color": "919191"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 11, 
+    "fields": {
+      "name": "구름 파자마", 
+      "initial": "GP", 
+      "fg_color": "ffffff", 
+      "bg_color": "000000"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 12, 
+    "fields": {
+      "name": "3반의 꽃", 
+      "initial": "GJ", 
+      "fg_color": "ff0000", 
+      "bg_color": "000000"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 13, 
+    "fields": {
+      "name": "MD 장인", 
+      "initial": "MD", 
+      "fg_color": "000000", 
+      "bg_color": "fff700"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 14, 
+    "fields": {
+      "name": "홈카페 사장님", 
+      "initial": "HS", 
+      "fg_color": "000000", 
+      "bg_color": "fff700"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 15, 
+    "fields": {
+      "name": "옷걸이 5번", 
+      "initial": "OD", 
+      "fg_color": "000000", 
+      "bg_color": "fff700"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 16, 
+    "fields": {
+      "name": "단발 요정", 
+      "initial": "DY", 
+      "fg_color": "000000", 
+      "bg_color": "fff700"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 17, 
+    "fields": {
+      "name": "하회탈", 
+      "initial": "HH", 
+      "fg_color": "000000", 
+      "bg_color": "fff700"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 18, 
+    "fields": {
+      "name": "퐁듀라 부르기 금지", 
+      "initial": "PG", 
+      "fg_color": "000000", 
+      "bg_color": "fff700"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 19, 
+    "fields": {
+      "name": "막걸리 2병", 
+      "initial": "MD", 
+      "fg_color": "000000", 
+      "bg_color": "fff700"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 20, 
+    "fields": {
+      "name": "조조교", 
+      "initial": "JJ", 
+      "fg_color": "000000", 
+      "bg_color": "fff700"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 21, 
+    "fields": {
+      "name": "데스파시토", 
+      "initial": "DP", 
+      "fg_color": "000000", 
+      "bg_color": "fff700"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 22, 
+    "fields": {
+      "name": "야자하자", 
+      "initial": "YH", 
+      "fg_color": "000000", 
+      "bg_color": "fff700"
+    }
+  }, 
+  {
+    "model": "game.chatuser", 
+    "pk": 23, 
+    "fields": {
+      "name": "킹갓제네럴엠페러DS", 
+      "initial": "KD", 
+      "fg_color": "000000", 
+      "bg_color": "fff700"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 1, 
+    "fields": {
+      "chat_user": 1, 
+      "message": "안녕하세요~~"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 2, 
+    "fields": {
+      "chat_user": 2, 
+      "message": "안녕하세요!!"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 3, 
+    "fields": {
+      "chat_user": 4, 
+      "message": "안녕하세요~~~~!"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 4, 
+    "fields": {
+      "chat_user": 3, 
+      "message": "너무 눈이 부셔서 눈을 뜰 수가 없네요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 5, 
+    "fields": {
+      "chat_user": 2, 
+      "message": "교수님 밤에 불 안켜도 되겠어요 자체발광하니까"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 6, 
+    "fields": {
+      "chat_user": 4, 
+      "message": "승환교수님 좋아하는 사람 접으라 했더니 지구 절반이 접혔대요~!"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 7, 
+    "fields": {
+      "chat_user": 5, 
+      "message": "교수님한테 벽이 느껴져요..."
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 8, 
+    "fields": {
+      "chat_user": 5, 
+      "message": "완벽..."
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 9, 
+    "fields": {
+      "chat_user": 7, 
+      "message": "교수님 콧대에 미끄러져서 미국 다녀왔잖아요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 10, 
+    "fields": {
+      "chat_user": 8, 
+      "message": "교수님 그거 기억나세요? 저희 루브르박물관 털러갔는데 교수님만 조각상인척 해서 저만 경찰에 잡혀갔잖아요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 11, 
+    "fields": {
+      "chat_user": 13, 
+      "message": "KT에 고소당하셨다면서요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 12, 
+    "fields": {
+      "chat_user": 13, 
+      "message": "GIGA 막히게 잘 생겨서"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 13, 
+    "fields": {
+      "chat_user": 11, 
+      "message": "지구뿌셔~!"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 14, 
+    "fields": {
+      "chat_user": 11, 
+      "message": "교수님 잘생길 때마다 이마쳤더니 거북목 완치됐어요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 15, 
+    "fields": {
+      "chat_user": 4, 
+      "message": "교수님 캠 보다가 심장 녹을까봐 냉동실에서 수업 듣는 중"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 16, 
+    "fields": {
+      "chat_user": 2, 
+      "message": "아 그거 아세요...? 잘생긴 사람을 보면 기억을 잃는대요."
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 17, 
+    "fields": {
+      "chat_user": 2, 
+      "message": "아 그거 아세요...? 잘생긴 사람을 보면 기억을 잃는대요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 18, 
+    "fields": {
+      "chat_user": 13, 
+      "message": "교수님 잘생겨서 박수치다가 모기잡았잖아요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 19, 
+    "fields": {
+      "chat_user": 2, 
+      "message": "아 그거 아세요...? 잘생긴 사람을 보면 기억을 잃는대요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 20, 
+    "fields": {
+      "chat_user": 9, 
+      "message": "우리오파(于里烏播) 개귀여어(凱歸蠡魚) 하고풍거(河鼓風去) 삭다해라(削多海蘿) 신의미모(神義美貌) 세상간지(世上間地) 용안에서(用安恚西) 비치난다(費治難多) 좌로인정(左虜人正) 우로인정(右虜人正) 압구루기(狎鷗漏器) 대굴대굴(大窟大窟) 매일이론(每日理論) 덕후마음(德厚馬音) 주접이라(主楪伊亽) 할지라도(轄地羅道) 내가알게(來駕謁揭) 모야시발(暮夜始發) 내주접은(內主接銀) 정당하다(正當下多)"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 21, 
+    "fields": {
+      "chat_user": 9, 
+      "message": "교수님은 계란 한 판 사면 29개가 들어있다면서요!"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 22, 
+    "fields": {
+      "chat_user": 9, 
+      "message": "왜냐구요? 교수님의 미모에 한계란 없거든요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 23, 
+    "fields": {
+      "chat_user": 5, 
+      "message": "세계 3대 마요 소개 1.참치마요 2.치킨마요 3.제 마음 훔치지 마요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 24, 
+    "fields": {
+      "chat_user": 21, 
+      "message": "저는 교수님이 짐을 좀 내려놨으면 좋겠어요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 25, 
+    "fields": {
+      "chat_user": 21, 
+      "message": "멋짐"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 26, 
+    "fields": {
+      "chat_user": 3, 
+      "message": "교수님 때문에 전쟁 났다면서요?"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 27, 
+    "fields": {
+      "chat_user": 3, 
+      "message": "귀여WAR"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 28, 
+    "fields": {
+      "chat_user": 1, 
+      "message": "교수님은 린스 안해도 되겠다 프린스라서"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 29, 
+    "fields": {
+      "chat_user": 18, 
+      "message": "교수님은 다 좋은데 딱 하나만 고쳐줬으면 좋겠어요..."
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 30, 
+    "fields": {
+      "chat_user": 18, 
+      "message": "내 심장"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 31, 
+    "fields": {
+      "chat_user": 10, 
+      "message": "교수님의 잘생김은 다 거품이야"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 32, 
+    "fields": {
+      "chat_user": 10, 
+      "message": "언빌리버블"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 33, 
+    "fields": {
+      "chat_user": 12, 
+      "message": "교수님 혼혈이죠? 솔직히 말해봐요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 34, 
+    "fields": {
+      "chat_user": 12, 
+      "message": "한국과 천국"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 35, 
+    "fields": {
+      "chat_user": 11, 
+      "message": "교수님 MBTI가 CUTE라면서요?"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 36, 
+    "fields": {
+      "chat_user": 12, 
+      "message": "어디서 타는 냄새 안나요?"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 37, 
+    "fields": {
+      "chat_user": 4, 
+      "message": "교수님 때문에 내 심장이 타고 있어요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 38, 
+    "fields": {
+      "chat_user": 1, 
+      "message": "교수님 혹시 렌즈 꼈어요?"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 39, 
+    "fields": {
+      "chat_user": 1, 
+      "message": "마이보이프렌즈"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 40, 
+    "fields": {
+      "chat_user": 4, 
+      "message": "왜 일하세요????? 교수님 미모가 이미 열일하고 있는데"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 41, 
+    "fields": {
+      "chat_user": 8, 
+      "message": "교수님을 음계로 표현하자면 '레'예요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 42, 
+    "fields": {
+      "chat_user": 8, 
+      "message": "왜냐하면 교수님에게 '미'치기 직전이니까요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 43, 
+    "fields": {
+      "chat_user": 12, 
+      "message": "5점 만점에 4.9점 드리겠습니다."
+    }
+  },
+  {
+    "model": "game.chatmessage", 
+    "pk": 43, 
+    "fields": {
+      "chat_user": 12, 
+      "message": "교수님에겐 '오점'이란 없으니까"
+    }
+  }
+]
