@@ -9,6 +9,7 @@ urlpatterns = [
     path('stage2/get_hint/<int:pk>/', views.getHint, name='getHint'),
     path('stage2/balance/<int:pk>/', views.balance_game, name='balance_game'),
     path('stage2/balance/<int:game_pk>/<int:choice_pk>/', views.choose_one, name='choose_one'),
+    path('stage2/end/', views.endGame2, name='endGame2'),
     path('stage3/', views.stage3, name='stage3'),
     path('stage3/is_absent/', views.is_absent, name='is_absent'),
     path('bonus/', views.bonus, name='bonus'),

@@ -4,6 +4,7 @@
     "pk": 1,
     "fields": {
       "name": "juan",
+      "profile_img": "/media/profile/juan.jpg",
       "webex_img": "/media/webex/juan.png",
       "coins": 0,
       "game_clear": "False"
