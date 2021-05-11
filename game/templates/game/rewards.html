@@ -9,16 +9,38 @@
     .middle-text{
         font-size: 1.5rem;
     }
+    .modal-big-text{
+        font-size: 2.5rem;
+    }
+    .modal-middle-text{
+        font-size: 1.8rem;
+    }
+
 </style>
 
 <div id="app">
-{% comment %} 상단 우측 : 열 수 있는 메세지 개수를 표시하는 버튼 {% endcomment %}
+<!-- 상단 우측 : 열 수 있는 메세지 개수를 표시하는 버튼 -->
 <div class="d-flex flex-row-reverse my-3">
     <button type="button" class="btn" :class="{'btn-primary':remainedNum}" style="width: 20%;">
         열 수 있는 메세지 개수 <span class="badge bg-secondary" v-text="remainedNum"></span>
     </button>
 </div>
-{% comment %} 본문 : 메세지 내용 {% endcomment %}
+
+<!-- 모달 (팝업 메세지) : 클릭했을 때 -->
+<div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content"  :class="[nowMessage.color, nowMessage.fontColor]">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">From.  <span v-html="nowMessage.name"><i class="fas fa-user-lock"></i></span> </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" :class="[nowMessage.fontColor == 'text-white'? 'btn-close-white' : '']"></button>
+        </div>
+        <div class="modal-body">
+            <p class="text-center" v-html="nowMessage.content"> </p>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- 본문 : 메세지 내용 -->
 <div class="row" data-masonry='{"percentPosition": true }'>
     <div class="col-6 col-lg-4 col-xl-3" v-for="(message, idx) in messages" :key="idx">
         <template v-if="message.isLocked">
@@ -79,23 +101,39 @@
             name : '<i class="fas fa-user-lock"></i>',
             content : '<i class="fas fa-lock"></i>',
             // DB에서 가져온 Messages 데이터
-            messages: null
+            messages: null,
+            nowMessage: {
+                'color' : 'bg-primary',
+                'fontColor' : "text-dark"
+            },
         },
         methods: {
             // on click 시 호출되는 카드 열기 함수
             openCard :function(id){
                 if (this.remainedNum > 0){
+                    this.nowMessage = this.messages[id]
                     this.messages[id].color = _.sample(this.cardColors)
                     this.messages[id].fontColor = this.textColors[this.messages[id].color]
                     this.messages[id].isLocked = false
                     this.remainedNum -= 1
                     const pk = this.messages[id].id
+                    // 메세지 DB에 is_locked = true로 업데이트
                     axios({
                         method:'get',
                         url:BASE_URL +`/openmessage/${pk}/`,
                     })
+                    // 모달 (메세지 팝업) 띄우기
+                    const myModal = new bootstrap.Modal(document.getElementById('messageModal'), {
+                    backdrop: true
+                    })
+                    myModal.show();
                 }
             },
+        },
+        computed : {
+            isOpenMessageAvailable : function(){
+                return this.remainedNum > 0
+            }
         },
         created:function(){
             // load coins
