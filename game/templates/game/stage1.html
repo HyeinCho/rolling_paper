@@ -20,7 +20,7 @@
   </div>
   <div class="d-flex justify-content-center mt-5">
     {% comment %} rewards로 이동하기 {% endcomment %}
-      <form class='move-next' style="display:none" method="POST" action="{% url 'ssafy5-3:insertCoin' 10 %}">
+      <form class='move-next' style="display:none" method="POST" action="{% url 'ssafy5-3:insertCoin' 1 %}">
         {% csrf_token %}
         <button class="btn btn-primary">보상 확인하러 가기</button>
       </form>

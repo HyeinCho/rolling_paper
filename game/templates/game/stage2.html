@@ -16,7 +16,7 @@
                 {% csrf_token %}
                 <button id="isDisabled-{{ card.pk }}" class="card p-0">
                   {% if card.flip %}
-                    <img id="card-{{ card.pk }}" src="/media/{{ card.card_img }}" class="card-img-top">
+                    <img id="card-{{ card.pk }}" src="{{ card.card_img }}" class="card-img-top">
                   {% else %}
                     <img id="card-{{ card.pk }}" src="{% static 'game/stage2_card_back.png' %}" class="card-img-top">
                   {% endif %}
