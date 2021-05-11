@@ -10,6 +10,11 @@ def index(request):
     }
     return render(request, 'ssafy5_3/index.html', context)
 
+def messages(request):
+    context = {
+
+    }
+    return render(request, 'ssafy5_3/messages.html', context)
 
 def collegues(request):
     students = Student.objects.all()
@@ -86,12 +91,12 @@ def open_message(request, id):
     return JsonResponse(context)
 
 # 입력한 개수 만큼의 coin을 추가한다.
+@require_POST
 def insert_coin(request, coin_num):
-    print(request.POST)
     professor = get_object_or_404(Professor, pk=1)
     professor.coins = professor.coins + coin_num
     professor.save()
 
-    context={}
-    return JsonResponse(context)
+    return redirect('game:rewards')
+    
     

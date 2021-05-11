@@ -18,7 +18,8 @@ def stage1(request):
 
     for student in students:
         if student.name in names:
-            student.flag = False       
+            student.flag=True
+            student.save()   
 
     if request.is_ajax():
         data = serializers.serialize('json', nicknames)
@@ -30,40 +31,40 @@ def stage1(request):
         return render(request, 'game/stage1.html', context)
     
 
-
+@require_POST
 def stage2(request):
     # if not Card.objects.all(): # 나중에 포스트로 바꿀거임
-    if request.method == 'POST':
-        Card.objects.all().delete()
+    # if request.method == 'POST':
+    Card.objects.all().delete()
 
-        for _ in range(20):
-            while True:
-                student = Student.objects.order_by("?").first()
-                count_num = Card.objects.filter(student_id=student.pk).count()
-                card = Card()
-                card.student_id = student.pk
-                card.flip = False
-                
-                if count_num == 2:
-                    continue
-                elif count_num == 1:
-                    tmp = Card.objects.get(student_id=student.pk)
-                    if tmp.flag: # 프로필 이미지 존재 => 이름 이미지 넣기
-                        card.card_img = student.name_img
-                        card.flag = False
-                    else: # 이름 이미지 존재 => 카드 이미지 넣기
-                        card.card_img = student.card_img
-                        card.flag = True
-                else: # count_num == 0
-                    random_num = randint(0, 1)
-                    if random_num: # 프로필 이미지 넣기
-                        card.card_img = student.card_img
-                        card.flag = True
-                    else: # random_num == 0, 이름 이미지 넣기
-                        card.card_img = student.name_img
-                        card.flag = False
-                card.save()
-                break
+    for _ in range(20):
+        while True:
+            student = Student.objects.order_by("?").first()
+            count_num = Card.objects.filter(student_id=student.pk).count()
+            card = Card()
+            card.student_id = student.pk
+            card.flip = False
+            
+            if count_num == 2:
+                continue
+            elif count_num == 1:
+                tmp = Card.objects.get(student_id=student.pk)
+                if tmp.flag: # 프로필 이미지 존재 => 이름 이미지 넣기
+                    card.card_img = student.name_img
+                    card.flag = False
+                else: # 이름 이미지 존재 => 카드 이미지 넣기
+                    card.card_img = student.card_img
+                    card.flag = True
+            else: # count_num == 0
+                random_num = randint(0, 1)
+                if random_num: # 프로필 이미지 넣기
+                    card.card_img = student.card_img
+                    card.flag = True
+                else: # random_num == 0, 이름 이미지 넣기
+                    card.card_img = student.name_img
+                    card.flag = False
+            card.save()
+            break
 
     cards = Card.objects.all()
     context = {

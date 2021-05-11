@@ -13,10 +13,14 @@
 
 <div id="app">
 {% comment %} 상단 우측 : 열 수 있는 메세지 개수를 표시하는 버튼 {% endcomment %}
-<div class="d-flex flex-row-reverse my-3">
+<div class="d-flex justify-content-between my-3">
     <button type="button" class="btn" :class="{'btn-primary':remainedNum}" style="width: 20%;">
         열 수 있는 메세지 개수 <span class="badge bg-secondary" v-text="remainedNum"></span>
     </button>
+    <form id="stage-form">
+        {% csrf_token %}
+        <button class="btn btn-primary">Next Stage</button>
+    </form>
 </div>
 {% comment %} 본문 : 메세지 내용 {% endcomment %}
 <div class="row" data-masonry='{"percentPosition": true }'>
@@ -58,9 +62,12 @@
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 <script>
     const BASE_URL = 'http://127.0.0.1:8000/ssafy5-3'
+    let nextGame = 0
+
     const app = new Vue({
         el: "#app",
         data: {
+            nextGame: 1, // 다음 게임 스테이지
             remainedNum: 0, // 열 수 있는 메세지 개수
             // 부트스트랩 Card 에 적용되는 배경 색상 리스트
             cardColors: [
@@ -96,6 +103,31 @@
                     })
                 }
             },
+            // on click 시 호출되는 다음 스테이지 함수
+            // nextStage: function() {
+            //     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+            //     this.nextGame += 1
+            //     if (this.nextGame === 2) {
+            //         axios({
+            //             method: 'post',
+            //             url: 'http://127.0.0.1:8000/game/stage2/',
+            //             headers: {'X-CSRFToken': csrftoken},
+            //         })
+            //     }
+            //     else if (this.nextGame === 3) {
+            //         axios({
+            //             method: 'post',
+            //             url: 'http://127.0.0.1:8000/game/stage3/',
+            //             headers: {'X-CSRFToken': csrftoken},
+            //         })
+            //     }
+            //     else if (this.nextGame === 4) {
+            //         axios({
+            //             method: 'get',
+            //             url: 'http://127.0.0.1:8000/ssafy5-3/profile',
+            //         })
+            //     }
+            // }
         },
         created:function(){
             // load coins
@@ -118,7 +150,39 @@
                 console.log(err)
             })
             
+            nextGame = 1
         }
     })
+
+    
+    const form = document.querySelector('#stage-form')
+    form.addEventListener('submit', event => {
+        event.preventDefault()
+        
+        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+        nextGame+=1
+        console.log(nextGame)
+        if (nextGame === 2) {
+            axios({
+                method: 'post',
+                url: 'http://127.0.0.1:8000/game/stage2/',
+                headers: {'X-CSRFToken': csrftoken},
+            })
+        }
+        else if (nextGame === 3) {
+            axios({
+                method: 'post',
+                url: 'http://127.0.0.1:8000/game/stage3/',
+                headers: {'X-CSRFToken': csrftoken},
+            })
+        }
+        else if (nextGame === 4) {
+            axios({
+                method: 'get',
+                url: 'http://127.0.0.1:8000/ssafy5-3/profile',
+            })
+        }
+    })
+
 </script>
 {% endblock content %}

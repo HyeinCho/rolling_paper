@@ -4,6 +4,7 @@ from . import views
 app_name = 'ssafy5-3'
 urlpatterns = [
     path('', views.index, name='index'),
+    path('messages/', views.messages, name='messages'),
     path('collegues/', views.collegues, name='collegues'),
     path('greetings/', views.greetings, name='greetings'),
     path('coin/', views.load_coin, name='coin'),

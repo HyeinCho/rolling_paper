@@ -128,10 +128,13 @@
           }
 
           if (completed){
-            setTimeout(function() {
-              alert('Finish')
-              
-            }, 1000)      
+            if(!alert("STAGE 2 완료!!")) {
+              axios({
+                method: 'post',
+                url: 'http://127.0.0.1:8000/ssafy5-3/insertcoin/10/',
+                headers: {'X-CSRFToken': csrftoken},
+              })
+            }  
           }
         })
       })

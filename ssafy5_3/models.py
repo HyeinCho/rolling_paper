@@ -26,6 +26,7 @@ class Student(models.Model):
 
 class Professor(models.Model):
     name = models.CharField(max_length=10)
+    profile_img = models.ImageField(upload_to='profile/')
     webex_img = models.ImageField(upload_to='webex/')
     coins = models.IntegerField()
     game_clear = models.BooleanField()

@@ -20,14 +20,14 @@
   </div>
   <div class="d-flex justify-content-center mt-5">
     {% comment %} rewards로 이동하기 {% endcomment %}
-      <form class='move-next' style="display:none" method="POST" action="{% url 'game:stage2' %}">
+      <form class='move-next' style="display:none" method="POST" action="{% url 'ssafy5-3:insertCoin' 10 %}">
         {% csrf_token %}
-        <button type="button" class="btn btn-primary">보상 확인하러 가기</button>
+        <button class="btn btn-primary">보상 확인하러 가기</button>
       </form>
       <form class="myForm">
       <div class="input-group mb-3">
         <input class="answer form-control" type="text" placeholder='완성시켜 입력하세요.' aria-describedby="button-submit">
-        <button type="button" class="my-btn btn btn-outline-secondary" id="button-submit">제출</button>
+        <button class="my-btn btn btn-outline-secondary" id="button-submit">제출</button>
       </div>
       </form>
     </div>
@@ -115,6 +115,7 @@
             let next = document.querySelector('.move-next')
             next.setAttribute('style', 'display:block')
             myForm.setAttribute('style', 'display:none')
+            
             return
           }
           document.querySelector(".answer").value = ""
