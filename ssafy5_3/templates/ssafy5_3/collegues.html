@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
 
+{% comment %} 화면 상단 네비게이션 바 {% endcomment %}
+{% block navbar %}
+  {% include 'nav.html' %}
+    <script>
+    const iconSelected = document.querySelector('#icon-collegues')
+    iconSelected.classList.add('bold-icon')
+  </script>
+{% endblock navbar %}
+
+{% comment %} 본문 {% endcomment %}
 {% block content %}
 <div class="card p-4 my-3">
   <div class="row">
