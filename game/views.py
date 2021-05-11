@@ -31,15 +31,14 @@ def stage1(request):
         return render(request, 'game/stage1.html', context)
     
 
-@require_POST
+# @require_POST
 def stage2(request):
-    # if not Card.objects.all(): # 나중에 포스트로 바꿀거임
-    # if request.method == 'POST':
     Card.objects.all().delete()
+    absent_students = sorted(Student.objects.filter(flag=False), key=lambda x: random())[0:10]
 
     for _ in range(20):
         while True:
-            student = Student.objects.order_by("?").first()
+            student = sorted(absent_students, key=lambda x: random())[0]
             count_num = Card.objects.filter(student_id=student.pk).count()
             card = Card()
             card.student_id = student.pk
@@ -67,6 +66,7 @@ def stage2(request):
             break
 
     cards = Card.objects.all()
+
     context = {
         'cards': cards,
     }
@@ -164,10 +164,14 @@ def endGame2(request):
         student.flag = True
         student.save()
     
-    return redirect(bonus)
+    data = {}
+    return JsonResponse(data)
 
+
+@require_POST
 def stage3(request):
     attended_students = sorted(Student.objects.filter(flag=True), key=lambda x: random())
+    print(len(attended_students))
     row1 = attended_students[:4]
     row2 = attended_students[4:9]
     row3 = attended_students[9:14]

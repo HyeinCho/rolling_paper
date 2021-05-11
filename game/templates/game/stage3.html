@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 
 {% block webex %}
+<form name="sendCoin" action="{% url 'ssafy5-3:insertCoin' 12 %}" method="POST">
+  {% csrf_token %}
+  <input id="hidden-form" type="hidden" >
+</form>
+
 <div class="d-flex justify-content-center align-items-center">
   <div class="col-11 row d-flex justify-content-around align-items-stretch p-0" style="background-color: #E0E0E0">
     <div class="col-12 d-flex justify-content-between align-items-center m-0 p-0">
@@ -141,16 +146,19 @@
       console.log(chat)
       chatting.append(chat)
       event.target.reset()
-    })
-  })
-    axios({
-      method: 'post',
-      url: 'http://127.0.0.1:8000/game/stage3/is_absent/',
-      headers: {'X-CSRFToken': csrftoken},
-      nowAttendedId: nowAttendedId
-    })
-    .then(response => {
+
+      
+      if (nowAttended.length === 3){
+        setTimeout(function () {
+          if(!alert("STAGE 3 완료!!")) {
+            if (document.getElementById("hidden-form").value == "") {
+              document.sendCoin.submit();
+            }
+          }
+        }, 1000)
+      }
       
     })
+  })
 </script>
 {% endblock %}
