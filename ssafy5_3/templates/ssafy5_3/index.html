@@ -2,8 +2,17 @@
 {% load static %}
 {% load bootstrap5 %}
 
+{% comment %} 화면 상단 네비게이션 바 {% endcomment %}
+{% block navbar %}
+  {% include 'nav.html' %}
+  <script>
+    const iconSelected = document.querySelector('#icon-game')
+    iconSelected.classList.add('bold-icon')
+  </script>
+{% endblock navbar %}
+
+{% comment %} 본문 {% endcomment %}
 {% block index %}
-  {% include "nav.html" %}
   <div class='container '>
     <div class="d-flex justify-content-center mt-5">
       <img src="/media/{{ professor.webex_img }}" class="rounded-circle border border-5" alt="juan"><br>
@@ -11,5 +20,55 @@
     <div class="d-flex justify-content-center mt-5">
       <p class="mt-5 fs-1">서울 3반 <b>{{ professor.name }}</b>을 초대합니다.</p>
     </div>
+    <div class="d-flex justify-content-center mt-5">
+      <p class="mt-2 fs-3">스승의 날을 맞이하여 서울 3반이 준비한 특별 이벤트!</p>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button id='move-game' type="button" class="btn btn-primary">시작하기</button>
+    </div>
   </div>
+
+  <div class="modal" tabindex="-1" id='modal'>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">스승의 날 이벤트</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>감사 인사를 전하기 전에 참된 스승의 맞는 지 검증하는 과정을 거치겠습니다.</p>
+          <p>서울 3반 학우들과 관련된 총 세 가지 게임을 통해 교수님의 진정성을 보여주세요.</p>
+          <p>각 단계를 클리어하면 어마어마한 보상들이 주어집니다.</p>
+        </div>
+        <div class="modal-footer">
+          <form action="{% url 'game:stage1' %}">
+            <button id='modal-button'class="btn btn-primary">Start</button>
+          </form>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style='display: none' class="alert alert-warning" role="alert">
+    게임을 시작하면 중간에 멈출 수 없습니다. 주의하세요.
+  </div>
+
+  <script>
+    const myBtn = document.querySelector('#move-game')
+    myBtn.addEventListener("click", function(event) {
+    let modal = document.getElementById('modal')
+    var myModal = new bootstrap.Modal(document.getElementById('modal'), {
+      keyboard: false
+    })
+    console.log(modal)
+    console.log(myModal)
+    myModal.toggle()
+    })
+
+    const modalBtn = document.querySelector('#modal-button')
+    modalBtn.addEventListener('mouseover', function() {
+      let alert = document.querySelector('.alert')
+      alert.setAttribute('style', 'display: block')
+    })
+  </script>
 {% endblock index %}

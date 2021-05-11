@@ -8,7 +8,6 @@ from .models import Card, ChatMessage, BalanceGame, Nickname
 from ssafy5_3.models import Message, Professor
 from random import randint, random
 
-@login_required
 def stage1(request):
     #모든 학생들 중 해당 스테이지에서 언급되는 학생들 flag를 통해 구분하기
     students = Student.objects.all()
