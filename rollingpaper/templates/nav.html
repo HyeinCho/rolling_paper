@@ -3,8 +3,9 @@
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid d-flex flex-row-reverse me-5">
     <div class="navbar-nav">
-      <a class="nav-link ms-auto" href="{% url 'ssafy5_3:ssafy5_3.collegues' %}"><img src="{% static 'collegue.svg' %}" alt="profile" width="100" height="70"></a>
-      <a class="nav-link p-2" href="{% url 'ssafy5_3:ssafy5_3.messages' %}"><img src="{% static 'message2.svg' %}" alt="profile" width="100" height="70"></a>
+      <a class="nav-link" href="{% url 'game:stage1' %}"><img src="{% static 'game.svg' %}" alt="game" width="100" height="70"></a>
+      <a class="nav-link" href="{% url 'ssafy5_3:ssafy5_3.collegues' %}"><img src="{% static 'collegue.svg' %}" alt="profile" width="100" height="70"></a>
+      <a class="nav-link" href="{% url 'ssafy5_3:ssafy5_3.messages' %}"><img src="{% static 'message2.svg' %}" alt="message" width="100" height="70"></a>
     </div>
   </div>
 </nav>

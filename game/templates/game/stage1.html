@@ -52,7 +52,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
-    // 페이지 렌더링 시 모달 구현 ex) 게임을 시작하시겠습니까? bootstrap 모달 가져왔는데 실행시키는 방법을 모르겠음
+    // 페이지 렌더링 시 모달 구현 
     window.addEventListener("load", function(event) {
       let modal = document.getElementById('modal')
       var myModal = new bootstrap.Modal(document.getElementById('modal'), {
@@ -61,7 +61,7 @@
       console.log(modal)
       console.log(myModal)
       myModal.toggle()
-    });
+    })
     // 문자열 인덱스 바꾸기 함수
     String.prototype.replaceAt=function(idx, character) {
     return this.substr(0, idx) + character + this.substr(idx+character.length)
