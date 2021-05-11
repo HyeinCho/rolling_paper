@@ -96,8 +96,8 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
   form = document.querySelector('#answer')
+  
   const nowAttended = []
-
   const nowAttendedId = []
 
   form.addEventListener('submit', event => {
@@ -109,10 +109,12 @@
     .then((response) => {
       const absents = response.data.absents
       for (absent in absents) {
+        
         const absentId = absents[absent].id
         const absentName = absents[absent].name
         const absentWebexImg = absents[absent].webex_img
         const absentFlag = absents[absent].flag
+        
         if (sentence.includes(absentName) && !nowAttended.includes(absentName)) {
           const row5 = document.querySelector('#row5')
           const webexImg = document.createElement('img')
@@ -138,9 +140,17 @@
       
       console.log(chat)
       chatting.append(chat)
+      event.target.reset()
     })
-
-    event.target.reset()
   })
+    axios({
+      method: 'post',
+      url: 'http://127.0.0.1:8000/game/stage3/is_absent/',
+      headers: {'X-CSRFToken': csrftoken},
+      nowAttendedId: nowAttendedId
+    })
+    .then(response => {
+      
+    })
 </script>
 {% endblock %}

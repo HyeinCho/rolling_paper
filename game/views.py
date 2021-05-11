@@ -185,20 +185,27 @@ def stage3(request):
 
 def is_absent(request):
     absent_students = get_list_or_404(Student)
-    serialized_students = []
-    for student in absent_students:
-        if student.flag == False:
-            student_name = student.name[1:]
-            serialized_students.append({
-                'id': student.pk,
-                'name': student_name,
-                'webex_img': str(student.webex_img),
-                'flag': student.flag,
-            })
-    context = {
-        'absents': serialized_students,
-    }
-    return JsonResponse(context)
+    if request.method == 'GET':
+        serialized_students = []
+        for student in absent_students:
+            if student.flag == False:
+                student_name = student.name[1:]
+                serialized_students.append({
+                    'id': student.pk,
+                    'name': student_name,
+                    'webex_img': str(student.webex_img),
+                    'flag': student.flag,
+                })
+        context = {
+            'absents': serialized_students,
+        }
+        return JsonResponse(context)
+    elif request.method == 'POST':
+        attended_id = request.nowAttendedId
+        for attended in attended_id:
+            absent_student = get_object_or_404(Student)
+            absent_student.flag = True
+            
 
 def bonus(request):
     return render(request, 'game/bonus.html')
