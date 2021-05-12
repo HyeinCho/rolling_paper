@@ -21,7 +21,7 @@
         <h5 class="card-title fw-bolder mt-md-3">Juan</h5>
         <p class="card-text">SSAFY 최고 존잘 교수님</p>
         <p class="card-text"><small><a href="https://lab.ssafy.com/juan" class="text-dark text-decoration-none"><i class="fab fa-github"></i> Github | https://lab.ssafy.com/juan</a></a></small></p>
-        <p><i class="fas fa-music" style="color:blueviolet; font-size:12px;"> 강소천 - 스승의 은혜</i></p>
+        <a href="https://www.youtube.com/watch?v=XYXkMPfuOxU" class="text-decoration-none"><i class="fas fa-music" style="color:blueviolet; font-size:12px;"> 강소천 - 스승의 은혜</i></a>
       </div>
     </div>
   </div>
@@ -35,7 +35,7 @@
         <div class="card-body pb-0">
           <h5 class="card-title text-center fw-bolder">{{ student.name }}</h5>
           <p class="card-text text-center">{{ student.nickname }}</p>
-          <p><i class="fas fa-music" style="color:blueviolet; font-size:12px;"> {{ student.song }}</i></p>
+          <a href="{{ student.song_url }}" class="text-decoration-none"><i class="fas fa-music" style="color:blueviolet; font-size:12px;"> {{ student.song }}</i></a>
         </div>
         <div class="card-footer">
           {% if student.git_url %}

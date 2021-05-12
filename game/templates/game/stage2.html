@@ -78,7 +78,7 @@
           <p>(참고! 카드를 뒤집을 때마다 카드가 돌아가요)</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button id="yesButton" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -98,138 +98,124 @@
       console.log(myModal)
       myModal.toggle()
     })
-    const back_url = "/static/game/stage2_card_back.png"
-    const forms = document.querySelectorAll('.card-form')
-    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
 
-    function randAngle() {
-      return _.sample([0, 90, 180, 270])
-    }
+    const yesButton = document.getElementById('yesButton')
+    yesButton.addEventListener('click', function () {
+      const back_url = "/static/game/stage2_card_back.png"
+      const forms = document.querySelectorAll('.card-form')
+      const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
 
-    forms.forEach(form => {
-      form.addEventListener('submit', event => {
-        event.preventDefault()
-        
-        const cardId = event.target.dataset.cardId
-        axios({
-          method: 'post',
-          url: `http://3.34.129.176:8000/game/stage2/${cardId}/`,
-          headers: {'X-CSRFToken': csrftoken}
-        })
-        .then(response => {
-          const student_id = response.data.student_id
-          const prev_id = response.data.prev_id
-          const flipped = response.data.flipped
-          const card_url = response.data.card_url
-          const completed = response.data.completed
-          const current_progress = response.data.current_progress
+      function randAngle() {
+        return _.sample([0, 90, 180, 270])
+      }
 
-          const clickCard = document.querySelector(`#card-${cardId}`)
-          const disableCard = document.querySelector(`#isDisabled-${cardId}`)
-
-          if (flipped) {
-            const angle = randAngle()
-            clickCard.src = card_url
-            disableCard.disabled = true
-            clickCard.setAttribute('style', `transform: rotate(${angle}deg);`)
-          }else{
-            clickCard.src = back_url
-            disableCard.disabled = false
-            clickCard.setAttribute('style', 'transform: none;')
-          }
+      forms.forEach(form => {
+        form.addEventListener('submit', event => {
+          event.preventDefault()
           
-
-          if (prev_id != 0){
-            if (prev_id != cardId) {
-              setTimeout(function() {
-                const prev_Card = document.querySelector(`#card-${prev_id}`)
-                const prev_disableCard = document.querySelector(`#isDisabled-${prev_id}`)
-                prev_Card.src = back_url
-                clickCard.src = back_url
-                prev_disableCard.disabled = false
-                disableCard.disabled = false
-                clickCard.setAttribute('style', 'transform: none;')
-                prev_Card.setAttribute('style', 'transform: none;')
-              }, 500)  
-            }else{
-              const cardProgress = document.querySelector('#card_progress')
-              cardProgress.setAttribute('style', `width: ${current_progress}%`)
-            }
-          }
-
-          if (completed){
-            axios({
-              method: 'post',
-              url: `http://3.34.129.176:8000/game/stage2/end/`,
-              headers: {'X-CSRFToken': csrftoken}
-            })
-            .then(response => {
-              setTimeout(function () {
-                if(!alert("STAGE 2 완료!!")) {
-                  if (document.getElementById("hidden-form").value == "") {
-                    document.sendCoin.submit();
-                  }
-                }
-              }, 1000)
-            })
-          }
-        })
-      })
-    })
-
-    const app = new Vue({
-      el: '#app',
-      data: {
-        clicked: false,
-        hint: 10,
-        game_pk: 1,
-        title: '', 
-        question1: '',
-        question2: '',
-        btn_msg: '',
-      },
-      methods: {
-        balanceGame: function () {
-          if (this.hint == 0) return
-          this.clicked = true
-          this.btn_msg = '힌트포기'
-
+          const cardId = event.target.dataset.cardId
           axios({
             method: 'post',
-            url: `http://3.34.129.176:8000/game/stage2/balance/${this.game_pk}/`,
-            headers: {'X-CSRFToken': csrftoken},
+            url: `http://3.34.129.176:8000/game/stage2/${cardId}/`,
+            headers: {'X-CSRFToken': csrftoken}
           })
-          .then ( response => {
-            this.title = response.data.title
-            this.question1 = response.data.question1
-            this.question2 = response.data.question2
-          })
-        },
-        cancleGame: function () {
-          this.clicked = false
-          this.btn_msg = `힌트빰 ${this.hint}`
-        },
+          .then(response => {
+            const student_id = response.data.student_id
+            const prev_id = response.data.prev_id
+            const flipped = response.data.flipped
+            const card_url = response.data.card_url
+            const completed = response.data.completed
+            const current_progress = response.data.current_progress
 
-        getHint: function(){
-          axios.get('http://3.34.129.176:8000/game/stage2/get_hint/1/')
-          .then (response => {
-            forms.forEach(form => {
-              const cardId = form.dataset.cardId
+            const clickCard = document.querySelector(`#card-${cardId}`)
+            const disableCard = document.querySelector(`#isDisabled-${cardId}`)
+
+            if (flipped) {
+              const angle = randAngle()
+              clickCard.src = card_url
+              disableCard.disabled = true
+              clickCard.setAttribute('style', `transform: rotate(${angle}deg);`)
+            }else{
+              clickCard.src = back_url
+              disableCard.disabled = false
+              clickCard.setAttribute('style', 'transform: none;')
+            }
+            
+
+            if (prev_id != 0){
+              if (prev_id != cardId) {
+                setTimeout(function() {
+                  const prev_Card = document.querySelector(`#card-${prev_id}`)
+                  const prev_disableCard = document.querySelector(`#isDisabled-${prev_id}`)
+                  prev_Card.src = back_url
+                  clickCard.src = back_url
+                  prev_disableCard.disabled = false
+                  disableCard.disabled = false
+                  clickCard.setAttribute('style', 'transform: none;')
+                  prev_Card.setAttribute('style', 'transform: none;')
+                }, 500)  
+              }else{
+                const cardProgress = document.querySelector('#card_progress')
+                cardProgress.setAttribute('style', `width: ${current_progress}%`)
+              }
+            }
+
+            if (completed){
               axios({
                 method: 'post',
-                url: `http://3.34.129.176:8000/game/stage2/get_hint/${cardId}/`,
-                headers: {'X-CSRFToken': csrftoken},
+                url: `http://3.34.129.176:8000/game/stage2/end/`,
+                headers: {'X-CSRFToken': csrftoken}
               })
-              .then (response => {
-                const card_url = response.data.card_url
-                const clickCard = document.querySelector(`#card-${cardId}`)
-                clickCard.src = card_url
+              .then(response => {
+                setTimeout(function () {
+                  if(!alert("STAGE 2 완료!!")) {
+                    if (document.getElementById("hidden-form").value == "") {
+                      document.sendCoin.submit();
+                    }
+                  }
+                }, 1000)
               })
-            })
-            return response
+            }
           })
-          .then (response => {
-            setTimeout(function() {
+        })
+      })
+
+      const app = new Vue({
+        el: '#app',
+        data: {
+          clicked: false,
+          hint: 10,
+          game_pk: 1,
+          title: '', 
+          question1: '',
+          question2: '',
+          btn_msg: '',
+        },
+        methods: {
+          balanceGame: function () {
+            if (this.hint == 0) return
+            this.clicked = true
+            this.btn_msg = '힌트포기'
+
+            axios({
+              method: 'post',
+              url: `http://3.34.129.176:8000/game/stage2/balance/${this.game_pk}/`,
+              headers: {'X-CSRFToken': csrftoken},
+            })
+            .then ( response => {
+              this.title = response.data.title
+              this.question1 = response.data.question1
+              this.question2 = response.data.question2
+            })
+          },
+          cancleGame: function () {
+            this.clicked = false
+            this.btn_msg = `힌트빰 ${this.hint}`
+          },
+
+          getHint: function(){
+            axios.get('http://3.34.129.176:8000/game/stage2/get_hint/1/')
+            .then (response => {
               forms.forEach(form => {
                 const cardId = form.dataset.cardId
                 axios({
@@ -238,50 +224,70 @@
                   headers: {'X-CSRFToken': csrftoken},
                 })
                 .then (response => {
-                  const flipped = response.data.flipped
-
-                  if (!flipped) {
-                    const clickCard = document.querySelector(`#card-${cardId}`)
-                    clickCard.src = back_url
-                  }
+                  const card_url = response.data.card_url
+                  const clickCard = document.querySelector(`#card-${cardId}`)
+                  clickCard.src = card_url
                 })
               })
-            }, 1500)      
-          })
+              return response
+            })
+            .then (response => {
+              setTimeout(function() {
+                forms.forEach(form => {
+                  const cardId = form.dataset.cardId
+                  axios({
+                    method: 'post',
+                    url: `http://3.34.129.176:8000/game/stage2/get_hint/${cardId}/`,
+                    headers: {'X-CSRFToken': csrftoken},
+                  })
+                  .then (response => {
+                    const flipped = response.data.flipped
+
+                    if (!flipped) {
+                      const clickCard = document.querySelector(`#card-${cardId}`)
+                      clickCard.src = back_url
+                    }
+                  })
+                })
+              }, 1500)      
+            })
+          },
+          clickFirst: function () {
+            axios({
+              method: 'post',
+              url: `http://3.34.129.176:8000/game/stage2/balance/${this.game_pk}/1/`,
+              headers: {'X-CSRFToken': csrftoken},
+            })
+            .then ( response => {
+              this.clicked = false
+              this.hint--
+              this.game_pk++
+              this.btn_msg = `힌트빰 ${this.hint}`
+              this.getHint()
+            })
+          },
+          clickSecond: function () {
+            axios({
+              method: 'post',
+              url: `http://3.34.129.176:8000/game/stage2/balance/${this.game_pk}/2/`,
+              headers: {'X-CSRFToken': csrftoken},
+            })
+            .then ( response => {
+              this.clicked = false
+              this.hint--
+              this.game_pk++
+              this.btn_msg = `힌트빰 ${this.hint}`
+              this.getHint()
+            })
+          },
         },
-        clickFirst: function () {
-          axios({
-            method: 'post',
-            url: `http://3.34.129.176:8000/game/stage2/balance/${this.game_pk}/1/`,
-            headers: {'X-CSRFToken': csrftoken},
-          })
-          .then ( response => {
-            this.clicked = false
-            this.hint--
-            this.game_pk++
-            this.btn_msg = `힌트빰 ${this.hint}`
-            this.getHint()
-          })
-        },
-        clickSecond: function () {
-          axios({
-            method: 'post',
-            url: `http://3.34.129.176:8000/game/stage2/balance/${this.game_pk}/2/`,
-            headers: {'X-CSRFToken': csrftoken},
-          })
-          .then ( response => {
-            this.clicked = false
-            this.hint--
-            this.game_pk++
-            this.btn_msg = `힌트빰 ${this.hint}`
-            this.getHint()
-          })
-        },
-      },
-      created: function () {
-        this.getHint()
-        this.cancleGame()
-      }
+        created: function () {
+          this.getHint()
+          this.cancleGame()
+        }
+      })
     })
+
+    
   </script>
 {% endblock content %}
