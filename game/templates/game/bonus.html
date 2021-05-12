@@ -113,6 +113,9 @@
     }
 
 </style>
+
+<link rel="manifest" href="../../static/game/manifest.json">
+
 <form name="sendCoin" action="{% url 'ssafy5-3:insertCoin' 13 %}" method="POST">
     {% csrf_token %}
     <input id="hidden-form" type="hidden" >
