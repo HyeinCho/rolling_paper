@@ -247,6 +247,26 @@
 
 </div>
 
+<div class="modal" tabindex="-1" id='modal'>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Stage2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>모든 게임이 종료되었습니다.</p>
+          <p>앞선 세 게임에서 서울 3반의 모든 학생들이 등장하였고 교수님의 진정성을 확인할 수 있었습니다.</p>
+          <p>그 보상으로 세상에서 가장 빛나는 남자, 변승환의 민낯을 지금 바로 보여드리겠습니다.</p>
+          <p>준비되셨으면 버튼을 눌러주세요.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Start</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <div class="col-lg-12 col-xl-3">
     <div class="chatting-title-holder">
         <h2 class="chatting-title">주요 채팅</h2>
@@ -297,6 +317,16 @@
 <!-- axios CDN -->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
+    // 페이지 렌더링 시 모달 구현 
+    window.addEventListener("load", function(event) {
+      let modal = document.getElementById('modal')
+      var myModal = new bootstrap.Modal(document.getElementById('modal'), {
+        keyboard: false
+      })
+      console.log(modal)
+      console.log(myModal)
+      myModal.toggle()
+    })
     const divChattingList = document.querySelector("#chatting-list")
     const TempBtn = document.querySelector('button')
     

@@ -345,8 +345,8 @@
     "fields": {
       "name": "옷걸이 5번", 
       "initial": "OD", 
-      "fg_color": "000000", 
-      "bg_color": "fff700"
+      "fg_color": "9473ff", 
+      "bg_color": "deff73"
     }
   }, 
   {
@@ -355,8 +355,8 @@
     "fields": {
       "name": "단발 요정", 
       "initial": "DY", 
-      "fg_color": "000000", 
-      "bg_color": "fff700"
+      "fg_color": "98ff73", 
+      "bg_color": "ff8373"
     }
   }, 
   {
@@ -365,8 +365,8 @@
     "fields": {
       "name": "하회탈", 
       "initial": "HH", 
-      "fg_color": "000000", 
-      "bg_color": "fff700"
+      "fg_color": "f4ff8e", 
+      "bg_color": "ff8ef4"
     }
   }, 
   {
@@ -375,8 +375,8 @@
     "fields": {
       "name": "퐁듀라 부르기 금지", 
       "initial": "PG", 
-      "fg_color": "000000", 
-      "bg_color": "fff700"
+      "fg_color": "f4ff8e", 
+      "bg_color": "d28eff"
     }
   }, 
   {
@@ -385,8 +385,8 @@
     "fields": {
       "name": "막걸리 2병", 
       "initial": "MD", 
-      "fg_color": "000000", 
-      "bg_color": "fff700"
+      "fg_color": "4a2aff", 
+      "bg_color": "ff3c2a"
     }
   }, 
   {
@@ -395,8 +395,8 @@
     "fields": {
       "name": "조조교", 
       "initial": "JJ", 
-      "fg_color": "000000", 
-      "bg_color": "fff700"
+      "fg_color": "8fff5b", 
+      "bg_color": "ff925b"
     }
   }, 
   {
@@ -405,8 +405,8 @@
     "fields": {
       "name": "데스파시토", 
       "initial": "DP", 
-      "fg_color": "000000", 
-      "bg_color": "fff700"
+      "fg_color": "cb5bff", 
+      "bg_color": "e1ff5b"
     }
   }, 
   {
@@ -415,8 +415,8 @@
     "fields": {
       "name": "야자하자", 
       "initial": "YH", 
-      "fg_color": "000000", 
-      "bg_color": "fff700"
+      "fg_color": "ffe45b", 
+      "bg_color": "ff5b8f"
     }
   }, 
   {
@@ -426,7 +426,7 @@
       "name": "킹갓제네럴엠페러DS", 
       "initial": "KD", 
       "fg_color": "000000", 
-      "bg_color": "fff700"
+      "bg_color": "58ff49"
     }
   }, 
   {
@@ -465,32 +465,32 @@
     "model": "game.chatmessage", 
     "pk": 5, 
     "fields": {
-      "chat_user": 2, 
-      "message": "교수님 밤에 불 안켜도 되겠어요 자체발광하니까"
+      "chat_user": 16, 
+      "message": "앜ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
     }
   }, 
   {
     "model": "game.chatmessage", 
     "pk": 6, 
     "fields": {
-      "chat_user": 4, 
-      "message": "승환교수님 좋아하는 사람 접으라 했더니 지구 절반이 접혔대요~!"
+      "chat_user": 5, 
+      "message": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
     }
   }, 
   {
     "model": "game.chatmessage", 
     "pk": 7, 
     "fields": {
-      "chat_user": 5, 
-      "message": "교수님한테 벽이 느껴져요..."
+      "chat_user": 2, 
+      "message": "교수님 밤에 불 안켜도 되겠어요 자체발광하니까"
     }
   }, 
   {
     "model": "game.chatmessage", 
     "pk": 8, 
     "fields": {
-      "chat_user": 5, 
-      "message": "완벽..."
+      "chat_user": 10, 
+      "message": "자체발광ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
     }
   }, 
   {
@@ -498,39 +498,39 @@
     "pk": 9, 
     "fields": {
       "chat_user": 7, 
-      "message": "교수님 콧대에 미끄러져서 미국 다녀왔잖아요"
+      "message": "앜ㅋㅋㅋㅋ 넘 웃겨욬ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
     }
   }, 
   {
     "model": "game.chatmessage", 
     "pk": 10, 
     "fields": {
-      "chat_user": 8, 
-      "message": "교수님 그거 기억나세요? 저희 루브르박물관 털러갔는데 교수님만 조각상인척 해서 저만 경찰에 잡혀갔잖아요"
+      "chat_user": 4, 
+      "message": "승환교수님 좋아하는 사람 접으라 했더니 지구 절반이 접혔대요~!"
     }
   }, 
   {
     "model": "game.chatmessage", 
     "pk": 11, 
     "fields": {
-      "chat_user": 13, 
-      "message": "KT에 고소당하셨다면서요"
+      "chat_user": 5, 
+      "message": "교수님한테 벽이 느껴져요..."
     }
   }, 
   {
     "model": "game.chatmessage", 
     "pk": 12, 
     "fields": {
-      "chat_user": 13, 
-      "message": "GIGA 막히게 잘 생겨서"
+      "chat_user": 5, 
+      "message": "완벽..."
     }
   }, 
   {
     "model": "game.chatmessage", 
     "pk": 13, 
     "fields": {
-      "chat_user": 11, 
-      "message": "지구뿌셔~!"
+      "chat_user": 7, 
+      "message": "교수님 콧대에 미끄러져서 미국 다녀왔잖아요"
     }
   }, 
   {
@@ -538,31 +538,31 @@
     "pk": 14, 
     "fields": {
       "chat_user": 11, 
-      "message": "교수님 잘생길 때마다 이마쳤더니 거북목 완치됐어요"
+      "message": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
     }
   }, 
   {
     "model": "game.chatmessage", 
     "pk": 15, 
     "fields": {
-      "chat_user": 4, 
-      "message": "교수님 캠 보다가 심장 녹을까봐 냉동실에서 수업 듣는 중"
+      "chat_user": 17, 
+      "message": "콧ㅋㅋㅋㅋㅋㅋ댘ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
     }
   }, 
   {
     "model": "game.chatmessage", 
     "pk": 16, 
     "fields": {
-      "chat_user": 2, 
-      "message": "아 그거 아세요...? 잘생긴 사람을 보면 기억을 잃는대요."
+      "chat_user": 8, 
+      "message": "교수님 그거 기억나세요? 저희 루브르박물관 털러갔는데 교수님만 조각상인척 해서 저만 경찰에 잡혀갔잖아요"
     }
   }, 
   {
     "model": "game.chatmessage", 
     "pk": 17, 
     "fields": {
-      "chat_user": 2, 
-      "message": "아 그거 아세요...? 잘생긴 사람을 보면 기억을 잃는대요"
+      "chat_user": 13, 
+      "message": "KT에 고소당하셨다면서요"
     }
   }, 
   {
@@ -570,12 +570,76 @@
     "pk": 18, 
     "fields": {
       "chat_user": 13, 
-      "message": "교수님 잘생겨서 박수치다가 모기잡았잖아요"
+      "message": "GIGA 막히게 잘 생겨서"
     }
   }, 
   {
     "model": "game.chatmessage", 
     "pk": 19, 
+    "fields": {
+      "chat_user": 1, 
+      "message": "GIGA 막...ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 20, 
+    "fields": {
+      "chat_user": 11, 
+      "message": "지구뿌셔~!"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 21, 
+    "fields": {
+      "chat_user": 16, 
+      "message": "예~ 지구뿌셔~!"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 22, 
+    "fields": {
+      "chat_user": 19, 
+      "message": "교수님 잘생길 때마다 이마쳤더니 거북목 완치됐어요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 23, 
+    "fields": {
+      "chat_user": 4, 
+      "message": "교수님 캠 보다가 심장 녹을까봐 냉동실에서 수업 듣는 중"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 24, 
+    "fields": {
+      "chat_user": 3, 
+      "message": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ거북목 완칰ㅋㅋㅋㅋㅋ"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 25, 
+    "fields": {
+      "chat_user": 4, 
+      "message": "ㅋㅋㅋㅋㅋㅋ"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 26, 
+    "fields": {
+      "chat_user": 2, 
+      "message": "아 그거 아세요...? 잘생긴 사람을 보면 기억을 잃는대요."
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 27, 
     "fields": {
       "chat_user": 2, 
       "message": "아 그거 아세요...? 잘생긴 사람을 보면 기억을 잃는대요"
@@ -583,15 +647,55 @@
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 20, 
+    "pk": 28, 
     "fields": {
-      "chat_user": 9, 
+      "chat_user": 13, 
+      "message": "교수님 잘생겨서 박수치다가 모기잡았잖아요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 29, 
+    "fields": {
+      "chat_user": 2, 
+      "message": "아 그거 아세요...? 잘생긴 사람을 보면 기억을 잃는대요"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 30, 
+    "fields": {
+      "chat_user": 20, 
       "message": "우리오파(于里烏播) 개귀여어(凱歸蠡魚) 하고풍거(河鼓風去) 삭다해라(削多海蘿) 신의미모(神義美貌) 세상간지(世上間地) 용안에서(用安恚西) 비치난다(費治難多) 좌로인정(左虜人正) 우로인정(右虜人正) 압구루기(狎鷗漏器) 대굴대굴(大窟大窟) 매일이론(每日理論) 덕후마음(德厚馬音) 주접이라(主楪伊亽) 할지라도(轄地羅道) 내가알게(來駕謁揭) 모야시발(暮夜始發) 내주접은(內主接銀) 정당하다(正當下多)"
     }
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 21, 
+    "pk": 31, 
+    "fields": {
+      "chat_user": 12, 
+      "message": "ㅋㅋㅋㅋㅋ 개쩐다"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 32, 
+    "fields": {
+      "chat_user": 14, 
+      "message": "우리오파 개귀여어래ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 33, 
+    "fields": {
+      "chat_user": 19, 
+      "message": "주접봐ㅋㅋㅋㅋㅋㅋㅋ"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 34, 
     "fields": {
       "chat_user": 9, 
       "message": "교수님은 계란 한 판 사면 29개가 들어있다면서요!"
@@ -599,7 +703,7 @@
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 22, 
+    "pk": 35, 
     "fields": {
       "chat_user": 9, 
       "message": "왜냐구요? 교수님의 미모에 한계란 없거든요"
@@ -607,7 +711,15 @@
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 23, 
+    "pk": 36, 
+    "fields": {
+      "chat_user": 18, 
+      "message": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ와 찢었다"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 37, 
     "fields": {
       "chat_user": 5, 
       "message": "세계 3대 마요 소개 1.참치마요 2.치킨마요 3.제 마음 훔치지 마요"
@@ -615,7 +727,7 @@
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 24, 
+    "pk": 38, 
     "fields": {
       "chat_user": 21, 
       "message": "저는 교수님이 짐을 좀 내려놨으면 좋겠어요"
@@ -623,7 +735,7 @@
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 25, 
+    "pk": 39, 
     "fields": {
       "chat_user": 21, 
       "message": "멋짐"
@@ -631,7 +743,15 @@
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 26, 
+    "pk": 40, 
+    "fields": {
+      "chat_user": 20, 
+      "message": "와 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 41, 
     "fields": {
       "chat_user": 3, 
       "message": "교수님 때문에 전쟁 났다면서요?"
@@ -639,7 +759,15 @@
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 27, 
+    "pk": 42, 
+    "fields": {
+      "chat_user": 7, 
+      "message": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 43, 
     "fields": {
       "chat_user": 3, 
       "message": "귀여WAR"
@@ -647,7 +775,7 @@
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 28, 
+    "pk": 44, 
     "fields": {
       "chat_user": 1, 
       "message": "교수님은 린스 안해도 되겠다 프린스라서"
@@ -655,7 +783,7 @@
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 29, 
+    "pk": 45, 
     "fields": {
       "chat_user": 18, 
       "message": "교수님은 다 좋은데 딱 하나만 고쳐줬으면 좋겠어요..."
@@ -663,7 +791,7 @@
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 30, 
+    "pk": 46, 
     "fields": {
       "chat_user": 18, 
       "message": "내 심장"
@@ -671,7 +799,23 @@
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 31, 
+    "pk": 47, 
+    "fields": {
+      "chat_user": 16, 
+      "message": "내 심장"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 48, 
+    "fields": {
+      "chat_user": 17, 
+      "message": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 49, 
     "fields": {
       "chat_user": 10, 
       "message": "교수님의 잘생김은 다 거품이야"
@@ -679,7 +823,7 @@
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 32, 
+    "pk": 50, 
     "fields": {
       "chat_user": 10, 
       "message": "언빌리버블"
@@ -687,71 +831,95 @@
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 33, 
+    "pk": 51, 
     "fields": {
-      "chat_user": 12, 
+      "chat_user": 22, 
       "message": "교수님 혼혈이죠? 솔직히 말해봐요"
     }
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 34, 
+    "pk": 52, 
     "fields": {
-      "chat_user": 12, 
+      "chat_user": 8, 
+      "message": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 53, 
+    "fields": {
+      "chat_user": 22, 
       "message": "한국과 천국"
     }
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 35, 
+    "pk": 54, 
     "fields": {
-      "chat_user": 11, 
+      "chat_user": 16, 
       "message": "교수님 MBTI가 CUTE라면서요?"
     }
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 36, 
+    "pk": 55, 
     "fields": {
-      "chat_user": 12, 
+      "chat_user": 1, 
       "message": "어디서 타는 냄새 안나요?"
     }
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 37, 
+    "pk": 56, 
     "fields": {
-      "chat_user": 4, 
+      "chat_user": 1, 
       "message": "교수님 때문에 내 심장이 타고 있어요"
     }
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 38, 
+    "pk": 57, 
     "fields": {
-      "chat_user": 1, 
+      "chat_user": 6, 
+      "message": "엌ㅋㅋㅋㅋㅋㅋㅋ 아재.."
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 58, 
+    "fields": {
+      "chat_user": 14, 
       "message": "교수님 혹시 렌즈 꼈어요?"
     }
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 39, 
+    "pk": 59, 
     "fields": {
-      "chat_user": 1, 
+      "chat_user": 14, 
       "message": "마이보이프렌즈"
     }
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 40, 
+    "pk": 60, 
     "fields": {
-      "chat_user": 4, 
+      "chat_user": 15, 
       "message": "왜 일하세요????? 교수님 미모가 이미 열일하고 있는데"
     }
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 41, 
+    "pk": 61, 
+    "fields": {
+      "chat_user": 4, 
+      "message": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 62, 
     "fields": {
       "chat_user": 8, 
       "message": "교수님을 음계로 표현하자면 '레'예요"
@@ -759,7 +927,7 @@
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 42, 
+    "pk": 63, 
     "fields": {
       "chat_user": 8, 
       "message": "왜냐하면 교수님에게 '미'치기 직전이니까요"
@@ -767,18 +935,50 @@
   }, 
   {
     "model": "game.chatmessage", 
-    "pk": 43, 
+    "pk": 64, 
     "fields": {
-      "chat_user": 12, 
+      "chat_user": 22, 
+      "message": "미쳐서ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 65, 
+    "fields": {
+      "chat_user": 2, 
+      "message": "미쳤다ㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+    }
+  }, 
+  {
+    "model": "game.chatmessage", 
+    "pk": 66, 
+    "fields": {
+      "chat_user": 23, 
       "message": "5점 만점에 4.9점 드리겠습니다."
     }
   },
   {
     "model": "game.chatmessage", 
-    "pk": 43, 
+    "pk": 67, 
     "fields": {
-      "chat_user": 12, 
+      "chat_user": 23, 
       "message": "교수님에겐 '오점'이란 없으니까"
+    }
+  },
+  {
+    "model": "game.chatmessage", 
+    "pk": 68, 
+    "fields": {
+      "chat_user": 13, 
+      "message": "앜ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+    }
+  },
+  {
+    "model": "game.chatmessage", 
+    "pk": 69, 
+    "fields": {
+      "chat_user": 9, 
+      "message": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
     }
   }
 ]

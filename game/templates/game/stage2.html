@@ -65,10 +65,39 @@
     </aside>
   </div>
 
+  <div class="modal" tabindex="-1" id='modal'>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Stage2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>빙글빙글~ 교수님 속을 뒤집는 카드 뒤집기 게임!</p>
+          <p>카드를 뒤집어서 사진과 이름을 매치해주세요.</p>
+          <p>(참고! 카드를 뒤집을 때마다 카드가 돌아가요)</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
   <script>
+    // 페이지 렌더링 시 모달 구현 
+    window.addEventListener("load", function(event) {
+      let modal = document.getElementById('modal')
+      var myModal = new bootstrap.Modal(document.getElementById('modal'), {
+        keyboard: false
+      })
+      console.log(modal)
+      console.log(myModal)
+      myModal.toggle()
+    })
     const back_url = "/static/game/stage2_card_back.png"
     const forms = document.querySelectorAll('.card-form')
     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
