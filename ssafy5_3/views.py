@@ -54,8 +54,10 @@ def greetings(request):
 def load_coin(request):
     professor = get_object_or_404(Professor, pk=1)
     coin = professor.coins
+    not_opened_num = len(get_list_or_404(Message, is_locked=True))
+    # DB의 coin 개수와 아직 열리지 않은 메세지 개수 중에서 더 적은 쪽을 반환한다.
     context = {
-        'coin' : coin
+        'coin' : min(coin, not_opened_num)
     }
     return JsonResponse(context)
 
@@ -73,7 +75,7 @@ def load_messages(request):
             'textSize' : 1 if (len(message_content_br)>60) else ( 2 if (len(message_content_br)>40) else 3)
         })
     context = {
-        'messages':serialized_messages
+        'messages':serialized_messages,
     }
     return JsonResponse(context)
 
