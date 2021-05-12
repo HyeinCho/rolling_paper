@@ -343,8 +343,8 @@ navigator.mediaDevices.getUserMedia({video:true}).then(function(mediaStream){
       myModal.toggle()
     })
 
-    // const yesButton = document.getElementById('yesButton')
-    // yesButton.addEventListener('click', function () {
+    const yesButton = document.getElementById('yesButton')
+    yesButton.addEventListener('click', function () {
         const divChattingList = document.querySelector("#chatting-list")
         const TempBtn = document.querySelector('button')
         
@@ -417,7 +417,7 @@ navigator.mediaDevices.getUserMedia({video:true}).then(function(mediaStream){
             })
         }, 1000)
 
-    // })
+    })
   
 </script>
     
