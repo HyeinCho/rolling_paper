@@ -149,8 +149,8 @@
   "model": "game.nickname",
   "pk": 5,
   "fields": {
-    "student_nickname": "퐁듀엄마",
-    "student_name": "정희진",
+    "student_nickname": "겨울맘",
+    "student_name": "김혜인",
     "flag": false
   }
 },
@@ -194,8 +194,8 @@
   "model": "game.nickname",
   "pk": 10,
   "fields": {
-    "student_nickname": "꿈나무꺼누",
-    "student_name": "안건우",
+    "student_nickname": "퐁듀엄마",
+    "student_name": "정희진",
     "flag": false
   }
 },

@@ -11,6 +11,11 @@ from random import randint, random
 def stage1(request):
     #모든 학생들 중 해당 스테이지에서 언급되는 학생들 flag를 통해 구분하기
     students = Student.objects.all()
+    # 플래그 초기화
+    for student in students:
+        student.flag = False
+        student.save()
+        
     nicknames = Nickname.objects.all()
     names = []
     for i in range(len(nicknames)):
@@ -188,20 +193,30 @@ def stage3(request):
     return render(request, 'game/stage3.html', context)
 
 def is_absent(request):
-    absent_students = get_list_or_404(Student)
+    students = get_list_or_404(Student)
     if request.method == 'GET':
-        serialized_students = []
-        for student in absent_students:
+        absent_students = []
+        attended_students = []
+        for student in students:
             if student.flag == False:
                 student_name = student.name[1:]
-                serialized_students.append({
+                absent_students.append({
                     'id': student.pk,
+                    'full_name': student.name,
                     'name': student_name,
                     'webex_img': str(student.webex_img),
                     'flag': student.flag,
                 })
+            else:
+                attended_students.append({
+                    'id': student.pk,
+                    'name': student.name,
+                    'webex_img': str(student.webex_img),
+                    'flag': student.flag,
+                })
         context = {
-            'absents': serialized_students,
+            'absents': absent_students,
+            'attendeds': attended_students,
         }
         return JsonResponse(context)
     elif request.method == 'POST':

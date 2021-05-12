@@ -59,7 +59,8 @@
       <ul id="chatting" class="p-0" style="height: 75%">
         <div class="mx-2" style="font-size: 0.9rem">서울_3반_이규정 : 오늘 점심 뭐 드셨나요?</div>
         <div class="mx-2" style="font-size: 0.9rem">서울_3반_이규정 : 오늘도 사람이 좀 부족하네요</div>
-        <div class="mx-2" style="font-size: 0.9rem">서울_3반_이규정 : 교수님 지금 누가 없나요?</div>
+        <div class="mx-2" style="font-size: 0.9rem">서울_3반_이규정 : 상길님?</div>
+        <div class="mx-2" style="font-size: 0.9rem">서울_3반_한상길 : 저 여기 있습니다만...</div>
       </ul>
       <hr class="m-0">
 
@@ -98,8 +99,38 @@
   </div>
 </div>
 
+<div class="modal" tabindex="-1" id='modal'>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Stage3</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>교수님은 수업에 입장하셨습니다.</p>
+          <p>몇 분의 자리가 비어보이는데요.</p>
+          <p>누가 아직 오지 않았는지 맞춰주세요.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 <script>
+  // 페이지 렌더링 시 모달 구현 
+  window.addEventListener("load", function(event) {
+    let modal = document.getElementById('modal')
+    var myModal = new bootstrap.Modal(document.getElementById('modal'), {
+      keyboard: false
+    })
+    console.log(modal)
+    console.log(myModal)
+    myModal.toggle()
+  })
   form = document.querySelector('#answer')
   
   const nowAttended = []
@@ -116,6 +147,7 @@
       for (absent in absents) {
         
         const absentId = absents[absent].id
+        const absentFullName = absents[absent].full_name
         const absentName = absents[absent].name
         const absentWebexImg = absents[absent].webex_img
         const absentFlag = absents[absent].flag
@@ -133,6 +165,16 @@
           nowAttended.push(absentName)
           nowAttendedId.push(absentId)
 
+          // 채팅 추가되는 부분
+          const chatting = document.querySelector('#chatting')
+          const chat = document.createElement('div')
+
+          chat.setAttribute('class', 'mx-2')
+          chat.setAttribute('style', 'font-size: 0.9rem')
+          chat.innerText = '서울_3반_' + absentFullName + " : "+ _.sample(['늦어서 죄송합니다', '죄송합니다', '노래 부르겠습니다'])
+          
+          console.log(chat)
+          chatting.append(chat)
         }
       }
       // 채팅 추가되는 부분
