@@ -261,7 +261,7 @@
           <p>준비되셨으면 버튼을 눌러주세요.</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Start</button>
+          <button id="yesButton" type="button" class="btn btn-primary" data-bs-dismiss="modal">Start</button>
         </div>
       </div>
     </div>
@@ -327,79 +327,83 @@
       console.log(myModal)
       myModal.toggle()
     })
-    const divChattingList = document.querySelector("#chatting-list")
-    const TempBtn = document.querySelector('button')
-    
-    let chatIdx = 1 // 채팅 읽어올 인덱스
 
-    // TempBtn.addEventListener('click',  function(event){
-    //     event.preventDefault()
-    const timer = setInterval(() => {
-        // axios 요청 보내기
-        axios({
-            method:'get',
-            url:`http://3.34.129.176:8000/game/bonus/${chatIdx}/chat/`,
-            // headers: {'X-CSRFToken': csrftoken},
-        }).then(response=>{
-            // DB 데이터 읽어오기
-            let bgColor = response.data.bg
-            let fontColor = response.data.fg
-            let initialName = response.data.initial
-            let nickname = response.data.author
-            let message = response.data.message
+    const yesButton = document.getElementById('yesButton')
+    yesButton.addEventListener('click', function () {
+        const divChattingList = document.querySelector("#chatting-list")
+        const TempBtn = document.querySelector('button')
+        
+        let chatIdx = 1 // 채팅 읽어올 인덱스
 
-            // li
-            const li = document.createElement('li')
-            li.setAttribute('class', 'chatting d-flex align-items-center')
-            // 프로필 holder
-            const divProfileHolder = document.createElement('div')
-            divProfileHolder.setAttribute('class', 'profile-holder d-inline-block me-2')
-            li.append(divProfileHolder)
-            // 프로필 이미지
-            const imgProfile = document.createElement('img')
-            imgProfile.setAttribute('src',`https://via.placeholder.com/24/${bgColor}/${fontColor}.png?text=${initialName}`)
-            imgProfile.setAttribute('class', 'profile')
-            divProfileHolder.append(imgProfile)
-            // 채팅 holder
-            const divChatholder = document.createElement('div')
-            li.append(divChatholder)
-            // 이름
-            const spanName = document.createElement('span')
-            spanName.setAttribute('class', 'author-name me-2')
-            spanName.innerText = nickname
-            divChatholder.append(spanName)
-            // 메세지
-            const spanMessage = document.createElement('span')
-            spanMessage.setAttribute('class', 'message')
-            spanMessage.innerText = message
-            divChatholder.append(spanMessage)
+        // TempBtn.addEventListener('click',  function(event){
+        //     event.preventDefault()
+        const timer = setInterval(() => {
+            // axios 요청 보내기
+            axios({
+                method:'get',
+                url:`http://3.34.129.176:8000/game/bonus/${chatIdx}/chat/`,
+                // headers: {'X-CSRFToken': csrftoken},
+            }).then(response=>{
+                // DB 데이터 읽어오기
+                let bgColor = response.data.bg
+                let fontColor = response.data.fg
+                let initialName = response.data.initial
+                let nickname = response.data.author
+                let message = response.data.message
 
-            divChattingList.append(li)
-            // 채팅 리스트가 넘쳤을 경우, 채팅창을 가장 하단으로 내려준다.
-            if (divChattingList.scrollHeight > 0){
-                divChattingList.scrollTop = divChattingList.scrollHeight
-            } 
+                // li
+                const li = document.createElement('li')
+                li.setAttribute('class', 'chatting d-flex align-items-center')
+                // 프로필 holder
+                const divProfileHolder = document.createElement('div')
+                divProfileHolder.setAttribute('class', 'profile-holder d-inline-block me-2')
+                li.append(divProfileHolder)
+                // 프로필 이미지
+                const imgProfile = document.createElement('img')
+                imgProfile.setAttribute('src',`https://via.placeholder.com/24/${bgColor}/${fontColor}.png?text=${initialName}`)
+                imgProfile.setAttribute('class', 'profile')
+                divProfileHolder.append(imgProfile)
+                // 채팅 holder
+                const divChatholder = document.createElement('div')
+                li.append(divChatholder)
+                // 이름
+                const spanName = document.createElement('span')
+                spanName.setAttribute('class', 'author-name me-2')
+                spanName.innerText = nickname
+                divChatholder.append(spanName)
+                // 메세지
+                const spanMessage = document.createElement('span')
+                spanMessage.setAttribute('class', 'message')
+                spanMessage.innerText = message
+                divChatholder.append(spanMessage)
 
-            // 다음 채팅 인덱스 읽어오기
-            chatIdx += 1
-        }).catch(err =>{
-            // 더 이상 가져올 채팅이 없음
-            if(err.response.status === 404){
-                // setInterval 중지
-                clearInterval(timer)
+                divChattingList.append(li)
+                // 채팅 리스트가 넘쳤을 경우, 채팅창을 가장 하단으로 내려준다.
+                if (divChattingList.scrollHeight > 0){
+                    divChattingList.scrollTop = divChattingList.scrollHeight
+                } 
 
-                setTimeout(function () {
-                    if(!alert("소문의 교수님 존잘로 밝혀져... 눈부셨어요")) {
-                        if (document.getElementById("hidden-form").value == "") {
-                            document.sendCoin.submit();
+                // 다음 채팅 인덱스 읽어오기
+                chatIdx += 1
+            }).catch(err =>{
+                // 더 이상 가져올 채팅이 없음
+                if(err.response.status === 404){
+                    // setInterval 중지
+                    clearInterval(timer)
+
+                    setTimeout(function () {
+                        if(!alert("소문의 교수님 존잘로 밝혀져... 눈부셨어요")) {
+                            if (document.getElementById("hidden-form").value == "") {
+                                document.sendCoin.submit();
+                            }
                         }
-                    }
-                }, 1000)
-            }
-        })
-    }, 1000)
+                    }, 1000)
+                }
+            })
+        }, 1000)
 
-    
+    })
+  
 </script>
     
 
