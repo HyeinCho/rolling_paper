@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
   <title>Document</title>
   {% bootstrap_css %}
   <style>
@@ -15,22 +14,31 @@
       margin: 0;
     }
     .left {
-      height: 100vh;
+      height: 90vh;
     }
     .right {
-      height: 95vh;
+      height: 90vh;
       width: 90%;
       overflow-y: scroll;
     }
 </style>
 </head>
 <body>
+  {% comment %} 화면 상단 네비게이션 바 {% endcomment %}
+  {% block navbar %}
+    {% include 'nav.html' %}
+    <script>
+      const iconSelected = document.querySelector('#icon-greetings')
+      iconSelected.classList.add('bold-icon')
+    </script>
+  {% endblock navbar %}
+
   <div class="d-flex align-items-start">
     <nav class="sticky-top navbar flex-column align-items-start p-0 text-light left" style="background:#145dbf;">
       <nav class="nav nav-pills flex-column">
         <div style="background:#1153ab;" class="row m-0 py-1 align-items-center">
           <div class="d-grid col-4 justify-content-end">
-            <img src="/media/{{ juan.webex_img }}" alt="{{ juan.name }}" style="width:30px; border-radius: 50%;">
+            <img src="{{ juan.profile_img }}" alt="{{ juan.name }}" style="width:30px; border-radius: 50%;">
           </div>
           <div class="d-grid col-8 p-0">
             <span>5기 서울 3반 <br> @juan</span>
@@ -79,7 +87,7 @@
         {% for greeting in greetings %}
           <div class="row">
             <div class="d-grid col-1 justify-content-end">
-              <img src="/media/{{ juan.webex_img }}" alt="{{ juan.name }}" style="width:30px; border-radius: 50%;">
+              <img src="{{ juan.profile_img }}" alt="{{ juan.name }}" style="width:30px; border-radius: 50%;">
             </div>
             <div class="d-grid col-11">
               <p><b>{{ juan.name }}</b> <small>{{ greeting.created_at }}</small></p>

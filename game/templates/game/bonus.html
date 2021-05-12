@@ -113,6 +113,11 @@
     }
 
 </style>
+<form name="sendCoin" action="{% url 'ssafy5-3:insertCoin' 13 %}" method="POST">
+    {% csrf_token %}
+    <input id="hidden-form" type="hidden" >
+</form>
+
 <div class = "row"> 
 <!-- 영상 -->
 <div class="video-frame col-lg-12 col-xl-9">
@@ -352,6 +357,14 @@
             if(err.response.status === 404){
                 // setInterval 중지
                 clearInterval(timer)
+
+                setTimeout(function () {
+                    if(!alert("소문의 교수님 존잘로 밝혀져... 눈부셨어요")) {
+                        if (document.getElementById("hidden-form").value == "") {
+                            document.sendCoin.submit();
+                        }
+                    }
+                }, 1000)
             }
         })
     }, 1000)

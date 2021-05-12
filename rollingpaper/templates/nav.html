@@ -11,12 +11,13 @@
   }
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white">
   <div class="container-fluid d-flex flex-row-reverse me-3">
     <div class="navbar-nav">
       <a class="nav-link icon-holder" href="{% url 'ssafy5-3:index' %}"><i class="fas fa-gamepad icon" id="icon-game"></i></a>
       <a class="nav-link icon-holder" href="{% url 'ssafy5-3:collegues' %}"><i class="fas fa-address-book icon" id="icon-collegues"></i></a>
       <a class="nav-link icon-holder" href="{% url 'ssafy5-3:messages' %}"><i class="fas fa-envelope-open-text icon" id="icon-messages"></i></a>
+      <a class="nav-link icon-holder" href="{% url 'ssafy5-3:greetings' %}"><i class="fas fa-hand-holding-heart icon" id="icon-greetings"></i></a>
     </div>
   </div>
 </nav>
