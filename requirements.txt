@@ -2,6 +2,7 @@ asgiref==3.3.4
 beautifulsoup4==4.9.3
 Django==3.2
 django-bootstrap-v5==1.0.2
+django-permissions-policy==4.0.1
 django-seed==0.2.2
 Faker==8.1.2
 importlib-metadata==2.1.1
