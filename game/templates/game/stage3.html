@@ -141,7 +141,7 @@
     
     const sentence = event.target[0].value
 
-    axios.get('http://127.0.0.1:8000/game/stage3/is_absent/')
+    axios.get('http://3.34.129.176:8000/game/stage3/is_absent/')
     .then((response) => {
       const absents = response.data.absents
       for (absent in absents) {
