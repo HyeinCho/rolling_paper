@@ -135,3 +135,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = BASE_DIR / 'ssafy5_3' / 'media'
 MEDIA_URL = '/media/' 
+
+URL_SELF = 'http://3.34.129.176:8000/'
