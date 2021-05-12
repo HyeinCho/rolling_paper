@@ -11,4 +11,5 @@ urlpatterns = [
     path('loadmessages/', views.load_messages, name='loadmessages'),
     path('openmessage/<int:id>/', views.open_message, name='openMessage'),
     path('insertcoin/<int:coin_num>/', views.insert_coin, name='insertCoin'),
+    path('credit/', views.credit, name='credit'),
 ]
