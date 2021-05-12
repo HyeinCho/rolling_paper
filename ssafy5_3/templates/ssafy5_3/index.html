@@ -69,4 +69,21 @@
       alert.setAttribute('style', 'display: block')
     })
   </script>
+
+  <style>
+    footer { 
+      position: relative; 
+      overflow: hidden;
+      height:30px; 
+      width:100%; 
+      bottom: 0;
+    }
+  </style>
+  <footer class='fixed-bottom'>
+    <p class="d-flex justify-content-center">
+      <a href="{% url 'ssafy5-3:credit' %}" class="text-secondary text-decoration-none">
+        All rights reserved 서울 3반 OPIC 스터디
+      </a>
+    </p>
+  </footer>
 {% endblock index %}
