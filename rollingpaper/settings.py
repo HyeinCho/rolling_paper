@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--x8oxfa!$9l20g2!871n7=dq4ak5aouq**6ds@@ogldwoub#xe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['3.34.129.176']
 
 
 # Application definition
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'rollingpaper.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
 }
 
