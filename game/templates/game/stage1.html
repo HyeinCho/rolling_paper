@@ -105,18 +105,14 @@
         e.preventDefault()
         let answer = document.querySelector(".answer").value;
         if(answer === datas[index]){
-          $.alert({
-            content: '정답',
-          });
+          alert("정답")
           document.querySelector("#p").remove()
           index += 1
           let myProgress = document.querySelector('.progress-bar')
           myProgress.setAttribute('style', `width:${(index / 10)*100}%`)
           myProgress.innerText = `${(index / 10)*100}%`
           if(datas.length <= index){
-            $.alert({
-              content: '끝',
-            });
+            alert("끝")
             // rewards 링크 띄우기
             let next = document.querySelector('.move-next')
             next.setAttribute('style', 'display:block')
