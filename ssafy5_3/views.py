@@ -102,4 +102,5 @@ def insert_coin(request, coin_num):
     stage_num = 1 if coin_num==9 else coin_num-9
     return redirect('game:rewards', stage_num)
     
-    
+def credit(request):
+    return render(request, 'ssafy5_3/credit.html')
