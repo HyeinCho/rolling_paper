@@ -114,21 +114,21 @@
 
 </style>
 
-<link rel="manifest" href="../../static/game/manifest.json">
+<!-- <link rel="manifest" href="../../static/game/manifest.json"> -->
 
 <form name="sendCoin" action="{% url 'ssafy5-3:insertCoin' 13 %}" method="POST">
     {% csrf_token %}
     <input id="hidden-form" type="hidden" >
 </form>
 
-<script>
+<!-- <script>
 var video = document.querySelector('video');
 navigator.mediaDevices.getUserMedia({video:true}).then(function(mediaStream){
     window.stream = mediaStream;
     video.src = URL.createObjectURL(mediaStream);
     video.play();
 });
-</script>
+</script> -->
 
 <div class = "row"> 
 <!-- 영상 -->
@@ -141,13 +141,14 @@ navigator.mediaDevices.getUserMedia({video:true}).then(function(mediaStream){
 
         let capture
         let videoHolder, videoFrame
-        let img_flare, img_youtube_frame
+        let img_flare, img_youtube_frame, img_bg
         let predictions = []
         let youtube_height, video_height
 
         function preload(){
             img_flare = loadImage('https://i.postimg.cc/V6xzyRR5/flare.png')
             img_youtube_frame = loadImage('https://i.postimg.cc/k52wH3gN/youtube-frame.png')
+            img_bg = loadImage('https://i.postimg.cc/rs6Dw7dP/bg-mulcam-image.png')
         }
 
         function setup(){
@@ -159,15 +160,15 @@ navigator.mediaDevices.getUserMedia({video:true}).then(function(mediaStream){
             cnv.parent(videoHolder)
 
             // video capture
-            capture = createCapture(VIDEO)
-            capture.size(800, 600)
-            capture.hide()
+            // capture = createCapture(VIDEO)
+            // capture.size(800, 600)
+            // capture.hide()
 
             // ml5 facemesh api
-            facemesh = ml5.facemesh(capture);
-            facemesh.on("predict", results => {
-                predictions = results;
-            });
+            // facemesh = ml5.facemesh(capture);
+            // facemesh.on("predict", results => {
+            //     predictions = results;
+            // });
 
             // calculate size of p5js canvas according to window size
             youtube_height =  width / 1280 * 704
@@ -185,8 +186,9 @@ navigator.mediaDevices.getUserMedia({video:true}).then(function(mediaStream){
 
         function draw() {
             blendMode(BLEND)
-            image(capture, 0, 0, width, height)
-            drawKeypoints()
+            image(img_bg, 0, 0, width, height)
+            // image(capture, 0, 0, width, height)
+            // drawKeypoints()
             fill(0)
             // when mouse is hovered, show youtube UI bar
             blendMode(BLEND)
@@ -235,8 +237,8 @@ navigator.mediaDevices.getUserMedia({video:true}).then(function(mediaStream){
 
     </script>
     <!-- p5.js sketch end-->
-    <div><iframe src="https://editor.p5js.org/ssafy.zero/embed/NV3i3QKb5"></iframe></div>
-    <!-- <div class="video-holder"></div> -->
+    <!-- <div><iframe src="https://editor.p5js.org/ssafy.zero/embed/NV3i3QKb5"></iframe></div> -->
+    <div class="video-holder"></div>
     <!-- <img src="https://via.placeholder.com/800/222222/808080.png?text=VIDEO" alt="video" class="profile"> -->
     <div class="title col-xl-12 mt-3 d-none d-xl-block">
         <ul class="hashtags">
