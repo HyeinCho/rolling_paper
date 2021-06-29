@@ -116,7 +116,7 @@
           const cardId = event.target.dataset.cardId
           axios({
             method: 'post',
-            url: `http://3.34.129.176:8000/game/stage2/${cardId}/`,
+            url: `http://3.34.95.60:8000/game/stage2/${cardId}/`,
             headers: {'X-CSRFToken': csrftoken}
           })
           .then(response => {
@@ -163,7 +163,7 @@
             if (completed){
               axios({
                 method: 'post',
-                url: `http://3.34.129.176:8000/game/stage2/end/`,
+                url: `http://3.34.95.60:8000/game/stage2/end/`,
                 headers: {'X-CSRFToken': csrftoken}
               })
               .then(response => {
@@ -199,7 +199,7 @@
 
             axios({
               method: 'post',
-              url: `http://3.34.129.176:8000/game/stage2/balance/${this.game_pk}/`,
+              url: `http://3.34.95.60:8000/game/stage2/balance/${this.game_pk}/`,
               headers: {'X-CSRFToken': csrftoken},
             })
             .then ( response => {
@@ -214,13 +214,13 @@
           },
 
           getHint: function(){
-            axios.get('http://3.34.129.176:8000/game/stage2/get_hint/1/')
+            axios.get('http://3.34.95.60:8000/game/stage2/get_hint/1/')
             .then (response => {
               forms.forEach(form => {
                 const cardId = form.dataset.cardId
                 axios({
                   method: 'post',
-                  url: `http://3.34.129.176:8000/game/stage2/get_hint/${cardId}/`,
+                  url: `http://3.34.95.60:8000/game/stage2/get_hint/${cardId}/`,
                   headers: {'X-CSRFToken': csrftoken},
                 })
                 .then (response => {
@@ -237,7 +237,7 @@
                   const cardId = form.dataset.cardId
                   axios({
                     method: 'post',
-                    url: `http://3.34.129.176:8000/game/stage2/get_hint/${cardId}/`,
+                    url: `http://3.34.95.60:8000/game/stage2/get_hint/${cardId}/`,
                     headers: {'X-CSRFToken': csrftoken},
                   })
                   .then (response => {
@@ -255,7 +255,7 @@
           clickFirst: function () {
             axios({
               method: 'post',
-              url: `http://3.34.129.176:8000/game/stage2/balance/${this.game_pk}/1/`,
+              url: `http://3.34.95.60:8000/game/stage2/balance/${this.game_pk}/1/`,
               headers: {'X-CSRFToken': csrftoken},
             })
             .then ( response => {
@@ -269,7 +269,7 @@
           clickSecond: function () {
             axios({
               method: 'post',
-              url: `http://3.34.129.176:8000/game/stage2/balance/${this.game_pk}/2/`,
+              url: `http://3.34.95.60:8000/game/stage2/balance/${this.game_pk}/2/`,
               headers: {'X-CSRFToken': csrftoken},
             })
             .then ( response => {
