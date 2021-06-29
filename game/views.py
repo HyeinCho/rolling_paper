@@ -176,7 +176,7 @@ def endGame2(request):
 @require_POST
 def stage3(request):
     attended_students = sorted(Student.objects.filter(flag=True), key=lambda x: random())
-    print(len(attended_students))
+#    print(len(attended_students))
     row1 = attended_students[:4]
     row2 = attended_students[4:9]
     row3 = attended_students[9:14]
